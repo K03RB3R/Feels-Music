@@ -68,11 +68,6 @@
             <p class="mb-1">DALE DALE DALE.</p>
             <!-- <small class="text-muted">Donec id elit non mi porta.</small> -->
         </a>
-</div>        
-
-
-
-
-
+</div>  
     </body>
 </html>
