@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `bancofeelsmusic`.`genero` (
   `nome` VARCHAR(45) NOT NULL,
   `sentimento_idsentimento` INT NOT NULL,
   PRIMARY KEY (`idgenero`),
-  INDEX `fk_genero_sentimento1_idx` (`sentimento_idsentimento` ASC) VISIBLE,
+  INDEX `fk_genero_sentimento1_idx` (`sentimento_idsentimento` ASC),
   CONSTRAINT `fk_genero_sentimento1`
     FOREIGN KEY (`sentimento_idsentimento`)
     REFERENCES `bancofeelsmusic`.`sentimento` (`idsentimento`)
@@ -67,8 +67,8 @@ CREATE TABLE IF NOT EXISTS `bancofeelsmusic`.`usuario` (
   `tipo_usuario_idtipo_usuario1` INT NOT NULL,
   `sentimento_idsentimento` INT NOT NULL,
   PRIMARY KEY (`idusuario`),
-  INDEX `fk_usuario_tipo_usuario1_idx` (`tipo_usuario_idtipo_usuario1` ASC) VISIBLE,
-  INDEX `fk_usuario_sentimento1_idx` (`sentimento_idsentimento` ASC) VISIBLE,
+  INDEX `fk_usuario_tipo_usuario1_idx` (`tipo_usuario_idtipo_usuario1` ASC),
+  INDEX `fk_usuario_sentimento1_idx` (`sentimento_idsentimento` ASC),
   CONSTRAINT `fk_usuario_tipo_usuario1`
     FOREIGN KEY (`tipo_usuario_idtipo_usuario1`)
     REFERENCES `bancofeelsmusic`.`tipo_usuario` (`idtipo_usuario`)
@@ -102,7 +102,7 @@ CREATE TABLE IF NOT EXISTS `bancofeelsmusic`.`album` (
   `nome` VARCHAR(45) NOT NULL,
   `artista_idartista` INT NOT NULL,
   PRIMARY KEY (`idalbum`),
-  INDEX `fk_album_artista1_idx` (`artista_idartista` ASC) VISIBLE,
+  INDEX `fk_album_artista1_idx` (`artista_idartista` ASC),
   CONSTRAINT `fk_album_artista1`
     FOREIGN KEY (`artista_idartista`)
     REFERENCES `bancofeelsmusic`.`artista` (`idartista`)
@@ -120,8 +120,8 @@ CREATE TABLE IF NOT EXISTS `bancofeelsmusic`.`musica` (
   `musica_idgenero` INT NOT NULL,
   `album_idalbum` INT NOT NULL,
   PRIMARY KEY (`idmusica`),
-  INDEX `fk_musica_musica1_idx` (`musica_idgenero` ASC) VISIBLE,
-  INDEX `fk_musica_album1_idx` (`album_idalbum` ASC) VISIBLE,
+  INDEX `fk_musica_musica1_idx` (`musica_idgenero` ASC) ,
+  INDEX `fk_musica_album1_idx` (`album_idalbum` ASC) ,
   CONSTRAINT `fk_musica_musica1`
     FOREIGN KEY (`musica_idgenero`)
     REFERENCES `bancofeelsmusic`.`genero` (`idgenero`)
