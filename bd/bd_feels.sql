@@ -58,7 +58,7 @@ ENGINE = InnoDB;
 -- Table `bancofeelsmusic`.`usuario`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `bancofeelsmusic`.`usuario` (
-  `idusuario` INT NOT NULL,
+  `idusuario` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `data_nascimento` DATE NOT NULL,
   `email` VARCHAR(80) NOT NULL,
