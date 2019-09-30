@@ -20,11 +20,10 @@ if(isset($_POST["nome"])){
 	if($fm >= 1){
 		echo "<script>alert('Cadastrado com sucesso!');</script>";
 		
+		
 	}
-	// header('Location: ../pages/pages_usuario/sentimento.php');
 	
 	mysqli_close($conexao);
-
 }
 ?>
 
@@ -33,11 +32,11 @@ if(isset($_POST["nome"])){
 
 <body>
 <form action="" method="post">
-<input type="text" name="nome" placeholder="Nome">
-<input type="date" name="data_nascimento" placeholder="Data de nascimento">
-<input type="email" name="email" placeholder="E-mail">
-<input type="password" name="senha" placeholder="Senha">
-<input type="text" name="nickname" placeholder="Nickname">
+<input type="text" name="nome" placeholder="Nome" required>
+<input type="date" name="data_nascimento" placeholder="Data de nascimento" required>
+<input type="email" name="email" placeholder="E-mail" required>
+<input type="password" name="senha" placeholder="Senha" required>
+<input type="text" name="nickname" placeholder="Nickname" required>
 <input type="submit" value="Cadastrar"/>
 </form>
 
