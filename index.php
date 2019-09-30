@@ -6,20 +6,22 @@ if(isset($_POST["nome"])){
 	$email = $_POST["email"];
 	$senha = $_POST["senha"];
 	$nick =  $_POST["nickname"];
+
 	
 	$conexao = mysqli_connect("localhost", "root", "root", "bancofeelsmusic");
 
-	$query = mysqli_query($conexao,"INSERT INTO usuario (NOME, DATA_NASCIMENTO, EMAIL, SENHA, NICKNAME, TIPO_USUARIO_IDTIPO_USUARIO1) VALUES('$nome', '$dataNasc', '$email', '$senha','$nick')") or die(mysqli_error($conexao));
+
+	$query = mysqli_query($conexao,"INSERT INTO usuario (NOME, DATA_NASCIMENTO, EMAIL, SENHA, NICKNAME, TIPO_USUARIO_IDTIPO_USUARIO1,SENTIMENTO_IDSENTIMENTO) VALUES('$nome', '$dataNasc', '$email', '$senha','$nick',1,1)") or die(mysqli_error($conexao));
 
 	$fm = mysqli_affected_rows($conexao);
 	
 	$id = mysqli_insert_id($conexao);
-	echo $id;
 	
 	if($fm >= 1){
 		echo "<script>alert('Cadastrado com sucesso!');</script>";
+		
 	}
-	
+	// header('Location: ../pages/pages_usuario/sentimento.php');
 	
 	mysqli_close($conexao);
 
