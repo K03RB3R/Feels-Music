@@ -10,51 +10,51 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     </head>
     <body>
-     <form action="">
+   <!--  <form action="../assets/validacao_sentimento.php" method="get"> -->
       <div class="list-group">
-                <a href="genero.php" class="list-group-item list-group-item-action flex-column align-items-start" name="apaixonado">
+                <a href="genero.php?id_sentimento=1" class="list-group-item list-group-item-action flex-column align-items-start" name="apaixonado">
                     <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1">Apaixonado</h5>
                     </div>
                     <p class="mb-1">Descrição sobre apaixonado.</p>
                 </a>
-                <a href="genero.php" class="list-group-item list-group-item-action flex-column align-items-start">
+                <a href="../../assets/includes/validacao_sentimento.php?cod=2" class="list-group-item list-group-item-action flex-column align-items-start" name="triste">
                     <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1">Triste</h5>
                     </div>
                     <p class="mb-1">Descrição sobre triste.</p>
                 </a>
-                <a href="genero.php" class="list-group-item list-group-item-action flex-column align-items-start">
+                <a href="genero.php" class="list-group-item list-group-item-action flex-column align-items-start" name="inspirado">
                     <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1">Inspirado</h5>
                     </div>
                     <p class="mb-1">Descrição sobre inspirado.</p>
                 </a>
-                <a href="genero.php" class="list-group-item list-group-item-action flex-column align-items-start">
+                <a href="genero.php" class="list-group-item list-group-item-action flex-column align-items-start" name="odio">
                     <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1">Com ódio</h5>
                     </div>
                     <p class="mb-1">Descrição sobre ódio.</p>
                 </a>
-                <a href="genero.php" class="list-group-item list-group-item-action flex-column align-items-start">
+                <a href="genero.php" class="list-group-item list-group-item-action flex-column align-items-start" name="nostalgia">
                     <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1">Nostalgia</h5>
                     </div>
                     <p class="mb-1">Descrição sobre nostalgia.</p>
                 </a>
-                <a href="genero.php" class="list-group-item list-group-item-action flex-column align-items-start">
+                <a href="genero.php" class="list-group-item list-group-item-action flex-column align-items-start" name="religiao">
                     <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1">Religiosidade</h5>
                     </div>
                     <p class="mb-1">Descrição sobre religiosidade.</p>
                 </a>
-                <a href="genero.php" class="list-group-item list-group-item-action flex-column align-items-start">
+                <a href="genero.php" class="list-group-item list-group-item-action flex-column align-items-start" name="vamodale">
                     <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1">VAMO DALE</h5>
                     </div>
                     <p class="mb-1">DALE DALE DALE.</p>          
                 </a>
         </div> 
-        </form> 
+       <!-- </form> -->
     </body>
 </html>

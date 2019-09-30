@@ -1,3 +1,8 @@
+<?php 
+session_start();
+  $sentimento = $_GET["id_sentimento"];
+  echo $sentimento;
+  $_SESSION['id_sentimento'] = $sentimento; ?>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -11,7 +16,7 @@
     </head>
     <body>
       <div class="list-group">
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+        <a href="lista.php?id_genero=1" class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">Funk</h5>
             </div>
@@ -44,7 +49,7 @@
 </div>        
 
 
-<h3>Estou me sentindo <?php $sentimento ?></h3>
+
 
 
     </body>
