@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 if(isset($_GET["erro"])){
 	$erro = $_GET["erro"];
 
@@ -9,7 +9,7 @@ if(isset($_GET["erro"])){
 		echo "<script>alert('Usuario nao autenticado!');</script>";
 	}
 }
-?> -->
+?>
 
 <!DOCTYPE html>
 <html>

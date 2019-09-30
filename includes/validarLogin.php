@@ -27,7 +27,7 @@ else{
   unset ($_SESSION['login']);
   unset ($_SESSION['senha']);
 	// echo "<script>alert('Usuario e/ou senha não cadastrado!');</script>";
-  header('location:../index.php');
+  header('location:../index.php?erro=254');
 
   }
 
