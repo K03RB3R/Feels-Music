@@ -16,6 +16,8 @@ if(isset($_POST["nome"])){
 	$fm = mysqli_affected_rows($conexao);
 	
 	$id = mysqli_insert_id($conexao);
+
+	
 	
 	if($fm >= 1){
 		echo "<script>alert('Cadastrado com sucesso!');</script>";
