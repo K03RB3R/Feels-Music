@@ -21,7 +21,7 @@ USE `bancofeelsmusic` ;
 -- Table `bancofeelsmusic`.`sentimento`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `bancofeelsmusic`.`sentimento` (
-  `idsentimento` INT NOT NULL,
+  `idsentimento` INT AUTO_INCREMENT NOT NULL,
   `nome` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idsentimento`))
 ENGINE = InnoDB;
@@ -31,7 +31,7 @@ ENGINE = InnoDB;
 -- Table `bancofeelsmusic`.`genero`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `bancofeelsmusic`.`genero` (
-  `idgenero` INT NOT NULL,
+  `idgenero` INT AUTO_INCREMENT NOT NULL,
   `nome` VARCHAR(45) NOT NULL,
   `sentimento_idsentimento` INT NOT NULL,
   PRIMARY KEY (`idgenero`),
@@ -58,7 +58,7 @@ ENGINE = InnoDB;
 -- Table `bancofeelsmusic`.`usuario`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `bancofeelsmusic`.`usuario` (
-  `idusuario` INT NOT NULL,
+  `idusuario` INT AUTO_INCREMENT NOT NULL,
   `nome` VARCHAR(45) NOT NULL,
   `data_nascimento` DATE NOT NULL,
   `email` VARCHAR(80) NOT NULL,
@@ -86,8 +86,7 @@ ENGINE = InnoDB;
 -- Table `bancofeelsmusic`.`artista`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `bancofeelsmusic`.`artista` (
-  `idartista` INT NOT NULL,
-  `album_idalbum` VARCHAR(45) NULL,
+  `idartista` INT AUTO_INCREMENT NOT NULL,
   `nome` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idartista`))
 ENGINE = InnoDB;
@@ -115,7 +114,7 @@ ENGINE = InnoDB;
 -- Table `bancofeelsmusic`.`musica`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `bancofeelsmusic`.`musica` (
-  `idmusica` INT NOT NULL,
+  `idmusica` INT AUTO_INCREMENT NOT NULL,
   `titulo` VARCHAR(45) NOT NULL,
   `musica_idgenero` INT NOT NULL,
   `album_idalbum` INT NOT NULL,
@@ -133,33 +132,6 @@ CREATE TABLE IF NOT EXISTS `bancofeelsmusic`.`musica` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-
--- -----------------------------------------------------
--- Insert na tabela Sentimento
--- -----------------------------------------------------
-
-INSERT INTO `bancofeelsmusic`.`sentimento` (`idsentimento`, `nome`) VALUES ('0', 'Apaixonado ');
-INSERT INTO `bancofeelsmusic`.`sentimento` (`idsentimento`, `nome`) VALUES ('1', 'Triste ');
-INSERT INTO `bancofeelsmusic`.`sentimento` (`idsentimento`, `nome`) VALUES ('2', 'Inspirado ');
-INSERT INTO `bancofeelsmusic`.`sentimento` (`idsentimento`, `nome`) VALUES ('3', 'Com ódio ');
-INSERT INTO `bancofeelsmusic`.`sentimento` (`idsentimento`, `nome`) VALUES ('4', 'Querendo nostalgia ');
-INSERT INTO `bancofeelsmusic`.`sentimento` (`idsentimento`, `nome`) VALUES ('5', 'Querendo um momento com Deus ');
-INSERT INTO `bancofeelsmusic`.`sentimento` (`idsentimento`, `nome`) VALUES ('6', 'Vamo dale ');
-
--- -----------------------------------------------------
--- Insert na tabela Tipo usuario
--- -----------------------------------------------------
-INSERT INTO `bancofeelsmusic`.`tipo_usuario` (`idtipo_usuario`, `descricao_usuario`) VALUES ('0', '1');
-INSERT INTO `bancofeelsmusic`.`tipo_usuario` (`idtipo_usuario`, `descricao_usuario`) VALUES ('1', '2');
-
--- -----------------------------------------------------
--- Insert na tabela usuario
--- -----------------------------------------------------
-INSERT INTO `bancofeelsmusic`.`usuario` (`idusuario`, `nome`, `data_nascimento`, `email`, `senha`, `nickname`, `tipo_usuario_idtipo_usuario1`, `sentimento_idsentimento`) VALUES ('0', 'Bruna Ribeiro', '1995-09-18', 'brunaeita@hotmail.com', 'bruna', 'bruna', '0', '1');
-INSERT INTO `bancofeelsmusic`.`usuario` (`idusuario`, `nome`, `data_nascimento`, `email`, `senha`, `nickname`, `tipo_usuario_idtipo_usuario1`, `sentimento_idsentimento`) VALUES ('1', 'Guilherme Koeber', '2000-11-20', 'gk@hotmail.com', 'guilheme', 'guilherme01', '1', '3');
-INSERT INTO `bancofeelsmusic`.`usuario` (`idusuario`, `nome`, `data_nascimento`, `email`, `senha`, `nickname`, `tipo_usuario_idtipo_usuario1`, `sentimento_idsentimento`) VALUES ('2', 'Felipe Rangel', '1990-05-01', 'rangel@hotmail.com', 'felipe', 'felipe10', '0', '2');
-INSERT INTO `bancofeelsmusic`.`usuario` (`idusuario`, `nome`, `data_nascimento`, `email`, `senha`, `nickname`, `tipo_usuario_idtipo_usuario1`, `sentimento_idsentimento`) VALUES ('5', 'Roberto Casagrande', '1997-10-18', 'roberto@hotmail.com', 'casa', 'roberto', '1', '6');
-
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
