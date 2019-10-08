@@ -19,9 +19,29 @@ mysqli_close($conexao);
 <html>
   <head>
     <meta charset="utf-8">
+    <style media="screen">
+   	 body{
+   		 background-color: #171717;
+   	 }
+   	 h2{
+   		 color: #FC9F01
+   	 }
+     th{
+       color: #FC9F01
+     }
+     td,a{
+        color:#F2F2F2
+     }
+    </style>
+    <nav class="navbar navbar-light" style="background-color: #FC9F01;">
+      <a class="navbar-brand" href="#">
+        <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
+        Feels Music
+      </a>
+    </nav>
   </head>
   <body>
-    <br><br><br>
+    <br>
     <center>
       <h2>Artistas Cadastrados</h2>
       <table class="table table-bordered">
@@ -30,7 +50,6 @@ mysqli_close($conexao);
             <th scope="col">Nome</th>
             <th scope="col">Editar Artista</th>
             <th scope="col">Excluir Artista</th>
-
           </tr>
         </thead>
         <?php

@@ -27,10 +27,21 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <style media="screen">
+   	 body{
+   		 background-color: #171717;
+   	 }
+    </style>
+    <nav class="navbar navbar-light" style="background-color: #FC9F01;">
+      <a class="navbar-brand" href="#">
+      <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
+      Feels Music
+      </a>
+    </nav>
   </head>
   <body>
     <form class="form-inline" method="post">
-      <br><br><br>
+      <br><br><br><br>
       <div class="col-auto">
         <label class="sr-only" for="inlineFormInput">Nome</label>
           <input type="text" name="nome" class="form-control mb-2" id="inlineFormInput" placeholder="Nome" required>
