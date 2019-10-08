@@ -2,7 +2,7 @@
 
 $conexao = mysqli_connect("localhost","root","root","bancofeelsmusic");
 $busca = mysqli_query($conexao,"SELECT * FROM sentimento");
-$arrDados = mysqli_fetch_all($busca, MYSQLI_ASSOC);
+$arrSentimento = mysqli_fetch_all($busca, MYSQLI_ASSOC);
 mysqli_close($conexao);
 
 ?>
@@ -33,7 +33,7 @@ mysqli_close($conexao);
                     </div>
                     <p class="mb-1">Descrição sobre triste.</p>
                 </a>
-                <a href="genero.php" class="list-group-item list-group-item-action flex-column align-items-start" name="inspirado">
+                <!-- <a href="genero.php" class="list-group-item list-group-item-action flex-column align-items-start" name="inspirado">
                     <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1">Inspirado</h5>
                     </div>
@@ -62,11 +62,15 @@ mysqli_close($conexao);
                     <h5 class="mb-1">VAMO DALE</h5>
                     </div>
                     <p class="mb-1">DALE DALE DALE.</p>          
-                </a>
-                <?php 
-                    foreach($arrDados as $chave => $valor){ 
-                    echo $valor;
-                    }
+                </a> -->
+                <?php
+                foreach($arrSentimento as $chave => $valor){
+                    echo "<tr>";
+                    echo "<td>";
+                    echo "<a href='genero.php?codigo=".$valor["idsentimento"]."'>".$valor["nome"]."</a>";
+                    echo "</td>";
+                    echo "</tr>";
+                }
                 ?>
         </div> 
        <!-- </form> -->
