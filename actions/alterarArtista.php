@@ -1,8 +1,11 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<?php
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
+<?php
 $codigo = $_GET["codigo"];
 $conexao = mysqli_connect("localhost", "root", "", "bancofeelsmusic");
 
@@ -13,8 +16,6 @@ if (isset($_POST["nome"])) {
   $alterou = mysqli_affected_rows($conexao);
   if ($alterou > 0) {
       header("Location:../pages/pages_adm/visualizarArtista.php");
-      echo "<script>alert('Alterado com sucesso!')</script>";
-
 
     }
 }
@@ -29,8 +30,6 @@ mysqli_close($conexao);
      <meta charset="utf-8">
    </head>
    <body>
-
-
        <form class="form-inline" method="post">
          <br><br><br>
          <div class="col-auto">
@@ -39,8 +38,6 @@ mysqli_close($conexao);
              <input type="hidden" name="codigo" value="<?php echo $codigo; ?>"/>
          </div>
          <button type="submit" style="background-color: #FC9F01;" class="btn btn-warning mb-2">Editar Artista</button>
-
        </form>
-
    </body>
  </html>

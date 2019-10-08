@@ -44,7 +44,7 @@
 				 		</button>
 				 	</div>
 				  <?php }
-				  else if($erro == 414){?>
+				  else if($erro == 414){ ?>
 				 	 <div class="alert alert-light alert-dismissible fade show" role="alert">
 				 		<strong>Apelido e/ou senha inválidos</strong>
 				 		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
