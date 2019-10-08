@@ -33,7 +33,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `bancofeelsmusic`.`genero` (
   `idgenero` INT AUTO_INCREMENT NOT NULL,
   `nome` VARCHAR(45) NOT NULL,
-  `sentimento_idsentimento` INT NOT NULL,
+  `sentimento_idsentimento` INT AUTO_INCREMENT NOT NULL,
   PRIMARY KEY (`idgenero`),
   INDEX `fk_genero_sentimento1_idx` (`sentimento_idsentimento` ASC),
   CONSTRAINT `fk_genero_sentimento1`
