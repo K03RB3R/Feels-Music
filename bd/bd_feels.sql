@@ -21,7 +21,7 @@ USE `bancofeelsmusic` ;
 -- Table `bancofeelsmusic`.`sentimento`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `bancofeelsmusic`.`sentimento` (
-  `idsentimento` INT NOT NULL,
+  `idsentimento` INT AUTO_INCREMENT NOT NULL,
   `nome` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idsentimento`))
 ENGINE = InnoDB;
@@ -31,7 +31,7 @@ ENGINE = InnoDB;
 -- Table `bancofeelsmusic`.`genero`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `bancofeelsmusic`.`genero` (
-  `idgenero` INT NOT NULL,
+  `idgenero` INT AUTO_INCREMENT NOT NULL,
   `nome` VARCHAR(45) NOT NULL,
   `sentimento_idsentimento` INT NOT NULL,
   PRIMARY KEY (`idgenero`),
@@ -58,7 +58,7 @@ ENGINE = InnoDB;
 -- Table `bancofeelsmusic`.`usuario`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `bancofeelsmusic`.`usuario` (
-  `idusuario` INT NOT NULL AUTO_INCREMENT,
+  `idusuario` INT AUTO_INCREMENT NOT NULL,
   `nome` VARCHAR(45) NOT NULL,
   `data_nascimento` DATE NOT NULL,
   `email` VARCHAR(80) NOT NULL,
@@ -86,8 +86,7 @@ ENGINE = InnoDB;
 -- Table `bancofeelsmusic`.`artista`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `bancofeelsmusic`.`artista` (
-  `idartista` INT NOT NULL,
-  `album_idalbum` VARCHAR(45) NULL,
+  `idartista` INT AUTO_INCREMENT NOT NULL,
   `nome` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idartista`))
 ENGINE = InnoDB;
@@ -115,12 +114,12 @@ ENGINE = InnoDB;
 -- Table `bancofeelsmusic`.`musica`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `bancofeelsmusic`.`musica` (
-  `idmusica` INT NOT NULL,
+  `idmusica` INT AUTO_INCREMENT NOT NULL,
   `titulo` VARCHAR(45) NOT NULL,
   `musica_idgenero` INT NOT NULL,
   `album_idalbum` INT NOT NULL,
   PRIMARY KEY (`idmusica`),
-  INDEX `fk_musica_musica1_idx` (`musica_idgenero` ASC) ,
+  INDEX `fk_musica_musica1_idx` (`musica_idgenero` ASC),
   INDEX `fk_musica_album1_idx` (`album_idalbum` ASC) ,
   CONSTRAINT `fk_musica_musica1`
     FOREIGN KEY (`musica_idgenero`)
@@ -133,7 +132,6 @@ CREATE TABLE IF NOT EXISTS `bancofeelsmusic`.`musica` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
