@@ -8,7 +8,6 @@ if(isset($_GET["sentimento"])){
 
 	$query = mysqli_query($conexao,"INSERT INTO sentimento VALUES(DEFAULT, '$sentimento')") or die(mysqli_error($conexao));
 
-	 $quantidade = mysqli_affected_rows($conexao);
 
 	mysqli_close($conexao);
 
@@ -42,6 +41,8 @@ if(isset($_GET["sentimento"])){
         </button>
       </div>
      <?php } ?>
+     <a href="visualizarSentimento.php">Sentimento</a>
+      
 </form>
 </body>
 </html>
