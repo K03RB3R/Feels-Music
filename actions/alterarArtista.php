@@ -28,10 +28,31 @@ mysqli_close($conexao);
  <html>
    <head>
      <meta charset="utf-8">
+     <style media="screen">
+     body{
+       background-color: #171717;
+     }
+     footer.fixar-rodape{
+        border-top: 1px solid #333;
+        bottom: 0;
+        left: 0;
+        height: 30px;
+        position: fixed;
+        width: 100%;
+        background: #171717;
+        color: #ffffff;
+      }
+     </style>
+     <nav class="navbar navbar-light" style="background-color: #FC9F01;">
+       <a class="navbar-brand" href="#">
+       <img src="../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
+       Feels Music
+       </a>
+     </nav>
    </head>
    <body>
        <form class="form-inline" method="post">
-         <br><br><br>
+         <br><br><br><br>
          <div class="col-auto">
            <label class="sr-only" for="inlineFormInput">Nome</label>
              <input type="text" name="nome" class="form-control mb-2" id="inlineFormInput" placeholder="Nome" value="<?php echo $arrArtista[0]["nome"]; ?>"/>
@@ -40,4 +61,7 @@ mysqli_close($conexao);
          <button type="submit" style="background-color: #FC9F01;" class="btn btn-warning mb-2">Editar Artista</button>
        </form>
    </body>
+   <footer class="fixar-rodape">
+     Todos os direitos reservados à Feels Music INC - 2019
+   </footer>
  </html>

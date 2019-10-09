@@ -23,15 +23,22 @@ mysqli_close($conexao);
    	 body{
    		 background-color: #171717;
    	 }
-   	 h2{
+   	 h2,th{
    		 color: #FC9F01
    	 }
-     th{
-       color: #FC9F01
-     }
      td,a{
         color:#F2F2F2
      }
+     footer.fixar-rodape{
+        border-top: 1px solid #333;
+        bottom: 0;
+        left: 0;
+        height: 30px;
+        position: fixed;
+        width: 100%;
+        background: #171717;
+        color: #ffffff;
+      }
     </style>
     <nav class="navbar navbar-light" style="background-color: #FC9F01;">
       <a class="navbar-brand" href="#">
@@ -68,4 +75,8 @@ mysqli_close($conexao);
       </table>
     </center>
   </body>
+  <br>
+  <footer class="fixar-rodape">
+    Todos os direitos reservados à Feels Music INC - 2019
+  </footer>
 </html>
