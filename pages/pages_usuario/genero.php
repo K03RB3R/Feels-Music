@@ -1,11 +1,8 @@
-<?php 
-session_start();
-//   $sentimento = $_GET["id_sentimento"];
-//   echo $sentimento;
-//   $_SESSION['id_sentimento'] = $sentimento; ?>
+
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
 <html>
     <head>
@@ -16,35 +13,41 @@ session_start();
     </head>
     <body>
       <div class="list-group">
-        <a href="lista.php?id_genero=1" class="list-group-item list-group-item-action flex-column align-items-start">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">Funk</h5>
             </div>
+            <!-- <small>Donec id elit non mi porta.</small> -->
         </a>
         <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">Hip Hop/Rap</h5>
             </div>
+            <!-- <small class="text-muted">Donec id elit non mi porta.</small> -->
         </a>
         <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">Música eletrônica</h5>
             </div>
+            <!-- <small class="text-muted">Donec id elit non mi porta.</small> -->
         </a>
         <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">Pagode/Samba</h5>
             </div>
+            <!-- <small class="text-muted">Donec id elit non mi porta.</small> -->
         </a>
         <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">Rock/Pop</h5>
             </div>
+            <!-- <small class="text-muted">Donec id elit non mi porta.</small> -->
         </a>
         <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">Sertanejo</h5>
             </div>
+            <!-- <small class="text-muted">Donec id elit non mi porta.</small> -->
         </a>
 </div>        
 
