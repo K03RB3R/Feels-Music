@@ -8,7 +8,7 @@ mysqli_query($conexao, "DELETE * FROM genero WHERE idgenero =".$codigo);
 
 mysqli_close($conexao);
 
-header("Location:../pages/pages_adm/m_genero.php");
+header("Location:../pages/pages_adm/visualizargenero.php");
 
 
  ?>
