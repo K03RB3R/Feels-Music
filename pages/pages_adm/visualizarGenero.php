@@ -50,7 +50,7 @@ mysqli_close($conexao);
   <body>
     <br>
     <center>
-      <h2>Artistas Cadastrados</h2>
+      <h2>Gêneros Cadastrados</h2>
       <table class="table table-bordered">
         <thead>
           <tr>

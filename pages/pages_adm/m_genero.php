@@ -19,9 +19,11 @@ if (isset($_POST["nome"])){
   $query =  mysqli_query($conexao, "INSERT INTO genero VALUES(DEFAULT, '$nome', $sentimento_idsentimento) ") or die (mysqli_error($conexao));
 
   $quantidade = mysqli_affected_rows($conexao);
-
+  header("Location:../actions/excluirgenero.php");
 
   mysqli_close($conexao);
+
+
 
    echo "<script>history.pushState({}, '', '')</script>";
 
