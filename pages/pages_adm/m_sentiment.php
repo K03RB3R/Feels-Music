@@ -1,3 +1,21 @@
+<?php 
+$quantidade = 0;
+
+if(isset($_GET["sentimento"])){
+	$sentimento = $_GET["sentimento"];
+	
+	$conexao = mysqli_connect("localhost", "root", "root", "bancofeelsmusic");
+
+	$query = mysqli_query($conexao,"INSERT INTO sentimento VALUES(DEFAULT, '$sentimento')") or die(mysqli_error($conexao));
+
+
+	mysqli_close($conexao);
+
+
+	echo "<script>history.pushState({}, '', '')</script>";
+
+}
+?>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -6,54 +24,25 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 
-<?php
-
-$quantidade = 0;
-
-if (isset($_POST["nome"])){
-   $nome = $_POST["nome"];
-   $sentimento_idsentimento = $_POST["sentimento_idsentimento"];
-
-  $conexao = mysqli_connect("localhost","root", "root", "bancofeelsmusic");
-
-  $query =  mysqli_query($conexao, "INSERT INTO genero VALUES(DEFAULT, '$nome', $sentimento_idsentimento) ") or die (mysqli_error($conexao));
-
-  $quantidade = mysqli_affected_rows($conexao);
-
-
-  mysqli_close($conexao);
-
-   echo "<script>history.pushState({}, '', '')</script>";
-
-
-}
- ?>
-<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <form class="form-inline" method="post">
+<body>
+<form method="get" class="form-inline">
 
-      <div class="col-auto">
-        <label for="inlineFormImput" class="sr-only">Genero</label>
-      <input type="text" class="form-control mb-2"  id="inlineFormImput" placeholder="" name="nome" required>
+  <div class="form-group mx-sm-3 mb-2">
+    <label  class="sr-only"></label>
+    Sentimento:<input type="text" class="form-control"  placeholder="" name="sentimento" required>
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">Adicionar</button>
+	<?php if ($quantidade >=1){ ?>
+       <div class="alert alert-light alert-dismissible fade show" role="alert">
+         <strong>Artista cadastrado com sucesso!</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-      <div class="col-auto">
-        <label for="inlineFormImput" class="sr-only">idsentimento</label>
-      <input type="number" class="form-control mb-2"  id="inlineFormImput" placeholder="id" name="sentimento_idsentimento" required>
-      </div>
-      <button type="submit" class="btn warning mb-2">Adicionar</button>
-      <?php if ($quantidade >=1){ ?>
-           <div class="alert alert-light alert-dismissible fade show" role="alert">
-             <strong>Genero cadastrado com sucesso!</strong>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-         <?php } ?>
-    </form>
-  </body>
+     <?php } ?>
+     <a href="visualizarSentimento.php">Sentimento</a>
+      
+</form>
+</body>
 </html>
