@@ -3,7 +3,6 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <?php
-
 $conexao = mysqli_connect("localhost", "root", "", "bancofeelsmusic");
 
 $busca = mysqli_query($conexao, "SELECT * FROM artista");
@@ -11,7 +10,6 @@ $busca = mysqli_query($conexao, "SELECT * FROM artista");
 $arrArtista = mysqli_fetch_all($busca, MYSQLI_ASSOC);
 
 mysqli_close($conexao);
-
 
  ?>
 

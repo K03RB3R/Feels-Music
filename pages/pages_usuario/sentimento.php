@@ -61,7 +61,7 @@ mysqli_close($conexao);
                     <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1">VAMO DALE</h5>
                     </div>
-                    <p class="mb-1">DALE DALE DALE.</p>          
+                    <p class="mb-1">DALE DALE DALE.</p>
                 </a> -->
                 <?php
                 foreach($arrSentimento as $chave => $valor){
@@ -72,7 +72,7 @@ mysqli_close($conexao);
                     echo "</tr>";
                 }
                 ?>
-        </div> 
+        </div>
        <!-- </form> -->
     </body>
 </html>

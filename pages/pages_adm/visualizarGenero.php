@@ -4,7 +4,7 @@
 
 <?php
 
-$conexao = mysqli_connect("localhost", "root", "root", "bancofeelsmusic");
+$conexao = mysqli_connect("localhost", "root", "", "bancofeelsmusic");
 
 $busca = mysqli_query($conexao, "SELECT * FROM genero");
 
@@ -76,6 +76,7 @@ mysqli_close($conexao);
       </table>
     </center>
   </body>
+  <br>
   <footer class="fixar-rodape">
     Todos os direitos reservados à Feels Music INC - 2019
   </footer>

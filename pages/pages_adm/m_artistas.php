@@ -22,7 +22,7 @@
      //Script que impede o refresh post
      echo "<script>history.pushState({}, '', '')</script>";
  }
- ?>
+  ?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
