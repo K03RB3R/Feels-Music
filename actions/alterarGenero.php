@@ -8,25 +8,29 @@
 
 
 
+
 <?php
 $codigo = isset($_GET["codigo"]) ? $_GET["codigo"] : "";
 $conexao = mysqli_connect("localhost","root","root", "bancofeelsmusic");
 
-if(isset($_GET["genero"])){
-echo $_GET["genero"];
-    $genero = $_GET["genero"];
+if(isset($_POST["genero"])){
+echo $_POST["genero"];
+    $genero = $_POST["genero"];
     mysqli_query($conexao, "UPDATE genero SET nome = '$genero' WHERE idgenero = $codigo") or die(mysqli_error($conexao));
     $alterou = mysqli_affected_rows($conexao);
     if($alterou > 0){
-        echo "<script>alert('Alterado com sucesso!')</script>";
+      header("Location:../pages/pages_adm/visualizarGenero.php");
+      echo "<script>alert('Alterado com sucesso!')</script>";
+
+
     }
+
 }
 $busca = mysqli_query($conexao, "SELECT * FROM genero WHERE idgenero = $codigo") or die(mysqli_error($conexao));
 $arrGenero = mysqli_fetch_all($busca, MYSQLI_ASSOC);
 
 
 mysqli_close($conexao);
-
 
 ?>
 
@@ -60,7 +64,7 @@ mysqli_close($conexao);
           <br><br><br><br>
           <div class="col-auto">
             <label class="sr-only" for="inlineFormInput">Nome</label>
-              <input type="text" name="nome" class="form-control mb-2" id="inlineFormInput" placeholder="Nome" value="<?php echo $arrGenero[0]["nome"]; ?>"/>
+              <input type="text" name="genero" class="form-control mb-2" id="inlineFormInput" placeholder="Nome" value="<?php echo $arrGenero[0]["nome"]; ?>"/>
               <input type="hidden" name="codigo" value="<?php echo $codigo; ?>"/>
           </div>
           <button type="submit" style="background-color: #FC9F01;" class="btn btn-warning mb-2">Editar Gênero</button>

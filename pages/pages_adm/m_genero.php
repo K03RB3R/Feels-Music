@@ -12,11 +12,11 @@ $quantidade = 0;
 
 if (isset($_POST["nome"])){
    $nome = $_POST["nome"];
-   $sentimento_idsentimento = $_POST["sentimento_idsentimento"];
+   $genero_idgenero = $_POST["genero_idgenero"];
 
   $conexao = mysqli_connect("localhost","root", "root", "bancofeelsmusic");
 
-  $query =  mysqli_query($conexao, "INSERT INTO genero VALUES(DEFAULT, '$nome', $sentimento_idsentimento) ") or die (mysqli_error($conexao));
+  $query =  mysqli_query($conexao, "INSERT INTO genero VALUES(DEFAULT, '$nome', $genero_idgenero) ") or die (mysqli_error($conexao));
 
   $quantidade = mysqli_affected_rows($conexao);
   header("Location:../actions/excluirgenero.php");
@@ -44,8 +44,8 @@ if (isset($_POST["nome"])){
       <input type="text" class="form-control mb-2"  id="inlineFormImput" placeholder="" name="nome" required>
       </div>
       <div class="col-auto">
-        <label for="inlineFormImput" class="sr-only">idsentimento</label>
-      <input type="number" class="form-control mb-2"  id="inlineFormImput" placeholder="id" name="sentimento_idsentimento" required>
+        <label for="inlineFormImput" class="sr-only">idgenero</label>
+      <input type="number" class="form-control mb-2"  id="inlineFormImput" placeholder="id" name="genero_idgenero" required>
       </div>
       <button type="submit" class="btn warning mb-2">Adicionar</button>
       <?php if ($quantidade >=1){ ?>
