@@ -1,10 +1,10 @@
 <?php
+
 $codigo = $_GET["codigo"];
 
 $conexao = mysqli_connect("localhost","root","root","bancofeelsmusic");
 
-mysqli_query($conexao, "DELETE FROM genero WHERE idGenero =".$codigo);
-
+mysqli_query($conexao, "DELETE FROM genero WHERE idgenero =".$codigo);
 
 mysqli_close($conexao);
 
