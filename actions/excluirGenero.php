@@ -2,9 +2,7 @@
 
 $codigo = $_GET["codigo"];
 
-echo $codigo;
-
-$conexao = mysqli_connect("localhost", "root", "", "bancofeelsmusic");
+$conexao = mysqli_connect("localhost","root","root","bancofeelsmusic");
 
 mysqli_query($conexao, "DELETE FROM genero WHERE idgenero =".$codigo);
 
