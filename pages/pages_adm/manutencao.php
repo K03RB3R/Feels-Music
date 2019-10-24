@@ -2,13 +2,6 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<?php
-$conexao = mysqli_connect("localhost","root","","bancofeelsmusic");
-$query = mysqli_query($conexao,"SELECT * FROM usuario");
-$arrFM = mysqli_fetch_all($query, MYSQLI_ASSOC);
-mysqli_close($conexao);
-
-?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -53,8 +46,19 @@ mysqli_close($conexao);
             <th scope="col">E-mail</th>
             <th scope="col">Senha</th>
             <th scope="col">Nickname</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Excluir</th>
+
           </tr>
         </thead>
+
+        <?php
+          $conexao = mysqli_connect("localhost","root","root","bancofeelsmusic");
+          $query = mysqli_query($conexao,"SELECT * FROM usuario");
+          $arrFM = mysqli_fetch_all($query, MYSQLI_ASSOC);
+          mysqli_close($conexao);
+
+        ?>
         <?php
         foreach ($arrFM as $key => $value){
             echo "<tr>";
@@ -65,6 +69,32 @@ mysqli_close($conexao);
                 echo "<td>". $value["nickname"] . "</td>";
             echo  "</tr><br>";
         }
+        ?>
+
+        <?php
+          $codigo = isset($_GET["codigo"]) ? $_GET["codigo"] : "";
+          $conexao = mysqli_connect("localhost","root","root", "bancofeelsmusic");
+
+          if(isset($_POST["nome"])){
+              $nome = $_POST["nome"];
+              $dataNasc = $_POST["data_nascimento"];
+              $email = $_POST["email"];
+              $senha = $_POST["senha"];
+              $nickname = $_POST["nickname"];
+
+              mysqli_query($conexao, "UPDATE USUARIO SET NOME = '$nome',DATA_NASCIMENTO = $dataNasc, EMAIL='$email',SENHA='$senha',NICKNAME='$nickname' WHERE TIPO_USUARIO_IDTIPO_USUARIO1 = $codigo") or die(mysqli_error($conexao));
+              $alterou = mysqli_affected_rows($conexao);
+              if($alterou > 0){
+                  echo "<script>alert('Alterado com sucesso!')</script>";
+              }
+          }
+          $busca = mysqli_query($conexao, "SELECT * FROM USUARIO WHERE TIPO_USUARIO_IDTIPO_USUARIO1 = $codigo") or die(mysqli_error($conexao));
+          $arrFM = mysqli_fetch_all($busca, MYSQLI_ASSOC);
+
+
+          mysqli_close($conexao);
+
+
         ?>
        </table>
       </center>
