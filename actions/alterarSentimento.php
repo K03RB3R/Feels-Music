@@ -1,25 +1,3 @@
-<?php
-$codigo = isset($_GET["codigo"]) ? $_GET["codigo"] : "";
-$conexao = mysqli_connect("localhost","root","", "bancofeelsmusic");
-
-if(isset($_GET["sentimento"])){
-    echo $_GET["sentimento"];
-	$sentimento = $_GET["sentimento"];
-	mysqli_query($conexao, "UPDATE sentimento SET nome = '$sentimento' WHERE idsentimento = $codigo") or die(mysqli_error($conexao));
-	$alterou = mysqli_affected_rows($conexao);
-	if($alterou > 0){
-		echo "<script>alert('Alterado com sucesso!')</script>";
-	}
-}
-$busca = mysqli_query($conexao, "SELECT * FROM sentimento WHERE idsentimento = $codigo") or die(mysqli_error($conexao));
-$arrSentimento = mysqli_fetch_all($busca, MYSQLI_ASSOC);
-
-
-mysqli_close($conexao);
-
-
-?>
-
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -27,14 +5,61 @@ mysqli_close($conexao);
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-<html>
-<head></head>
-<body>
+<?php
+$codigo = isset($_GET["codigo"]) ? $_GET["codigo"] : "";
+$conexao = mysqli_connect("localhost","root","", "bancofeelsmusic");
 
-<form action="" method="get">
-Nome:<input name="sentimento" type="text" value="<?php echo $arrSentimento[0]["nome"]; ?>"/><br>
-<input type="hidden" name="codigo" value="<?php echo $codigo; ?>"/>
-<input type="submit" value="Editar"/>
-</form>
+
+if(isset($_POST["sentimento"])){
+   $sentimento = $_POST["sentimento"];
+
+
+  	mysqli_query($conexao, "UPDATE sentimento SET nome = '$sentimento' WHERE idsentimento = $codigo");
+  	$alterou = mysqli_affected_rows($conexao);
+    if ($alterou > 0) {
+        header("Location:../pages/pages_adm/visualizarSentimento.php");
+      }
+}
+
+$busca = mysqli_query($conexao, "SELECT * FROM sentimento WHERE idsentimento = $codigo") or die(mysqli_error($conexao));
+$arrSentimento = mysqli_fetch_all($busca, MYSQLI_ASSOC);
+mysqli_close($conexao);
+
+?>
+
+<html>
+<head>
+  <style media="screen">
+  body{
+    background-color: #171717;
+  }
+  footer.fixar-rodape{
+     border-top: 1px solid #333;
+     bottom: 0;
+     left: 0;
+     height: 30px;
+     position: fixed;
+     width: 100%;
+     background: #171717;
+     color: #ffffff;
+   }
+  </style>
+  <nav class="navbar navbar-light" style="background-color: #FC9F01;">
+    <a class="navbar-brand" href="#">
+    <img src="../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
+    Feels Music
+    </a>
+  </nav>
+</head>
+<body>
+  <form class="form-inline" method="post">
+    <br><br><br><br>
+    <div class="col-auto">
+      <label class="sr-only" for="inlineFormInput">Nome</label>
+        <input type="text" name="sentimento" class="form-control mb-2" id="inlineFormInput" placeholder="Sentimento" value="<?php echo $arrSentimento[0]["nome"]; ?>"/>
+        <input type="hidden" name="codigo" value="<?php echo $codigo; ?>"/>
+    </div>
+    <button type="submit" style="background-color: #FC9F01;" class="btn btn-warning mb-2">Editar Artista</button>
+  </form>
 </body>
 </html>

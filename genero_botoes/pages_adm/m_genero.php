@@ -9,16 +9,15 @@
 <?php
   $quantidade = 0;
 
+  if (isset($_POST["nome"])){
+     $nome = $_POST["nome"];
+     $sentimento_idsentimento = $_POST["sentimento_idsentimento"];
 
-if (isset($_POST["nome"])){
-   $nome = $_POST["nome"];
-   $genero_idgenero = $_POST["genero_idgenero"];
+     $conexao = mysqli_connect("localhost","root", "", "bancofeelsmusic");
+     $query =  mysqli_query($conexao, "INSERT INTO genero VALUES(DEFAULT, '$nome', $sentimento_idsentimento) ") or die (mysqli_error($conexao));
 
-  $conexao = mysqli_connect("localhost","root", "root", "bancofeelsmusic");
-
-  $query =  mysqli_query($conexao, "INSERT INTO genero VALUES(DEFAULT, '$nome', $genero_idgenero) ") or die (mysqli_error($conexao));
-
-  $quantidade = mysqli_affected_rows($conexao);
+     $quantidade = mysqli_affected_rows($conexao);
+     // header("Location:../../actions/excluirgenero.php");
 
     mysqli_close($conexao);
     //Script que impede o refresh post
@@ -59,8 +58,8 @@ if (isset($_POST["nome"])){
       <input type="text" class="form-control mb-2"  id="inlineFormImput" placeholder="Nome" name="nome" required>
       </div>
       <div class="col-auto">
-        <label for="inlineFormImput" class="sr-only">idgenero</label>
-      <input type="number" class="form-control mb-2"  id="inlineFormImput" placeholder="id" name="genero_idgenero" required>
+        <label for="inlineFormImput" class="sr-only">idsentimento</label>
+      <input type="number" class="form-control mb-2"  id="inlineFormImput" placeholder="id" name="sentimento_idsentimento" required>
       </div>
       <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar Artista</button>
 
