@@ -7,7 +7,7 @@
     <!-- <nav class="navbar navbar-light" style="background-color: #FC9F01;">
         <h3>Feels Music</h3>
         
-            <!-- <ul>Sentimento</ul>
+            <ul>Sentimento</ul>
             <ul>Gênero</ul>
             <ul>Artista</ul> -->
             <!-- <a class="navbar-brand" href="m_sentiment.php">Sentimento</a>
