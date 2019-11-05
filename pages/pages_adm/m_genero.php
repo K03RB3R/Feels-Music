@@ -62,7 +62,7 @@ if (isset($_POST["nome"])){
         <label for="inlineFormImput" class="sr-only">idgenero</label>
       <input type="number" class="form-control mb-2"  id="inlineFormImput" placeholder="id" name="genero_idgenero" required>
       </div>
-      <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar Artista</button>
+      <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar Gênero</button>
 
       <?php if ($quantidade >=1){ ?>
            <div class="alert alert-light alert-dismissible fade show" role="alert">
