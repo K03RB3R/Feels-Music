@@ -36,6 +36,10 @@ if (isset ($_GET['excluir'])){
 		$senha = $_POST["senha"];
 		$nick =  $_POST["nickname"];
 
+<<<<<<< Updated upstream
+=======
+	$conexao = mysqli_connect("localhost", "root", "", "bancofeelsmusic");
+>>>>>>> Stashed changes
 
 		$conexao = mysqli_connect("localhost", "root", "", "bancofeelsmusic");
 
