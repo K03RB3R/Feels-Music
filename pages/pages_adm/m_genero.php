@@ -14,7 +14,7 @@ if (isset($_POST["nome"])){
    $nome = $_POST["nome"];
    $genero_idgenero = $_POST["genero_idgenero"];
 
-  $conexao = mysqli_connect("localhost","root", "root", "bancofeelsmusic");
+  $conexao = mysqli_connect("localhost","root", "", "bancofeelsmusic");
 
   $query =  mysqli_query($conexao, "INSERT INTO genero VALUES(DEFAULT, '$nome', $genero_idgenero) ") or die (mysqli_error($conexao));
 

@@ -9,7 +9,7 @@ if(isset($_POST["nome"])){
 	$nick =  $_POST["nickname"];
 
 
-	$conexao = mysqli_connect("localhost", "root", "root", "bancofeelsmusic");
+	$conexao = mysqli_connect("localhost", "root", "", "bancofeelsmusic");
 
 
 	$query = mysqli_query($conexao,"INSERT INTO usuario (NOME, DATA_NASCIMENTO, EMAIL, SENHA, NICKNAME, TIPO_USUARIO_IDTIPO_USUARIO1,SENTIMENTO_IDSENTIMENTO) VALUES('$nome', '$dataNasc', '$email', '$senha','$nick',1,1)") or die(mysqli_error($conexao));

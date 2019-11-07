@@ -4,7 +4,7 @@
 
 <?php
 
-$conexao = mysqli_connect("localhost", "root", "root", "bancofeelsmusic");
+$conexao = mysqli_connect("localhost", "root", "", "bancofeelsmusic");
 
 $busca = mysqli_query($conexao, "SELECT * FROM genero");
 

@@ -11,7 +11,7 @@
 
 <?php
 $codigo = isset($_GET["codigo"]) ? $_GET["codigo"] : "";
-$conexao = mysqli_connect("localhost","root","root", "bancofeelsmusic");
+$conexao = mysqli_connect("localhost","root","", "bancofeelsmusic");
 
 if(isset($_POST["genero"])){
 echo $_POST["genero"];
