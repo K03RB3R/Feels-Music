@@ -44,7 +44,7 @@
 				<a class="navbar-brand" href="#">
 				<img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
 				Feels Music
-        <h2>Alterar Álbum</h2>
+        <h2>Cadastrar Álbum</h2>
 				</a>
 			</nav>
 		</head>
@@ -55,20 +55,24 @@
 	  		<div class="form-group mx-sm-3 mb-2">
 	    <label  class="sr-only">Imagem</label>
 	    <input type="text" class="form-control"  placeholder="Imagem Álbum" name="album" required>
-	  </div>
+	     </div>
 
     <div class="form-group mx-sm-3 mb-2">
   <label  class="sr-only"></label>
   <input type="text" class="form-control"  placeholder="Ano" name="album" required>
-</div>
+    </div>
     <br><br><br><br>
-
     <div class="form-group mx-sm-3 mb-2">
   <label  class="sr-only"></label>
   <input type="text" class="form-control"  placeholder="Artista" name="album" required>
-</div>
+    </div>
     <br><br><br><br>
-    <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Alterar</button>
+    <div class="form-group mx-sm-3 mb-2">
+  <label  class="sr-only"></label>
+  <input type="text" class="form-control"  placeholder="Gênero" name="album" required>
+    </div>
+    <br><br><br><br>
+    <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar</button>
 
 		<?php if ($quantidade >=1){ ?>
 			<div class="alert alert-light alert-dismissible fade show" role="alert">

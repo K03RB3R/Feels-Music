@@ -53,11 +53,14 @@ $arrAlbum = mysqli_fetch_all($busca, MYSQLI_ASSOC);
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th scope="col">Álbum</th>
-            <th scope="col">Ano de Laçamento</th>
-            <th scope="col">Artista</th>
-            <th scope="col">Editar</th>
-            <th scope="col">Excluir</th>
+
+          <th><div scope="col" align="center">Álbum</div></th>
+            <th><div scope="col" align="center">Ano de Laçamento</div></th>
+            <th><div scope="col" align="center">Artista</div></th>
+            <th><div scope="col" align="center">Gênero</div></th>
+            <th><div scope="col" align="center">Editar</div></th>
+            <th><div scope="col" align="center">Excluir</div></th>
+            
 
           </tr>
         </thead>
