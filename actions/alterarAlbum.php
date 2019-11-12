@@ -54,7 +54,7 @@ mysqli_close($conexao);
     <br><br><br><br>
     <div class="col-auto">
       <label class="sr-only" for="inlineFormInput">Ano de lançamento</label>
-        <input type="text" name="album" class="form-control mb-2" id="inlineFormInput" placeholder="Album" value="<?php echo $arrAlbum[0]["data_de_lancamento"]; ?>"/>
+        <input type="text" name="album" class="form-control mb-2" id="inlineFormInput" placeholder="Album" value="<?php echo $arrAlbum[0]["ano_de_lancamento"]; ?>"/>
         <input type="hidden" name="codigo" value="<?php echo $codigo; ?>"/>
     </div>
     <button type="submit" style="background-color: #FC9F01;" class="btn btn-warning mb-2">Editar Álbum</button>

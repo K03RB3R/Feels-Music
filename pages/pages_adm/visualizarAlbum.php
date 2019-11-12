@@ -12,7 +12,8 @@ $busca = mysqli_query($conexao,"SELECT * FROM album");
 
 $arrAlbum = mysqli_fetch_all($busca, MYSQLI_ASSOC);
 
-// $quantidade = mysqli_affected_rows($conexao);
+mysqli_close($conexao);
+
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -21,6 +22,7 @@ $arrAlbum = mysqli_fetch_all($busca, MYSQLI_ASSOC);
     <style media="screen">
    	 body{
    		 background-color: #171717;
+
    	 }
    	 h2,th{
    		 color: #FC9F01
@@ -37,6 +39,7 @@ $arrAlbum = mysqli_fetch_all($busca, MYSQLI_ASSOC);
         width: 100%;
         background: #171717;
         color: #ffffff;
+
       }
     </style>
     <nav class="navbar navbar-light" style="background-color: #FC9F01;">
@@ -54,27 +57,28 @@ $arrAlbum = mysqli_fetch_all($busca, MYSQLI_ASSOC);
         <thead>
           <tr>
 
-          <th><div scope="col" align="center">Álbum</div></th>
+            <th><div scope="col" align="center">Álbum</div></th>
             <th><div scope="col" align="center">Ano de Laçamento</div></th>
             <th><div scope="col" align="center">Artista</div></th>
             <th><div scope="col" align="center">Gênero</div></th>
             <th><div scope="col" align="center">Editar</div></th>
             <th><div scope="col" align="center">Excluir</div></th>
-            
+
 
           </tr>
         </thead>
         <?php
           foreach ($arrAlbum as $chave => $valor) {
             echo "<tr>";
-            echo "<td>".$valor["nome"]."</td>";
+            echo "<td>".$valor["album"]."</td>";
             echo "<td>".$valor["ano de lancamento"]."</td>";
+            echo "<td>".$valor["genero"]."</td>";
             echo "<td>".$valor["artista"]."</td>";
             echo "<td>";
-              echo "<a href='../../actions/alterarAlbum.php?codigo=".$valor["idalbum"]."'>Editar</a>";
+            echo "<a href='../../actions/alterarAlbum.php?codigo=".$valor["idalbum"]."'>Editar</a>";
             echo "</td>";
             echo "<td>";
-              echo "<a href='../../actions/excluirAlbum.php?codigo=".$valor["idalbum"]."'>Excluir</a>";
+            echo "<a href='../../actions/excluirAlbum.php?codigo=".$valor["idalbum"]."'>Excluir</a>";
             echo "</td>";
             echo "</tr>";
           }
