@@ -9,8 +9,10 @@
 $codigo = isset($_GET["codigo"]) ? $_GET["codigo"] : "";
 $conexao = mysqli_connect("localhost","root","", "bancofeelsmusic");
 
+
 if(isset($_POST["sentimento"])){
    $sentimento = $_POST["sentimento"];
+
 
   	mysqli_query($conexao, "UPDATE sentimento SET nome = '$sentimento' WHERE idsentimento = $codigo");
   	$alterou = mysqli_affected_rows($conexao);

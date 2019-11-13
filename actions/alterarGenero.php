@@ -5,10 +5,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-
-
-
-
 <?php
 $codigo = isset($_GET["codigo"]) ? $_GET["codigo"] : "";
 $conexao = mysqli_connect("localhost","root","", "bancofeelsmusic");
@@ -22,13 +18,11 @@ echo $_POST["genero"];
       header("Location:../pages/pages_adm/visualizarGenero.php");
       echo "<script>alert('Alterado com sucesso!')</script>";
 
-
     }
 
 }
 $busca = mysqli_query($conexao, "SELECT * FROM genero WHERE idgenero = $codigo") or die(mysqli_error($conexao));
 $arrGenero = mysqli_fetch_all($busca, MYSQLI_ASSOC);
-
 
 mysqli_close($conexao);
 
