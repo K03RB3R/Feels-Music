@@ -1,10 +1,3 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
 <?php
 $conexao = mysqli_connect("localhost", "root", "", "bancofeelsmusic");
 
@@ -14,7 +7,16 @@ $arrAlbum = mysqli_fetch_all($busca, MYSQLI_ASSOC);
 
 mysqli_close($conexao);
 
+
 ?>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -58,9 +60,8 @@ mysqli_close($conexao);
           <tr>
 
             <th><div scope="col" align="center">Álbum</div></th>
-            <th><div scope="col" align="center">Ano de Laçamento</div></th>
+            <th><div scope="col" align="center">Ano</div></th>
             <th><div scope="col" align="center">Artista</div></th>
-            <th><div scope="col" align="center">Gênero</div></th>
             <th><div scope="col" align="center">Editar</div></th>
             <th><div scope="col" align="center">Excluir</div></th>
 
@@ -70,10 +71,9 @@ mysqli_close($conexao);
         <?php
           foreach ($arrAlbum as $chave => $valor) {
             echo "<tr>";
-            echo "<td>".$valor["album"]."</td>";
-            echo "<td>".$valor["ano de lancamento"]."</td>";
-            echo "<td>".$valor["genero"]."</td>";
-            echo "<td>".$valor["artista"]."</td>";
+            echo "<td>".$valor["nome"]."</td>";
+            echo "<td>".$valor["ano_lancamento"]."</td>";
+            echo "<td>".$valor["artista_idartista"]."</td>";
             echo "<td>";
             echo "<a href='../../actions/alterarAlbum.php?codigo=".$valor["idalbum"]."'>Editar</a>";
             echo "</td>";

@@ -10,12 +10,12 @@ $codigo = isset($_GET["codigo"]) ? $_GET["codigo"] : "";
 $conexao = mysqli_connect("localhost","root","", "bancofeelsmusic");
 
 if(isset($_POST["album"])){
-   $sentimento = $_POST["album"];
+   $album = $_POST["album"];
 
   	mysqli_query($conexao, "UPDATE album SET nome = '$album' WHERE idalbum = $codigo");
   	$alterou = mysqli_affected_rows($conexao);
     if ($alterou > 0) {
-        header("Location:../pages/pages_adm/visualizarAlbum.php");
+    header("Location:../pages/pages_adm/visualizarAlbum.php");
       }
 }
 
@@ -53,11 +53,25 @@ mysqli_close($conexao);
   <form class="form-inline" method="post">
     <br><br><br><br>
     <div class="col-auto">
+      <label class="sr-only" for="inlineFormInput"></label>
+        <input type="text" name="album" class="form-control mb-2" id="inlineFormInput" placeholder="Album" value="<?php echo $arrAlbum[0]["nome"]; ?>"/>
+        <input type="hidden" name="codigo" value="<?php echo $codigo; ?>"/>
+
+    </div>
+
+      <br><br><br><br>
+    <div class="col-auto">
       <label class="sr-only" for="inlineFormInput">Ano de lançamento</label>
-        <input type="text" name="album" class="form-control mb-2" id="inlineFormInput" placeholder="Album" value="<?php echo $arrAlbum[0]["ano_de_lancamento"]; ?>"/>
+        <input type="date" name="album" class="form-control mb-2" id="inlineFormInput" placeholder="Album" value="<?php echo $arrAlbum[0]["ano_lancamento"]; ?>"/>
         <input type="hidden" name="codigo" value="<?php echo $codigo; ?>"/>
     </div>
-    <button type="submit" style="background-color: #FC9F01;" class="btn btn-warning mb-2">Editar Álbum</button>
+
+    <div class="col-auto">
+      <label class="sr-only" for="inlineFormInput"></label>
+        <input type="text" name="text" class="form-control mb-2" id="inlineFormInput" placeholder="Artista" value="<?php echo $arrAlbum[0]["artista_idartista"]; ?>"/>
+        <input type="hidden" name="codigo" value="<?php echo $codigo; ?>"/>
+    </div>
+    <button type="submit" style="background-color: #FC9F01;" class="btn btn-warning mb-2">Alterar</button>
   </form>
 </body>
 </html>
