@@ -41,16 +41,7 @@
 				 background: #171717;
 				 color: #ffffff;
 			 }
-			 h1{
-				 border-top: 1px solid #333;
- 				bottom: 0;
- 				left: 0;
- 				height: 30px;
- 				position: fixed;
- 				width: 100%;
- 				background: #171717;
- 				color: #ffffff; 
-			 }
+
 			</style>
 			<nav class="navbar navbar-light" style="background-color: #FC9F01;">
 				<a class="navbar-brand" href="#">
@@ -61,7 +52,7 @@
 			</nav>
 		</head>
 		<body>
-			<h1>Cadastrar Álbum</h1>
+		
 			<form method="POST" class="form-inline">
 				<br><br><br><br>
 	  		<div class="form-group mx-sm-3 mb-2">
@@ -81,7 +72,7 @@
     </div>
     <br><br><br><br>
 
-    <br><br><br><br>
+
     <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar</button>
 
 		<?php if ($quantidade >=1){ ?>
