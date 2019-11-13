@@ -55,7 +55,7 @@ if (isset($_POST["nome"])){
     <form class="form-inline" method="post">
       <br><br><br><br>
       <div class="col-auto">
-        <label for="inlineFormImput" class="sr-only">Genero</label>
+        <label for="inlineFormImput" class="sr-only">Gênero</label>
       <input type="text" class="form-control mb-2"  id="inlineFormImput" placeholder="Nome" name="nome" required>
       </div>
       <div class="col-auto">
@@ -66,7 +66,7 @@ if (isset($_POST["nome"])){
 
       <?php if ($quantidade >=1){ ?>
            <div class="alert alert-light alert-dismissible fade show" role="alert">
-             <strong>Genero cadastrado com sucesso!</strong>
+             <strong>Gênero cadastrado com sucesso!</strong>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
