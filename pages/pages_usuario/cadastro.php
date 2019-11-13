@@ -33,8 +33,6 @@ if (isset ($_GET['excluir'])){
 		$senha = $_POST["senha"];
 		$nick =  $_POST["nickname"];
 
-	$conexao = mysqli_connect("localhost", "root", "", "bancofeelsmusic");
-
 
 		$conexao = mysqli_connect("localhost", "root", "", "bancofeelsmusic");
 
