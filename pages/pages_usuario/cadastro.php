@@ -36,10 +36,6 @@ if (isset ($_GET['excluir'])){
 		$senha = $_POST["senha"];
 		$nick =  $_POST["nickname"];
 
-<<<<<<< Updated upstream
-=======
-	$conexao = mysqli_connect("localhost", "root", "", "bancofeelsmusic");
->>>>>>> Stashed changes
 
 		$conexao = mysqli_connect("localhost", "root", "", "bancofeelsmusic");
 
@@ -100,5 +96,3 @@ if (isset ($_GET['excluir'])){
 
 </body>
 </html>
-
-<br /><b>Notice</b>:  Undefined variable: usuario in <b>C:\xampp\htdocs\Feels-Music\pages\pages_usuario\cadastro.php</b> on line <b>94</b><br />
