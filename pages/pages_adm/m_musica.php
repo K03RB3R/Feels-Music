@@ -10,7 +10,7 @@
   $quantidade = 0;
 
 
-if (isset($_POST["nome"])){
+if (isset($_POST["titulo"])){
    $titulo = $_POST["titulo"];
    $musica_idgenero = $_POST["musica_idgenero"];
    $album_idalbum = $_POST["album_idalbum"];
@@ -62,7 +62,22 @@ if (isset($_POST["nome"])){
 
       <div class="col-auto">
         <label for="inlineFormImput" class="sr-only">musica_idgenero</label>
-      <input type="number" class="form-control mb-2"  id="inlineFormImput" placeholder="idgenero" name="musica_idgenero" required>
+         <select name="select_musica_idgenero">
+           <option>Selecione..</option>
+
+         <?php
+         $conexao = mysqli_connect("localhost","root", "", "bancofeelsmusic");
+
+         $result_musica_idgenero = mysqli_query("SELECT * FROM musica");
+         $result_musica_idgenero = mysqli_query($conn, $result_musica_idgenero);
+
+         while ($row_musica_idgenero = mysqli_fetch_assoc($result_musica_idgenero) ) { ?>
+               <option value="<?php echo $row_musica_idgenero['idmusica'];?>"><?php echo $row_musica_idgenero['titulo'];?>"><?php echo $row_musica_idgenero['musica_idgenero'];?>"><?php echo $row_musica_idgenero['album_idalbum'];?>
+               </option><?php
+          }
+          ?>
+        </select><br><br>
+
       </div>
 
       <div class="col-auto">
