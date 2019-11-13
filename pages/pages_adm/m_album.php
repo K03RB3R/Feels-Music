@@ -46,7 +46,7 @@
 				<a class="navbar-brand" href="#">
 				<img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
 				Feels Music
-        <h2>Cadastrar Álbum</h2>
+        <h2></h2>
 				</a>
 			</nav>
 		</head>
@@ -56,10 +56,10 @@
 				<br><br><br><br>
 	  		<div class="form-group mx-sm-3 mb-2">
 	    <label  class="sr-only">album</label>
-	    <input type="text" class="form-control"  placeholder="Imagem Álbum" name="album" required>
+	    <input type="text" class="form-control"  placeholder="Álbum" name="album" required>
 	     </div>
 
-			 <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Editar Imagem</button>
+
     <div class="form-group mx-sm-3 mb-2">
   <label  class="sr-only"></label>
   <input type="date" class="form-control"  placeholder="Ano" name="ano" required>
