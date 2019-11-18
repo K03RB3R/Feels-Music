@@ -100,6 +100,7 @@ if (isset($_POST["titulo"])){
             }
             ?>
           </select>
+          <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar Gênero</button>
 
         </div
 
