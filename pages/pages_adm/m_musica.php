@@ -8,14 +8,14 @@
 
 <?php
   $quantidade = 0;
+  $conexao = mysqli_connect("localhost","root", "", "bancofeelsmusic");
 
 
-if (isset($_POST["nome"])){
+if (isset($_POST["titulo"])){
    $titulo = $_POST["titulo"];
    $musica_idgenero = $_POST["musica_idgenero"];
    $album_idalbum = $_POST["album_idalbum"];
 
-  $conexao = mysqli_connect("localhost","root", "", "bancofeelsmusic");
 
   $query =  mysqli_query($conexao, "INSERT INTO musica VALUES(DEFAULT, '$titulo', $musica_idgenero, $album_idalbum) ") or die (mysqli_error($conexao));
 
@@ -59,17 +59,50 @@ if (isset($_POST["nome"])){
         <label for="inlineFormImput" class="sr-only">Musica</label>
       <input type="text" class="form-control mb-2"  id="inlineFormImput" placeholder="Nome" name="titulo" required>
       </div>
-
       <div class="col-auto">
-        <label for="inlineFormImput" class="sr-only">musica_idgenero</label>
-      <input type="number" class="form-control mb-2"  id="inlineFormImput" placeholder="idgenero" name="musica_idgenero" required>
+         <label for="inlineFormImput" class="sr-only">musica_idgenero</label>
+         <select name="musica_idgenero">
+           <option>Selecione o Gênero</option>
+
+         <?php
+
+         $musica_idgenero = "SELECT * FROM genero";
+         $musica_idgenero = mysqli_query($conexao, $musica_idgenero);
+
+         while ($row_musica_idgenero = mysqli_fetch_assoc($musica_idgenero) ) {
+         ?>
+           <option value="<?php echo $row_musica_idgenero['idgenero'];?>">
+             <?php echo $row_musica_idgenero['nome'];?>
+           </option>
+         <?php
+          }
+          ?>
+        </select>
+
       </div>
 
       <div class="col-auto">
         <label for="inlineFormImput" class="sr-only">album_idalbum</label>
-      <input type="number" class="form-control mb-2"  id="inlineFormImput" placeholder="idalbum" name="album_idalbum" required>
-      </div>
-      <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar Música</button>
+           <select name="album_idalbum">
+             <option>Selecione o Album</option>
+
+           <?php
+
+           $album_idalbum = "SELECT * FROM album";
+           $album_idalbum = mysqli_query($conexao, $album_idalbum);
+
+           while ($row_album_idalbum = mysqli_fetch_assoc($album_idalbum) ) {
+           ?>
+             <option value="<?php echo $row_album_idalbum['idalbum'];?>">
+               <?php echo $row_album_idalbum['nome'];?>
+             </option>
+           <?php
+            }
+            ?>
+          </select>
+          <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar Gênero</button>
+
+        </div
 
       <?php if ($quantidade >0){ ?>
            <div class="alert alert-light alert-dismissible fade show" role="alert">

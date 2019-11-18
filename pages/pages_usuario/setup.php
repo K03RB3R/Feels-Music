@@ -17,9 +17,9 @@ $("document").ready(function(){
             alert(msg);
             $("span").html(objUsuario.sentimento);
         })
-        .fail(function(jqXHR, textstatus, msg){
-            alert(msg);
-        })
+        //.fail(function(jqXHR, textstatus, msg){
+           // alert(msg);
+        //})
     });
 
 });

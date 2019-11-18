@@ -47,7 +47,11 @@
 				<a class="navbar-brand" href="#">
 				<img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
 				Feels Music
+<<<<<<< HEAD
 
+=======
+        <h2></h2>
+>>>>>>> master
 				</a>
 			</nav>
 		</head>
