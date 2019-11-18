@@ -61,7 +61,7 @@ if (isset($_POST["titulo"])){
       </div>
       <div class="col-auto">
          <label for="inlineFormImput" class="sr-only">musica_idgenero</label>
-         <select name="select_musica_idgenero">
+         <select name="musica_idgenero">
            <option>Selecione o Gênero</option>
 
          <?php
@@ -83,7 +83,7 @@ if (isset($_POST["titulo"])){
 
       <div class="col-auto">
         <label for="inlineFormImput" class="sr-only">album_idalbum</label>
-           <select name="select_album_idalbum">
+           <select name="album_idalbum">
              <option>Selecione o Album</option>
 
            <?php
@@ -100,6 +100,7 @@ if (isset($_POST["titulo"])){
             }
             ?>
           </select>
+          <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar Gênero</button>
 
         </div
 
