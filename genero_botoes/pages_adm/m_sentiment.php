@@ -6,6 +6,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="../css/main.css">
 <?php
+
+	include("../../includes/nav.php");
 	$quantidade = 0;
 
 		if(isset($_POST["sentimento"])){
@@ -21,6 +23,7 @@
 			echo "<script>history.pushState({}, '', '')</script>";
  }
 ?>
+<<<<<<< Updated upstream:genero_botoes/pages_adm/m_sentiment.php
 	<!DOCTYPE html>
 	<html>
 		<head>
@@ -46,6 +49,17 @@
 				Feels Music
 				</a>
 			</nav>
+=======
+
+
+
+
+<link rel="stylesheet" href="../css/main.css">
+	<!DOCTYPE html>
+	<html>
+		<head>
+		
+>>>>>>> Stashed changes:pages/pages_adm/m_album.php
 		</head>
 		<body>
 			<form method="POST" class="form-inline">
