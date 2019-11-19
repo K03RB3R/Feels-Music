@@ -48,7 +48,7 @@ if (isset($_POST["titulo"])){
     <nav class="navbar navbar-light" style="background-color: #FC9F01;">
       <a class="navbar-brand" href="#">
       <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
-       Feels Music
+       Feels Music - Música
       </a>
     </nav>
   </head>
@@ -61,7 +61,7 @@ if (isset($_POST["titulo"])){
       </div>
       <div class="col-auto">
          <label for="inlineFormImput" class="sr-only">musica_idgenero</label>
-         <select name="musica_idgenero">
+         <select class="form-control mb-2" name="musica_idgenero">
            <option>Selecione o Gênero</option>
 
          <?php
@@ -82,7 +82,7 @@ if (isset($_POST["titulo"])){
       </div>
       <div class="col-auto">
         <label for="inlineFormImput" class="sr-only">album_idalbum</label>
-           <select name="album_idalbum">
+           <select class="form-control mb-2" name="album_idalbum">
              <option>Selecione o Album</option>
 
            <?php

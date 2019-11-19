@@ -46,7 +46,7 @@
     <nav class="navbar navbar-light" style="background-color: #FC9F01;">
       <a class="navbar-brand" href="#">
       <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
-      Feels Music
+      Feels Music - Artista
       </a>
     </nav>
   </head>
