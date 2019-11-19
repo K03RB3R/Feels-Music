@@ -80,7 +80,6 @@ if (isset($_POST["titulo"])){
         </select>
 
       </div>
-
       <div class="col-auto">
         <label for="inlineFormImput" class="sr-only">album_idalbum</label>
            <select name="album_idalbum">
@@ -99,6 +98,7 @@ if (isset($_POST["titulo"])){
            <?php
             }
             ?>
+
           </select>
           <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar Música</button>
 
