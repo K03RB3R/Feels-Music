@@ -30,18 +30,36 @@ if (isset($_POST["nome"])){
     <form class="form-inline" method="post">
       <br><br><br><br>
       <div class="col-auto">
-        <label for="inlineFormImput" class="sr-only">Genero</label>
+        <label for="inlineFormImput" class="sr-only">Gênero</label>
       <input type="text" class="form-control mb-2"  id="inlineFormImput" placeholder="Nome" name="nome" required>
       </div>
       <div class="col-auto">
-        <label for="inlineFormImput" class="sr-only">idgenero</label>
-      <input type="number" class="form-control mb-2"  id="inlineFormImput" placeholder="id" name="genero_idgenero" required>
+         <label for="inlineFormImput" class="sr-only">musica_idgenero</label>
+         <select class="form-control mb-2" name="genero_idgenero">
+           <option>Selecione o Sentimento</option>
+
+         <?php
+         $conexao = mysqli_connect("localhost","root", "", "bancofeelsmusic");
+         $musica_idsentimento = "SELECT * FROM sentimento";
+         $musica_idsentimento = mysqli_query($conexao, $musica_idsentimento);
+
+         while ($row_musica_idsentimento = mysqli_fetch_assoc($musica_idsentimento) ) {
+         ?>
+           <option value="<?php echo $row_musica_idsentimento['idsentimento'];?>">
+             <?php echo $row_musica_idsentimento['nome'];?>
+           </option>
+         <?php
+          }
+          ?>
+        </select>
+
       </div>
+
       <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar Gênero</button>
 
       <?php if ($quantidade >=1){ ?>
            <div class="alert alert-light alert-dismissible fade show" role="alert">
-             <strong>Genero cadastrado com sucesso!</strong>
+             <strong>Gênero cadastrado com sucesso!</strong>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>

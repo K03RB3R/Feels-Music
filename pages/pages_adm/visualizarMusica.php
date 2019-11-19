@@ -3,15 +3,13 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <?php
-
 $conexao = mysqli_connect("localhost", "root", "", "bancofeelsmusic");
 
-$busca = mysqli_query($conexao, "SELECT * FROM genero");
+$busca = mysqli_query($conexao, "SELECT * FROM musica");
 
-$arrGenero = mysqli_fetch_all($busca, MYSQLI_ASSOC);
+$arrMusica = mysqli_fetch_all($busca, MYSQLI_ASSOC);
 
 mysqli_close($conexao);
-
 
  ?>
 
@@ -20,12 +18,12 @@ mysqli_close($conexao);
   <head>
     <meta charset="utf-8">
     <style media="screen">
-    body{
-    background-color: #171717;
-    }
-    h2,th{
-    color: #FC9F01
-    }
+   	 body{
+   		 background-color: #171717;
+   	 }
+   	 h2,th{
+   		 color: #FC9F01
+   	 }
      td,a{
         color:#F2F2F2
      }
@@ -50,25 +48,24 @@ mysqli_close($conexao);
   <body>
     <br>
     <center>
-      <h2>Gêneros Cadastrados</h2>
+      <h2>Músicas Cadastradas</h2>
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th scope="col">Nome</th>
-            <th scope="col">Editar Gênero</th>
-            <th scope="col">Excluir Gênero</th>
+            <th scope="col">Título</th>
+            <th scope="col">Editar Título</th>
+            <th scope="col">Excluir Título</th>
           </tr>
         </thead>
         <?php
-
-          foreach ($arrGenero as $chave => $valor) {
+          foreach ($arrMusica as $chave => $valor) {
             echo "<tr>";
-            echo "<td>".$valor["nome"]."</td>";
+            echo "<td>".$valor["titulo"]."</td>";
             echo "<td>";
-              echo "<a href='../../actions/alterarGenero.php?codigo=".$valor["idgenero"]."'>Editar</a>";
+              echo "<a href='../../actions/alterarTitulo.php?codigo=".$valor["idmusica"]."'>Editar</a>";
             echo "</td>";
             echo "<td>";
-              echo "<a href='../../actions/excluirGenero.php?codigo=".$valor["idgenero"]."'>Excluir</a>";
+              echo "<a href='../../actions/excluirTitulo.php?codigo=".$valor["idmusica"]."'>Excluir</a>";
             echo "</td>";
             echo "</tr>";
           }
