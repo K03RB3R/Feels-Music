@@ -60,7 +60,7 @@ if (isset($_POST["nome"])){
       </div>
       <div class="col-auto">
          <label for="inlineFormImput" class="sr-only">musica_idgenero</label>
-         <select class="form-control mb-2" name="musica_idgenero">
+         <select class="form-control mb-2" name="genero_idgenero">
            <option>Selecione o Sentimento</option>
 
          <?php
