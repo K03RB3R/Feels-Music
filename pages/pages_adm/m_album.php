@@ -70,10 +70,27 @@
   <input type="date" class="form-control"  placeholder="Ano" name="ano" required>
     </div>
     <br><br><br><br>
-    <div class="form-group mx-sm-3 mb-2">
-  <label  class="sr-only"></label>
-  <input type="text" class="form-control"  placeholder="Artista" name="artista" required>
-    </div>
+		<div class="col-auto">
+			 <label for="inlineFormImput" class="sr-only">musica_idartista</label>
+			 <select class="form-control mb-2" name="musica_idartista">
+				 <option>Selecione o Artista</option>
+
+			 <?php
+			 $conexao = mysqli_connect("localhost","root", "", "bancofeelsmusic");
+			 $artista_idartista = "SELECT * FROM artista";
+			 $artista_idartista = mysqli_query($conexao, $artista_idartista);
+
+			 while ($row_artista_idartista = mysqli_fetch_assoc($artista_idartista) ) {
+			 ?>
+				 <option value="<?php echo $row_artista_idartista['idartista'];?>">
+					 <?php echo $row_artista_idartista['nome'];?>
+				 </option>
+			 <?php
+				}
+				?>
+			</select>
+
+		</div>
     <br><br><br><br>
 
 

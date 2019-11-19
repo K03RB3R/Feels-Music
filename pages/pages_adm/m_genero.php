@@ -64,7 +64,7 @@ if (isset($_POST["nome"])){
            <option>Selecione o Sentimento</option>
 
          <?php
-$conexao = mysqli_connect("localhost","root", "", "bancofeelsmusic");
+         $conexao = mysqli_connect("localhost","root", "", "bancofeelsmusic");
          $musica_idsentimento = "SELECT * FROM sentimento";
          $musica_idsentimento = mysqli_query($conexao, $musica_idsentimento);
 
