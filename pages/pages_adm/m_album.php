@@ -41,17 +41,22 @@
 				 background: #171717;
 				 color: #ffffff;
 			 }
+
 			</style>
 			<nav class="navbar navbar-light" style="background-color: #FC9F01;">
 				<a class="navbar-brand" href="#">
 				<img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
 				Feels Music
+<<<<<<< HEAD
+
+=======
         <h2></h2>
+>>>>>>> master
 				</a>
 			</nav>
 		</head>
 		<body>
-
+		
 			<form method="POST" class="form-inline">
 				<br><br><br><br>
 	  		<div class="form-group mx-sm-3 mb-2">
@@ -71,7 +76,7 @@
     </div>
     <br><br><br><br>
 
-    <br><br><br><br>
+
     <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar</button>
 
 		<?php if ($quantidade >=1){ ?>
