@@ -100,21 +100,21 @@ if (isset($_POST["titulo"])){
             }
             ?>
           </select>
-          <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar Gênero</button>
+          <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar Música</button>
 
         </div
 
-      <?php if ($quantidade >0){ ?>
-           <div class="alert alert-light alert-dismissible fade show" role="alert">
-             <strong>Música cadastrado com sucesso!</strong>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-      <?php } ?>
-    </form>
-  </body>
-  <footer class="fixar-rodape">
-    Todos os direitos reservados à Feels Music INC - 2019
-  </footer>
-</html>
+        <?php if ($quantidade >=1){ ?>
+             <div class="alert alert-light alert-dismissible fade show" role="alert">
+               <strong>Gênero cadastrado com sucesso!</strong>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+        <?php } ?>
+      </form>
+    </body>
+    <footer class="fixar-rodape">
+      Todos os direitos reservados à Feels Music INC - 2019
+    </footer>
+    </html>
