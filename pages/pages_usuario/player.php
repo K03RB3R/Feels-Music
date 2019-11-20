@@ -1,7 +1,7 @@
 <html>
     <head>
         <link href="../../css/mp3.css" rel="stylesheet"/>
-        <script src="jquery-1.10.2.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     <body>
         <div id="bg">
@@ -39,7 +39,12 @@
         var song = new Audio();
         var currentSong = 0;    
         
-        window.onload = playSong;   
+        $(document).ready(function(){
+            playSong();
+
+
+        })
+
         
         function playSong(){
             

@@ -2,5 +2,4 @@
     include("../../includes/nav.php");
 ?>
 
-
-<h1>TIRA CARAI</h1>
+<center><h1 style="color: orange; margin-top;">Bem vindo adm!</h1></center>
