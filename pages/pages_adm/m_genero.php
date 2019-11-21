@@ -45,11 +45,20 @@ if (isset($_POST["nome"])){
      }
     </style>
     <nav class="navbar navbar-light" style="background-color: #FC9F01;">
-      <a class="navbar-brand" href="#">
-      <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
-       Feels Music - Gênero
-      </a>
+      <div class="d-flex justify-content-between w-100">
+        <div class="">
+          <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
+          <a class="navbar-brand" href="#">	Feels Music - Álbum	</a>
+        </div>
+        <div class="">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
+          </button>
+        </div>
+      </div>
     </nav>
+  </head>
+  <body>
   </head>
   <body>
     <form class="form-inline" method="post">
