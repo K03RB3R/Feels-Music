@@ -74,28 +74,6 @@
         ?>
 
         <?php
-          // $codigo = isset($_GET["codigo"]) ? $_GET["codigo"] : "";
-          // $conexao = mysqli_connect("localhost","root","", "bancofeelsmusic");
-
-          // if(isset($_POST["nome"])){
-          //     $nome = $_POST["nome"];
-          //     $dataNasc = $_POST["data_nascimento"];
-          //     $email = $_POST["email"];
-          //     $senha = $_POST["senha"];
-          //     $nickname = $_POST["nickname"];
-
-          //     mysqli_query($conexao, "UPDATE USUARIO SET NOME = '$nome',DATA_NASCIMENTO = $dataNasc, EMAIL='$email',SENHA='$senha',NICKNAME='$nickname' WHERE TIPO_USUARIO_IDTIPO_USUARIO1 = $codigo") or die(mysqli_error($conexao));
-          //     $alterou = mysqli_affected_rows($conexao);
-          //     if($alterou > 0){
-          //         echo "<script>alert('Alterado com sucesso!')</script>";
-          //     }
-          // }
-          // $busca = mysqli_query($conexao, "SELECT * FROM USUARIO WHERE TIPO_USUARIO_IDTIPO_USUARIO1 = $codigo") or die(mysqli_error($conexao));
-          // $arrFM = mysqli_fetch_all($busca, MYSQLI_ASSOC);
-
-
-          // mysqli_close($conexao);
-
 
         ?>
        </table>

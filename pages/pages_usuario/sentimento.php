@@ -27,7 +27,7 @@ mysqli_close($conexao);
                     </div>
                     <p class="mb-1">Descrição sobre apaixonado.</p>
                 </a>
-                <a href="../../assets/includes/validacao_sentimento.php?cod=2" class="list-group-item list-group-item-action flex-column align-items-start" name="triste">
+                <a href="genero.php?id_sentimento=2" class="list-group-item list-group-item-action flex-column align-items-start" name="triste">
                     <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1">Triste</h5>
                     </div>
