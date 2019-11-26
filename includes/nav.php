@@ -58,6 +58,11 @@
                             <a class="dropdown-item" href="visualizarSentimento.php">Sentimento</a>
                             <a class="dropdown-item" href="visualizarGenero.php">Gênero</a>
                             <a class="dropdown-item" href="manutencao.php">Usuários</a>
+                            <a class="dropdown-item"href="http://localhost/feels-music/">Sair</a>
+                              <!-- <button class="btn btn-outline-dark my-2 my-sm-0" type="submit"> Sair -->
+                            <!-- <img src="../../assets/imgs/Icon.png" width="30" height="30" class="d-inline-block align-top" alt=""> -->
+                          </button>
+                        </a>
                         </div>
                     </li>
                 </ul>

@@ -42,8 +42,12 @@ if (isset($_POST["titulo"])){
     </style>
     <nav class="navbar navbar-light" style="background-color: #FC9F01;">
       <a class="navbar-brand" href="#">
-      <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
-       Feels Music - Música
+      <!-- <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt=""> -->
+        Músicas
+        <a href="http://localhost/feels-music/">
+      <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Sair
+        <img src="../../assets/imgs/Icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      </button>
       </a>
     </nav>
   </head>
@@ -66,8 +70,8 @@ if (isset($_POST["titulo"])){
       </div>
       <div class="col-auto">
          <label for="inlineFormImput" class="sr-only">musica_idgenero</label>
-         <select class="form-control mb-2" name="musica_idgenero">
-           <option>Selecione o Gênero</option>
+         <select class="form-control mb-2" name="musica_idgenero"required>
+           <option value="">Selecione o Gênero</option>
 
          <?php
 
@@ -87,8 +91,8 @@ if (isset($_POST["titulo"])){
       </div>
       <div class="col-auto">
         <label for="inlineFormImput" class="sr-only">album_idalbum</label>
-           <select class="form-control mb-2" name="album_idalbum">
-             <option>Selecione o Album</option>
+           <select class="form-control mb-2" name="album_idalbum" required>
+             <option value="">Selecione o Album</option>
 
            <?php
 

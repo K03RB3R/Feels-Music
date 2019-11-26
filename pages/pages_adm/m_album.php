@@ -46,8 +46,8 @@
 			<nav class="navbar navbar-light" style="background-color: #FC9F01;">
 				<div class="d-flex justify-content-between w-100">
 					<div class="">
-						<img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
-						<a class="navbar-brand" href="#">	Feels Music - Álbum	</a>
+						<!-- <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt=""> -->
+						<a class="navbar-brand" href="#">	Álbum	</a>
 					</div>
 					<div class="">
 						<a href="http://localhost/feels-music/">
