@@ -42,8 +42,6 @@ mysqli_close($conexao);
         height: 50px;
         width: 360px;
         text-align: center;
-
-
      }
      .linhaSentimento:hover, a:hover{
         background: #0D0D0D;
@@ -89,4 +87,5 @@ mysqli_close($conexao);
   <footer class="fixar-rodape">
     Todos os direitos reservados à Feels Music INC - 2019
   </footer>
-</html>
+<html>
+  
