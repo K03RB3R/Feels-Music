@@ -1,17 +1,15 @@
 <html>
     <head>
         <link href="../../css/mp3.css" rel="stylesheet"/>
-        <script src="jquery-1.10.2.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
-    <body>
-        <div id="bg">
-            <div id="blackLayer"></div>
-            <img src="../../assets/imgs/Poster1.jpeg"/>
-        </div>
+    <body style="background-color:  #171717;">
+      
+
 
         <div id="main">
             <div id="image">
-                <img src="../../assets/imgs/Poster1.jpeg"/>
+                <img src="../../assets/imgs/gg.gif"/>
             </div>
             <div id="player">
                 <div id="songTitle">Demo</div>
@@ -31,16 +29,21 @@
     <script type="text/javascript">
 
         var songs = ["../../assets/musics/It's So Easy - Guns N' Roses.mp3","../../assets/musics/Sunshine - Cat Dealers.mp3","../../assets/musics/Turn Of The Lights - Chris Lake.mp3"];
-        var poster = ["../../assets/imgs/Poster1.jpeg","../../assets/imgs/Poster2.jpeg","../../assets/imgs/Poster3.jpg"];
-
+        var poster = ["../../assets/imgs/wave.gif","../../assets/imgs/wave.gif"];
+        
         var songTitle = document.getElementById("songTitle");
         var fillBar = document.getElementById("fill");
 
         var song = new Audio();
-        var currentSong = 0;
+        var currentSong = 0;    
+        
+        $(document).ready(function(){
+            playSong();
 
-        window.onload = playSong;
 
+        })
+
+        
         function playSong(){
 
             song.src = songs[currentSong];
