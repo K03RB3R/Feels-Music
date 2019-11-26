@@ -1,62 +1,64 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
 <!DOCTYPE html>
 <html>
-    
 <head>
-	<title>Login - Feels Music</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+ <title>Feels Music</title>
+ <meta charset='utf-8'/>
+ <meta name='author' content="Bruna Ribeiro, Felipe Rangel, Guilherme Koerber e Roberto Casagrande.">
+ <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+ <style media="screen">
+	 body{
+		 background-color: #171717;
+	 }
+	 h1{
+		 color: #FC9F01
+	 }
+ </style>
 </head>
-<!--Coded with love by Mutiullah Samim-->
 <body>
-	<div class="container h-100">
-		<div class="d-flex justify-content-center h-100">
-			<div class="user_card">
-				<div class="d-flex justify-content-center">
-					<div class="brand_logo_container">
-						<img src="../../assets/imgs/Icon.png" class="brand_logo" alt="Logo">
-					</div>
-				</div>
-				<div class="d-flex justify-content-center form_container">
-					<form>
-						<div class="input-group mb-3">
-							<div class="input-group-append">
-								<span class="input-group-text"><i class="fas fa-user"></i></span>
-							</div>
-							<input type="text" name="" class="form-control input_user" value="" placeholder="apelido">
-						</div>
-						<div class="input-group mb-2">
-							<div class="input-group-append">
-								<span class="input-group-text"><i class="fas fa-key"></i></span>
-							</div>
-							<input type="password" name="" class="form-control input_pass" value="" placeholder="senha">
-						</div>
-						<div class="form-group">
-							<div class="custom-control custom-checkbox">
-								<input type="checkbox" class="custom-control-input" id="customControlInline">
-								<label class="custom-control-label" for="customControlInline">Lembrar-me</label>
-							</div>
-						</div>
-					</form>
-				</div>
-				<div class="d-flex justify-content-center mt-3 login_container">
-					<button type="button" name="button" class="btn login_btn">Entrar</button>
-				</div>
-				<div class="mt-4">
-					<div class="d-flex justify-content-center links">
-						Não possui uma conta? <a href="#" class="ml-2">Cadastre-se</a>
-					</div>
-					<div class="d-flex justify-content-center links">
-						<a href="#">Esqueceu a sua senha?</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+ <div class="container">
+	 <div class="mx-auto" style="width:200px;">
+		 <br>
+		 <img class="logo" src="../../assets/imgs/Icon.png"/ width="220" height="270">
+		 <h1> Login </h1>
+		 <form action="../../includes/validarLogin.php" name="formlogin" method="post">
+			 <div class="form-group">
+					<input type="text" class="form-control" id="login" name="login" placeholder="Apelido" required>
+			 </div>
+			 <div class="form-group">
+					<input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required>
+			 </div>
+				 <button type="submit" style="background-color: #FC9F01;" class="btn btn-warning">Entrar</button>
+         <a href="cadastro.php" style="background-color: #FC9F01;" class="btn btn-warning" type="button" name="cadastrar">Cadastrar-se</a>
+				 <?php
+				 if(isset($_GET["erro"])){
+				  $erro = $_GET["erro"];
+
+				  if($erro == 254){
+				 	 ?>
+				 	 <div class="alert alert-light alert-dismissible fade show" role="alert">
+				 		 <strong>Apelido e/ou senha inválidos</strong>
+				 		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				 			<span aria-hidden="true">&times;</span>
+				 		</button>
+				 	</div>
+				  <?php }
+				  else if($erro == 414){ ?>
+				 	 <div class="alert alert-light alert-dismissible fade show" role="alert">
+				 		<strong>Apelido e/ou senha inválidos</strong>
+				 		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				 			<span aria-hidden="true">&times;</span>
+				 		</button>
+				 	</div>
+				  <?php }
+				 }
+				 ?>
+		 </form>
+	 </div>
+ </div>
+ <footer>
+ </footer>
 </body>
 </html>
