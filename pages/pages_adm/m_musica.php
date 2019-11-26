@@ -29,7 +29,7 @@ if (isset($_POST["titulo"])){
   <body>
      <br>
      <!-- O tipo de encoding de dados, enctype, DEVE ser especificado abaixo -->
-     <form enctype="multipart/form-data" action="<?php $_FILES['userfile']['name']?>" method="POST">
+     <form enctype="multipart/form-data" action="../pages_adm/m_musica.php" method="POST">
      <!-- MAX_FILE_SIZE deve preceder o campo input -->
      <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
      <!-- O Nome do elemento input determina o nome da array $_FILES -->
