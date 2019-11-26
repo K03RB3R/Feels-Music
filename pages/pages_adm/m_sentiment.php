@@ -42,7 +42,7 @@ include("../../includes/nav.php");
 				<!-- <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt=""> -->
 				 Sentimento
 				 <a href="http://localhost/feels-music/">
-			 <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Sair
+			 <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Sair<br>
 				 <img src="../../assets/imgs/Icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
 			 </button>
 				</a>
