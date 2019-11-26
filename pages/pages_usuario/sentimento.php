@@ -32,13 +32,33 @@ mysqli_close($conexao);
        background: #171717;
        color: #ffffff;
      }
-     button, a{
-       background: #FC9F01;
-       color: #0D0D0D;
-       border: #FC9F01;
-       
+     .linhaSentimento{
+        background: #171717;
+        color: #0D0D0D;
+        border: #FC9F01;
+        cursor: pointer;
+        border: 1px solid #FC9F01;
+        border-radius: 20px;
+        height: 50px;
+        width: 360px;
+        text-align: center;
+
 
      }
+     .linhaSentimento:hover, a:hover{
+        background: #0D0D0D;
+        color: #FC9F01;
+        text-decoration: none;
+
+     }
+
+      a{
+        color: #FC9F01;
+    text-align: center;
+    font-size: 25px;
+
+      }
+      }
     </style>
     <nav class="navbar navbar-light" style="background-color: #FC9F01;">
       <a class="navbar-brand" href="#">
@@ -48,17 +68,24 @@ mysqli_close($conexao);
     </nav>
   </head>
   <body>
-    <br><br>
+    <br><br><br>
     <?php
     foreach($arrSentimento as $chave => $valor){
-        echo "<tr>";
-        echo "<td><br><br>";
-        echo "<button> <a href='genero.php?codigo=".$valor["idsentimento"]."'>".$valor["nome"]."</a></button>";
-        echo "</td>";
-        echo "</tr>";
+        echo "<div class='mx-auto linhaSentimento'>";
+        echo "<a href='genero.php?codigo=".$valor["idsentimento"]."'>".$valor["nome"]."</a>";
+        echo "</div></br>";
+
     }
     ?>
+    <script>
+    $(".linhaGenero").click(function(){
+      this.children[0].click();
+
+    })
+
+</script>
   </body>
+  </br></br>
   <footer class="fixar-rodape">
     Todos os direitos reservados à Feels Music INC - 2019
   </footer>

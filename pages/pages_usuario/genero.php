@@ -33,19 +33,23 @@ mysqli_close($conexao);
        color: #ffffff;
      }
      .linhaGenero{
-       background: #ffffff4f;
+        background: #171717;
         color: #0D0D0D;
         border: #FC9F01;
         cursor: pointer;
-        border-bottom: 1px solid black;
+        border: 1px solid #FC9F01;
+        border-radius: 20px;
         height: 50px;
-        width: 350px;
+        width: 360px;
         text-align: center;
+
+
      }
      .linhaGenero:hover, a:hover{
         background: #0D0D0D;
         color: #FC9F01;
         text-decoration: none;
+
      }
 
       a{
@@ -53,6 +57,7 @@ mysqli_close($conexao);
     text-align: center;
     font-size: 25px;
 
+      }
       }
 
     </style>
@@ -64,21 +69,23 @@ mysqli_close($conexao);
     </nav>
   </head>
   <body>
+    <br><br><br>
     <?php
     foreach($arrGenero as $chave => $valor){
         echo "<div class='mx-auto linhaGenero'>";
         echo "<a href='player.php?codigo=".$valor["idgenero"]."'>".$valor["nome"]."</a>";
-        echo "</div>";
+        echo "</div></br>";
     }
     ?>
-<script>
-$(".linhaGenero").click(function(){
-  this.children[0].click();
+    <script>
+    $(".linhaGenero").click(function(){
+      this.children[0].click();
 
-})
+    })
 
 </script>
   </body>
+  </br></br>
   <footer class="fixar-rodape">
     Todos os direitos reservados à Feels Music INC - 2019
   </footer>
