@@ -7,6 +7,6 @@ mysqli_query($conexao,"DELETE FROM sentimento WHERE idSentimento=".$codigo);
 
 mysqli_close($conexao);
 
-header("Location:../pages/pages_adm/m_sentiment.php");
+header("Location:../pages/pages_adm/visualizarSentimento.php");
 
 ?>

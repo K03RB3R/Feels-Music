@@ -1,12 +1,7 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="../css/main.css">
 
 <?php
+include("../../includes/nav.php");
   $quantidade = 0;
   $conexao = mysqli_connect("localhost","root", "", "bancofeelsmusic");
 
@@ -53,6 +48,16 @@ if (isset($_POST["titulo"])){
     </nav>
   </head>
   <body>
+     <br>
+     <!-- O tipo de encoding de dados, enctype, DEVE ser especificado abaixo -->
+     <form enctype="multipart/form-data" action="<?php $_FILES['userfile']['name']?>" method="POST">
+     <!-- MAX_FILE_SIZE deve preceder o campo input -->
+     <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+     <!-- O Nome do elemento input determina o nome da array $_FILES -->
+     Selecione o arquivo MP3: <input name="userfile" type="file" />
+     <input type="submit" value="Enviar arquivo" />
+     </form>
+
     <form class="form-inline" method="post">
       <br><br><br><br>
       <div class="col-auto">
@@ -113,6 +118,8 @@ if (isset($_POST["titulo"])){
             </div>
         <?php } ?>
       </form>
+
+
     </body>
     <footer class="fixar-rodape">
       Todos os direitos reservados à Feels Music INC - 2019
