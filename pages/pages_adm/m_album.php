@@ -64,7 +64,7 @@
 			<form method="POST" class="form-inline">
 				<br><br><br><br>
 	  		<div class="form-group mx-sm-3 mb-2">
-	    <label  class="sr-only">album</label>
+	    <label  class="sr-only">Álbum</label>
 	    <input type="text" class="form-control"  placeholder="Álbum" name="album" required>
 	     </div>
 

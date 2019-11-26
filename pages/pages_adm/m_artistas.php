@@ -64,7 +64,7 @@
         <label class="sr-only" for="inlineFormInput">Nome</label>
           <input type="text" name="nome" class="form-control mb-2" id="inlineFormInput" placeholder="Nome" required>
       </div>
-      <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar Artista</button>
+      <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar</button>
 
       <?php if ($quantidade >=1){ ?>
         <div class="alert alert-light alert-dismissible fade show" role="alert">

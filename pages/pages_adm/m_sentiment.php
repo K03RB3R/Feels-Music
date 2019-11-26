@@ -55,7 +55,7 @@ include("../../includes/nav.php");
 	    <label  class="sr-only"></label>
 	    <input type="text" class="form-control"  placeholder="Sentimento" name="sentimento" required>
 	  </div>
-		<button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar Sentimento</button>
+		<button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar</button>
 
 		<?php if ($quantidade >=1){ ?>
 			<div class="alert alert-light alert-dismissible fade show" role="alert">

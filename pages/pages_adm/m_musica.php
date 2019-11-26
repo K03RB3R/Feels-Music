@@ -109,7 +109,7 @@ if (isset($_POST["titulo"])){
             ?>
 
           </select>
-          <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar Música</button>
+          <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar</button>
 
         </div
 
