@@ -51,7 +51,7 @@
 					</div>
 					<div class="">
 						<a href="http://localhost/feels-music/">
-							<button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Sair<br>
+							<button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Sair
 								<img src="../../assets/imgs/Icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
 							</button>
 						</a>

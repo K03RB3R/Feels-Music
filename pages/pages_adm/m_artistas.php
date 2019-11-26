@@ -50,8 +50,8 @@
           <a class="navbar-brand" href="#">	Feels Music - Artista	</a>
         </div>
         <div class="">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sair
-            <img src="../../assets/imgs/Icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
           </button>
         </div>
       </div>
