@@ -1,9 +1,6 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <?php
-
+	include("../../includes/nav.php");
 $conexao = mysqli_connect("localhost", "root", "", "bancofeelsmusic");
 
 $busca = mysqli_query($conexao, "SELECT * FROM genero");
@@ -40,12 +37,7 @@ mysqli_close($conexao);
         color: #ffffff;
       }
     </style>
-    <nav class="navbar navbar-light" style="background-color: #FC9F01;">
-      <a class="navbar-brand" href="#">
-        <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
-        Feels Music
-      </a>
-    </nav>
+    
   </head>
   <body>
     <br>
