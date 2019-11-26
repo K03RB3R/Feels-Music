@@ -21,23 +21,24 @@ if (isset ($_GET['excluir'])){
 			$alterou = mysqli_affected_rows($conexao);
 			if($alterou > 0){
 				echo "<script>alert('Alterado com sucesso!')</script>";
+				header ('location: ../pages_adm/manutencao.php');
 			}
 		}
 		$busca = mysqli_query($conexao, "SELECT * FROM USUARIO WHERE IDUSUARIO = $codigo") or die(mysqli_error($conexao));
-		$arrFM = mysqli_fetch_all($busca, MYSQLI_ASSOC);
+		$arrFM = mysqli_fetch_all($busca, MYSQLI_ASSOC)[0];
 		mysqli_close($conexao);
 	}else{
 		$nome = $_POST["nome"];
 		$dataNasc = $_POST["data_nascimento"];
 		$email = $_POST["email"];
 		$senha = $_POST["senha"];
-		$nick =  $_POST["nickname"];
+		$nickname =  $_POST["nickname"];
 
 
 		$conexao = mysqli_connect("localhost", "root", "", "bancofeelsmusic");
 
 
-		$query = mysqli_query($conexao,"INSERT INTO usuario (NOME, DATA_NASCIMENTO, EMAIL, SENHA, NICKNAME, TIPO_USUARIO_IDTIPO_USUARIO1,SENTIMENTO_IDSENTIMENTO) VALUES('$nome', '$dataNasc', '$email', '$senha','$nick',1,1)") or die(mysqli_error($conexao));
+		$query = mysqli_query($conexao,"INSERT INTO usuario (NOME, DATA_NASCIMENTO, EMAIL, SENHA, NICKNAME, TIPO_USUARIO_IDTIPO_USUARIO1,SENTIMENTO_IDSENTIMENTO) VALUES('$nome', '$dataNasc', '$email', '$senha','$nickname',1,1)") or die(mysqli_error($conexao));
 
 
 		$fm = mysqli_affected_rows($conexao);
@@ -48,7 +49,7 @@ if (isset ($_GET['excluir'])){
 
 		if($fm >= 1){
 			echo "<script>alert('Cadastrado com sucesso!');</script>";
-
+			header ('location: login.php');
 
 		}
 
@@ -59,7 +60,7 @@ if (isset ($_GET['excluir'])){
 	$dataNasc= "";
 	$email="";
 	$senha="";
-	$usuario="";
+	$nickname="";
 	$url="";
 	if(isset($_GET['id'])){
 		$url = "idusuario=$_GET[id]&";
@@ -72,7 +73,8 @@ if (isset ($_GET['excluir'])){
 		$dataNasc= $arrFM['data_nascimento'];
 		$email= $arrFM['email'];
 		$senha= $arrFM['senha'];
-		$usuario= $arrFM['nickname'];
+		$nickname= $arrFM['nickname'];
+		
 	}
 
 }
@@ -116,7 +118,7 @@ if (isset ($_GET['excluir'])){
 						<input type="password" name="senha" placeholder="Senha" value="<?php echo $senha;?>" required>
 					</div>
 					<div class="form-group">
-						<input type="text" name="nickname" placeholder="Nickname" value="<?php echo $usuario;?>"required>
+						<input type="text" name="nickname" placeholder="Nickname" value="<?php echo $nickname;?>"required>
 					</div>
 					<button type="submit" style="background-color: #FC9F01;" class="btn btn-warning">Cadastrar</button>
 				</form>
@@ -126,3 +128,5 @@ if (isset ($_GET['excluir'])){
  	 </footer>
  	</body>
  	</html>
+
+	 <br /><b>Notice</b>:  Undefined variable: usuario in <b>C:\xampp\htdocs\Feels-Music\pages\pages_usuario\cadastro.php</b> on line <b>119</b><br />
