@@ -53,6 +53,16 @@ if (isset($_POST["titulo"])){
     </nav>
   </head>
   <body>
+     <br>
+     <!-- O tipo de encoding de dados, enctype, DEVE ser especificado abaixo -->
+     <form enctype="multipart/form-data" action="<?php $_FILES['userfile']['name']?>" method="POST">
+     <!-- MAX_FILE_SIZE deve preceder o campo input -->
+     <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+     <!-- O Nome do elemento input determina o nome da array $_FILES -->
+     Selecione o arquivo MP3: <input name="userfile" type="file" />
+     <input type="submit" value="Enviar arquivo" />
+     </form>
+
     <form class="form-inline" method="post">
       <br><br><br><br>
       <div class="col-auto">
@@ -113,6 +123,8 @@ if (isset($_POST["titulo"])){
             </div>
         <?php } ?>
       </form>
+
+
     </body>
     <footer class="fixar-rodape">
       Todos os direitos reservados à Feels Music INC - 2019
