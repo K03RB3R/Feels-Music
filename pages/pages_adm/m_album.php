@@ -50,9 +50,9 @@
 						<a class="navbar-brand" href="#">	Feels Music - Álbum	</a>
 					</div>
 					<div class="">
-						<a href="../pages_usuario/login.php">
-							<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sair
-								<img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
+						<a href="http://localhost/feels-music/">
+							<button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Sair<br>
+								<img src="../../assets/imgs/Icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
 							</button>
 						</a>
 					</div>
@@ -76,8 +76,8 @@
     <br><br><br><br>
 		<div class="col-auto">
 			 <label for="inlineFormImput" class="sr-only">musica_idartista</label>
-			 <select class="form-control mb-2" name="musica_idartista">
-				 <option>Selecione o Artista</option>
+			 <select class="form-control mb-2" name="musica_idartista" required>
+				 <option value="">Selecione o Artista</option>
 
 			 <?php
 			 $conexao = mysqli_connect("localhost","root", "", "bancofeelsmusic");
