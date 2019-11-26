@@ -28,6 +28,10 @@ if (isset($_POST["titulo"])){
     <style media="screen">
     body{
       background-color: #171717;
+
+    }
+    h2{
+    color: #FC9F01;
     }
     footer.fixar-rodape{
        border-top: 1px solid #333;
@@ -39,16 +43,21 @@ if (isset($_POST["titulo"])){
        background: #171717;
        color: #ffffff;
      }
+
     </style>
     <nav class="navbar navbar-light" style="background-color: #FC9F01;">
       <a class="navbar-brand" href="#">
       <!-- <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt=""> -->
-    
+
 
       </a>
     </nav>
   </head>
   <body>
+    <center>
+      <h2>Músicas</h2>
+      <table class="table table-bordered">
+      </table>
      <br>
      <!-- O tipo de encoding de dados, enctype, DEVE ser especificado abaixo -->
      <form enctype="multipart/form-data" action="<?php $_FILES['userfile']['name']?>" method="POST">

@@ -26,6 +26,8 @@ include("../../includes/nav.php");
 			body{
 				background-color: #171717;
 			}
+			h2{
+			color: #FC9F01;
 			footer.fixar-rodape{
 				 border-top: 1px solid #333;
 				 bottom: 0;
@@ -45,6 +47,10 @@ include("../../includes/nav.php");
 			</nav>
 		</head>
 		<body>
+			<center>
+	      <h2>Sentimentos</h2>
+	      <table class="table table-bordered">
+				</table>
 			<form method="POST" class="form-inline">
 				<br><br><br><br>
 	  		<div class="form-group mx-sm-3 mb-2">

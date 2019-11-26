@@ -31,6 +31,9 @@
 			body{
 				background-color: #171717;
 			}
+			h2{
+			color: #FC9F01;
+			}
 			footer.fixar-rodape{
 				 border-top: 1px solid #333;
 				 bottom: 0;
@@ -58,7 +61,12 @@
 			</nav>
 		</head>
 		<body>
-			<a class="navbar-brand" href="#">Álbum</a>
+			<center>
+	      <h2>Álbum</h2>
+	      <table class="table table-bordered">
+				</table>
+			</center>
+			<a class="navbar-brand" href="#"></a>
 			<form method="POST" class="form-inline">
 				<br><br><br><br>
 	  		<div class="form-group mx-sm-3 mb-2">

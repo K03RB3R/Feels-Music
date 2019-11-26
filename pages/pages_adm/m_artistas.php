@@ -28,6 +28,9 @@
     body{
       background-color: #171717;
     }
+    h2{
+    color: #FC9F01;
+    }
     footer.fixar-rodape{
        border-top: 1px solid #333;
        bottom: 0;
@@ -54,6 +57,10 @@
   <body>
   </head>
   <body>
+    <center>
+      <h2>Artistas</h2>
+      <table class="table table-bordered">
+      </table>
     <form class="form-inline" method="post">
       <br><br><br><br>
       <div class="col-auto">

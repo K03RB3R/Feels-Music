@@ -29,6 +29,9 @@ if (isset($_POST["nome"])){
     body{
       background-color: #171717;
     }
+    h2{
+    color: #FC9F01;
+    }
     footer.fixar-rodape{
        border-top: 1px solid #333;
        bottom: 0;
@@ -45,8 +48,8 @@ if (isset($_POST["nome"])){
         <div class="">
           <!-- <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt=""> -->
           <!-- <a class="navbar-brand" href="#"></a> -->
-        </div>
-        
+          </div>
+
         </div>
       </div>
     </nav>
@@ -54,6 +57,10 @@ if (isset($_POST["nome"])){
   <body>
   </head>
   <body>
+    <center>
+      <h2>Gênero</h2>
+      <table class="table table-bordered">
+      </table>
     <form class="form-inline" method="post">
       <br><br><br><br>
       <div class="col-auto">
