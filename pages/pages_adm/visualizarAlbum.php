@@ -43,6 +43,7 @@ mysqli_close($conexao);
 
   </head>
   <body>
+
     <br>
     <center>
       <h2>Álbuns Cadastrados</h2>
