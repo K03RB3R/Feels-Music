@@ -70,7 +70,7 @@ mysqli_close($conexao);
     <?php
     foreach($arrSentimento as $chave => $valor){
         echo "<div class='mx-auto linhaSentimento'>";
-        echo "<a href='genero.php?codigo=".$valor["idsentimento"]."'>".$valor["nome"]."</a>";
+        echo "<a href='genero.php?codigo=".$valor['idsentimento']."'>".$valor['nome']."</a>";
         echo "</div></br>";
 
     }

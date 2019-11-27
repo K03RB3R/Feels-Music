@@ -128,5 +128,3 @@ if (isset ($_GET['excluir'])){
  	 </footer>
  	</body>
  	</html>
-
-	 <br /><b>Notice</b>:  Undefined variable: usuario in <b>C:\xampp\htdocs\Feels-Music\pages\pages_usuario\cadastro.php</b> on line <b>119</b><br />

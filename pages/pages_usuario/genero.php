@@ -8,10 +8,23 @@
 
 <?php
 
+//session_start();
+
+//if (isset($_GET['codigo'])){
+//  $_SESSION['sentimento'] = $_GET['codigo'];
+//  header ('location:genero.php');
+//}else{
+//  header ('location:sentimento.php');
+//}
+     
+//echo $_SESSION['sentimento'];
+
+
 $conexao = mysqli_connect("localhost","root","","bancofeelsmusic");
 $busca = mysqli_query($conexao,"SELECT * FROM genero");
 $arrGenero = mysqli_fetch_all($busca, MYSQLI_ASSOC);
 mysqli_close($conexao);
+
 
 ?>
 <!DOCTYPE html>
