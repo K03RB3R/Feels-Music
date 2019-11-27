@@ -13,7 +13,7 @@ mysqli_close($conexao);
  ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <style media="screen">
@@ -37,7 +37,6 @@ mysqli_close($conexao);
         color: #ffffff;
       }
     </style>
-    
   </head>
   <body>
     <br>

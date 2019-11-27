@@ -1,5 +1,3 @@
-
-
 <?php
 	include("../../includes/nav.php");
 $conexao = mysqli_connect("localhost", "root", "", "bancofeelsmusic");
@@ -37,7 +35,7 @@ mysqli_close($conexao);
         color: #ffffff;
       }
     </style>
-    
+
   </head>
   <body>
     <br>

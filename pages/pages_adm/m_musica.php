@@ -24,10 +24,42 @@ if (isset($_POST["titulo"])){
 <!DOCTYPE html>
 <html>
   <head>
-    
+    <meta charset="utf-8">
+    <style media="screen">
+    body{
+      background-color: #171717;
+
+    }
+    h2{
+    color: #FC9F01;
+    }
+    footer.fixar-rodape{
+       border-top: 1px solid #333;
+       bottom: 0;
+       left: 0;
+       height: 30px;
+       position: fixed;
+       width: 100%;
+       background: #171717;
+       color: #ffffff;
+     }
+
+    </style>
+    <!-- <nav class="navbar navbar-light" style="background-color: #FC9F01;">
+      <a class="navbar-brand" href="#">
+      <!-- <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt=""> -->
+
+
+      </a>
+    </nav> -->
   </head>
   <body>
-     <br>
+    <center>
+      <h2>Músicas</h2>
+      <!-- <table class="table table-bordered">
+      </table> -->
+    </center>
+
      <!-- O tipo de encoding de dados, enctype, DEVE ser especificado abaixo -->
      <form enctype="multipart/form-data" action="../pages_adm/m_musica.php" method="POST">
      <!-- MAX_FILE_SIZE deve preceder o campo input -->
@@ -45,8 +77,8 @@ if (isset($_POST["titulo"])){
       </div>
       <div class="col-auto">
          <label for="inlineFormImput" class="sr-only">musica_idgenero</label>
-         <select name="musica_idgenero">
-           <option>Selecione o Gênero</option>
+         <select class="form-control mb-2" name="musica_idgenero"required>
+           <option value="">Selecione o Gênero</option>
 
          <?php
 
@@ -66,8 +98,8 @@ if (isset($_POST["titulo"])){
       </div>
       <div class="col-auto">
         <label for="inlineFormImput" class="sr-only">album_idalbum</label>
-           <select name="album_idalbum">
-             <option>Selecione o Album</option>
+           <select class="form-control mb-2" name="album_idalbum" required>
+             <option value="">Selecione o Album</option>
 
            <?php
 
@@ -84,7 +116,7 @@ if (isset($_POST["titulo"])){
             ?>
 
           </select>
-          <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar Música</button>
+          <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar</button>
 
         </div
 

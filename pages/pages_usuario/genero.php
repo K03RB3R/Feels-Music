@@ -71,6 +71,9 @@ mysqli_close($conexao);
     font-size: 25px;
 
       }
+      h2{
+        color: #FC9F01;
+      }
       }
 
     </style>
@@ -78,11 +81,17 @@ mysqli_close($conexao);
       <a class="navbar-brand" href="#">
       <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
       Feels Music
+      <a href="http://localhost/feels-music/">
+        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Sair
+          <img src="../../assets/imgs/Icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        </button>
       </a>
     </nav>
   </head>
   <body>
-    <br><br><br>
+    <br><br>
+    <h2><center>Qual é o seu gênero musical preferido?</center></h2>
+    <br><br>
     <?php
     foreach($arrGenero as $chave => $valor){
         echo "<div class='mx-auto linhaGenero'>";

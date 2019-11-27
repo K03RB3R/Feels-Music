@@ -20,16 +20,45 @@ include("../../includes/nav.php");
 	<!DOCTYPE html>
 	<html>
 		<head>
-			
+
+			<meta charset="utf-8">
+			<style media="screen">
+			body{
+				background-color: #171717;
+			}
+			h2{
+			color: #FC9F01;
+			footer.fixar-rodape{
+				 border-top: 1px solid #333;
+				 bottom: 0;
+				 left: 0;
+				 height: 30px;
+				 position: fixed;
+				 width: 100%;
+				 background: #171717;
+				 color: #ffffff;
+			 }
+			</style>
+			<!-- <nav class="navbar navbar-light" style="background-color: #FC9F01;">
+				<a class="navbar-brand" href="#">
+				<!-- <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt=""> -->
+
+				<!-- </a> -->
+			<!-- </nav> -->
 		</head>
 		<body>
+			<center>
+				<br>
+	      <h2>Sentimento</h2>
+	      <table class="table table-bordered"></table>
+			</center>
 			<form method="POST" class="form-inline">
 				<br><br><br><br>
 	  		<div class="form-group mx-sm-3 mb-2">
 	    <label  class="sr-only"></label>
 	    <input type="text" class="form-control"  placeholder="Sentimento" name="sentimento" required>
 	  </div>
-		<button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar Sentimento</button>
+		<button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar</button>
 
 		<?php if ($quantidade >=1){ ?>
 			<div class="alert alert-light alert-dismissible fade show" role="alert">

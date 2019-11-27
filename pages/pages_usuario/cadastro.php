@@ -74,7 +74,7 @@ if (isset ($_GET['excluir'])){
 		$email= $arrFM['email'];
 		$senha= $arrFM['senha'];
 		$nickname= $arrFM['nickname'];
-		
+
 	}
 
 }

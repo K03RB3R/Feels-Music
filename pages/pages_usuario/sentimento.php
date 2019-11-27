@@ -56,17 +56,26 @@ mysqli_close($conexao);
     font-size: 25px;
 
       }
+      h2{
+        color: #FC9F01;
+      }
       }
     </style>
     <nav class="navbar navbar-light" style="background-color: #FC9F01;">
       <a class="navbar-brand" href="#">
       <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
       Feels Music
+      <a href="http://localhost/feels-music/">
+        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Sair
+          <img src="../../assets/imgs/Icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        </button>
       </a>
     </nav>
   </head>
   <body>
-    <br><br><br>
+    <br><br>
+    <h2><center>Como voce está se sentindo hoje?</center></h2>
+    <br><br>
     <?php
     foreach($arrSentimento as $chave => $valor){
         echo "<div class='mx-auto linhaSentimento'>";
@@ -88,4 +97,3 @@ mysqli_close($conexao);
     Todos os direitos reservados à Feels Music INC - 2019
   </footer>
 <html>
-  
