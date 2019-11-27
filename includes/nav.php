@@ -11,7 +11,7 @@
 
             nav{
                 background-color: #FC9F01;
-              
+
             }
             footer.fixar-rodape{
                 border-top: 1px solid #333;
@@ -75,7 +75,7 @@
                 <a class="navbar-brand" href="#">	</a>
               </div>
               <a href="http://localhost/feels-music/">
-							<button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Sair
+							<button class="btn btn-outline-dark my-5 my-sm-0" type="submit">Sair
 								<img src="../../assets/imgs/Icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
 							</button>
             </a>

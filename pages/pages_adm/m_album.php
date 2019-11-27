@@ -75,16 +75,16 @@
 
 	  		<div class="form-group mx-sm-3 mb-2">
 	    <label  class="sr-only">Álbum</label>
-	    <input type="text" class="form-control"  placeholder="Álbum" name="album" required>
+	    <input type="text" class="form-control mb-2" placeholder="Álbum" name="album" required>
 	     </div>
 
 
     <div class="form-group mx-sm-3 mb-2">
   <label  class="sr-only"></label>
-  <input type="date" class="form-control"  placeholder="Ano" name="ano" required>
+  <input type="date" class="form-control mb-2"  placeholder="Ano" name="ano" required>
     </div>
 
-		<div class="col-auto">
+		<div class="form-group mx-sm-3 mb-2">
 	<label for="inlineFormImput" class="sr-only">musica_idartista</label>
 	<select class="form-control mb-2" name="musica_idartista" required>
 		<option value="">Selecione o Artista</option>
@@ -108,7 +108,7 @@
     <br><br><br><br>
 
 
-    <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar</button>
+    <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-3">Cadastrar</button>
 
 		<?php if ($quantidade >=1){ ?>
 			<div class="alert alert-light alert-dismissible fade show" role="alert">
