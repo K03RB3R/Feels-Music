@@ -58,6 +58,9 @@ mysqli_close($conexao);
     font-size: 25px;
 
       }
+      h2{
+        color: #FC9F01;
+      }
       }
 
     </style>
@@ -69,7 +72,9 @@ mysqli_close($conexao);
     </nav>
   </head>
   <body>
-    <br><br><br>
+    <br><br>
+    <h2><center>Qual é o seu gênero musical preferido?</center></h2>
+    <br><br>
     <?php
     foreach($arrGenero as $chave => $valor){
         echo "<div class='mx-auto linhaGenero'>";
