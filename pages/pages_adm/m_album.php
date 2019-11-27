@@ -33,6 +33,8 @@
 			}
 			h2{
 			color: #FC9F01;
+
+
 			}
 			footer.fixar-rodape{
 				 border-top: 1px solid #333;
@@ -47,28 +49,30 @@
 			 }
 
 			</style>
-			<nav class="navbar navbar-light" style="background-color: #FC9F01;">
-				<div class="d-flex justify-content-between w-100">
-					<div class="">
+			<!-- <nav class="navbar navbar-light" style="background-color: #FC9F01;">
+				<!-- <div class="d-flex justify-content-between w-100"> -->
+					<!-- <div class=""> -->
 						<!-- <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt=""> -->
-						<a class="navbar-brand" href="#">	</a>
-					</div>
-					<div class="">
+						<!-- <a class="navbar-brand" href="#">	</a> -->
+					<!-- </div> -->
+					<!-- <div class="">
 
 						</a>
 					</div>
 				</div>
-			</nav>
+			</nav> -->
 		</head>
 		<body>
 			<center>
+				<br>
 	      <h2>Álbum</h2>
 	      <table class="table table-bordered">
 				</table>
 			</center>
+
 			<a class="navbar-brand" href="#"></a>
 			<form method="POST" class="form-inline">
-				<br><br><br><br>
+
 	  		<div class="form-group mx-sm-3 mb-2">
 	    <label  class="sr-only">Álbum</label>
 	    <input type="text" class="form-control"  placeholder="Álbum" name="album" required>
@@ -79,11 +83,11 @@
   <label  class="sr-only"></label>
   <input type="date" class="form-control"  placeholder="Ano" name="ano" required>
     </div>
-    <br><br><br><br>
+
 		<div class="col-auto">
-			 <label for="inlineFormImput" class="sr-only">musica_idartista</label>
-			 <select class="form-control mb-2" name="musica_idartista" required>
-				 <option value="">Selecione o Artista</option>
+	<label for="inlineFormImput" class="sr-only">musica_idartista</label>
+	<select class="form-control mb-2" name="musica_idartista" required>
+		<option value="">Selecione o Artista</option>
 
 			 <?php
 			 $conexao = mysqli_connect("localhost","root", "", "bancofeelsmusic");

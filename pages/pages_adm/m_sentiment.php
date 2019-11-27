@@ -39,18 +39,19 @@ include("../../includes/nav.php");
 				 color: #ffffff;
 			 }
 			</style>
-			<nav class="navbar navbar-light" style="background-color: #FC9F01;">
+			<!-- <nav class="navbar navbar-light" style="background-color: #FC9F01;">
 				<a class="navbar-brand" href="#">
 				<!-- <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt=""> -->
 
-				</a>
-			</nav>
+				<!-- </a> -->
+			<!-- </nav> -->
 		</head>
 		<body>
 			<center>
-	      <h2>Sentimentos</h2>
-	      <table class="table table-bordered">
-				</table>
+				<br>
+	      <h2>Sentimento</h2>
+	      <table class="table table-bordered"></table>
+			</center>
 			<form method="POST" class="form-inline">
 				<br><br><br><br>
 	  		<div class="form-group mx-sm-3 mb-2">

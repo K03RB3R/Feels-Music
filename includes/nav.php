@@ -11,6 +11,7 @@
 
             nav{
                 background-color: #FC9F01;
+              
             }
             footer.fixar-rodape{
                 border-top: 1px solid #333;

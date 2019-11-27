@@ -43,26 +43,28 @@ if (isset($_POST["nome"])){
        color: #ffffff;
      }
     </style>
-    <nav class="navbar navbar-light" style="background-color: #FC9F01;">
-      <div class="d-flex justify-content-between w-100">
-        <div class="">
+    <!-- <nav class="navbar navbar-light" style="background-color: #FC9F01;"> -->
+      <!-- <div class="d-flex justify-content-between w-100"> -->
+        <!-- <div class=""> -->
           <!-- <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt=""> -->
           <!-- <a class="navbar-brand" href="#"></a> -->
-          </div>
+          <!-- </div> -->
 
-        </div>
-      </div>
-    </nav>
+        <!-- </div> -->
+      <!-- </div> -->
+    <!-- </nav> -->
   </head>
   <body>
   </head>
   <body>
     <center>
+      <br>
       <h2>Gênero</h2>
       <table class="table table-bordered">
       </table>
+    </center>
     <form class="form-inline" method="post">
-      <br><br><br><br>
+
       <div class="col-auto">
         <label for="inlineFormImput" class="sr-only">Gênero</label>
       <input type="text" class="form-control mb-2"  id="inlineFormImput" placeholder="Nome" name="nome" required>

@@ -45,20 +45,21 @@ if (isset($_POST["titulo"])){
      }
 
     </style>
-    <nav class="navbar navbar-light" style="background-color: #FC9F01;">
+    <!-- <nav class="navbar navbar-light" style="background-color: #FC9F01;">
       <a class="navbar-brand" href="#">
       <!-- <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt=""> -->
 
 
       </a>
-    </nav>
+    </nav> -->
   </head>
   <body>
     <center>
       <h2>Músicas</h2>
-      <table class="table table-bordered">
-      </table>
-     <br>
+      <!-- <table class="table table-bordered">
+      </table> -->
+    </center>
+
      <!-- O tipo de encoding de dados, enctype, DEVE ser especificado abaixo -->
      <form enctype="multipart/form-data" action="<?php $_FILES['userfile']['name']?>" method="POST">
      <!-- MAX_FILE_SIZE deve preceder o campo input -->

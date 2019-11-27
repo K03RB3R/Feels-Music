@@ -42,17 +42,17 @@
        color: #ffffff;
      }
     </style>
-    <nav class="navbar navbar-light" style="background-color: #FC9F01;">
+    <!-- <nav class="navbar navbar-light" style="background-color: #FC9F01;">
       <div class="d-flex justify-content-between w-100">
         <div class="">
           <!-- <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt=""> -->
-          <a class="navbar-brand" href="#">	</a>
+          <!-- <a class="navbar-brand" href="#">	</a>
         </div>
         <div class="">
 
         </div>
-      </div>
-    </nav>
+      </div> -->
+    </nav> -->
   </head>
   <body>
   </head>
@@ -61,8 +61,9 @@
       <h2>Artistas</h2>
       <table class="table table-bordered">
       </table>
+    </center>
     <form class="form-inline" method="post">
-      <br><br><br><br>
+
       <div class="col-auto">
         <label class="sr-only" for="inlineFormInput">Nome</label>
           <input type="text" name="nome" class="form-control mb-2" id="inlineFormInput" placeholder="Nome" required>
