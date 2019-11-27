@@ -1,3 +1,16 @@
+<?php
+
+if(isset($_GET["codigo"])){
+    $genero = $_GET["codigo"];
+    $conexao = mysqli_connect("localhost","root","", "bancofeelsmusic");
+
+    $buscaMusica = mysqli_query($conexao, "SELECT * FROM musica WHERE musica_idgenero = $genero") or die(mysqli_error($conexao));
+    $arrayBuscaM = mysqli_fetch_all($buscaMusica, MYSQLI_ASSOC);
+    print_r($arrayBuscaM);
+}
+
+?>
+
 <html>
     <head>
         <link href="../../css/mp3.css" rel="stylesheet"/>
