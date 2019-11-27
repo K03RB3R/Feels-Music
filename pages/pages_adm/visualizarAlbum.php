@@ -40,9 +40,10 @@ mysqli_close($conexao);
 
       }
     </style>
-    
+
   </head>
   <body>
+
     <br>
     <center>
       <h2>Álbuns Cadastrados</h2>
