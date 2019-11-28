@@ -8,7 +8,7 @@
 
 <?php
 session_start();
-  include("../../includes/verificarLogin.php");
+include("../../includes/verificarLogin.php");
 $conexao = mysqli_connect("localhost","root","","bancofeelsmusic");
 $busca = mysqli_query($conexao,"SELECT * FROM sentimento");
 $arrSentimento = mysqli_fetch_all($busca, MYSQLI_ASSOC);
