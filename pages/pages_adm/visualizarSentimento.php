@@ -1,5 +1,7 @@
 
 <?php
+include("../../includes/permissao.php");
+  include("../../includes/verificarLogin.php");
 	include("../../includes/nav.php");
 $conexao = mysqli_connect("localhost", "root", "", "bancofeelsmusic");
 
@@ -34,7 +36,7 @@ $arrSentimento = mysqli_fetch_all($busca, MYSQLI_ASSOC);
         color: #ffffff;
       }
     </style>
-    
+
   </head>
   <body>
     <br>
