@@ -7,11 +7,27 @@
 <link rel="stylesheet" href="../css/main.css">
 
 <?php
+
 $idsentimento = $_GET["codigo"];
+
+
+//session_start();
+
+//if (isset($_GET['codigo'])){
+//  $_SESSION['sentimento'] = $_GET['codigo'];
+//  header ('location:genero.php');
+//}else{
+//  header ('location:sentimento.php');
+//}
+     
+//echo $_SESSION['sentimento'];
+
+
 $conexao = mysqli_connect("localhost","root","","bancofeelsmusic");
 $busca = mysqli_query($conexao,"SELECT * FROM genero WHERE sentimento_idsentimento = $idsentimento");
 $arrGenero = mysqli_fetch_all($busca, MYSQLI_ASSOC);
 mysqli_close($conexao);
+
 
 ?>
 <!DOCTYPE html>
@@ -68,6 +84,10 @@ mysqli_close($conexao);
       <a class="navbar-brand" href="#">
       <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
       Feels Music
+      <a href="http://localhost/feels-music/includes/encerrarLogin.php">
+        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Sair
+          <img src="../../assets/imgs/Icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        </button>
       </a>
     </nav>
   </head>

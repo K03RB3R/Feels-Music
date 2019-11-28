@@ -7,7 +7,8 @@
 <link rel="stylesheet" href="../css/main.css">
 
 <?php
-
+session_start();
+  include("../../includes/verificarLogin.php");
 $conexao = mysqli_connect("localhost","root","","bancofeelsmusic");
 $busca = mysqli_query($conexao,"SELECT * FROM sentimento");
 $arrSentimento = mysqli_fetch_all($busca, MYSQLI_ASSOC);
@@ -65,6 +66,10 @@ mysqli_close($conexao);
       <a class="navbar-brand" href="#">
       <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
       Feels Music
+      <a href="http://localhost/feels-music/includes/encerrarLogin.php">
+        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Sair
+          <img src="../../assets/imgs/Icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        </button>
       </a>
     </nav>
   </head>
@@ -75,7 +80,7 @@ mysqli_close($conexao);
     <?php
     foreach($arrSentimento as $chave => $valor){
         echo "<div class='mx-auto linhaSentimento'>";
-        echo "<a href='genero.php?codigo=".$valor["idsentimento"]."'>".$valor["nome"]."</a>";
+        echo "<a href='genero.php?codigo=".$valor['idsentimento']."'>".$valor['nome']."</a>";
         echo "</div></br>";
 
     }

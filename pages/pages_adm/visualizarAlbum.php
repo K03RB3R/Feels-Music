@@ -1,5 +1,7 @@
 
 <?php
+include("../../includes/permissao.php");
+  include("../../includes/verificarLogin.php");
 	include("../../includes/nav.php");
 $conexao = mysqli_connect("localhost", "root", "", "bancofeelsmusic");
 
@@ -40,9 +42,10 @@ mysqli_close($conexao);
 
       }
     </style>
-    
+
   </head>
   <body>
+
     <br>
     <center>
       <h2>Álbuns Cadastrados</h2>

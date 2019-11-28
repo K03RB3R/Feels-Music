@@ -1,6 +1,8 @@
 <link rel="stylesheet" href="../css/main.css">
 
 <?php
+include("../../includes/permissao.php");
+  include("../../includes/verificarLogin.php");
 include("../../includes/nav.php");
   $quantidade = 0;
   $conexao = mysqli_connect("localhost","root", "", "bancofeelsmusic");
@@ -12,7 +14,18 @@ if (isset($_POST["titulo"])){
    $album_idalbum = $_POST["album_idalbum"];
 
 
-  $query =  mysqli_query($conexao, "INSERT INTO musica VALUES(DEFAULT, '$titulo', $musica_idgenero, $album_idalbum) ") or die (mysqli_error($conexao));
+   // teste //
+
+    $destino= '../../assets/musics/';
+    print_r($_FILES);
+    $ext = strtolower(substr($_FILES['userfile']['name'],-4));
+    if($ext==".mp3"||$ext==".wma"||$ext==".aac"||$ext==".ogg"){
+    $new_name = $_FILES['userfile']['name'];
+    $caminho="../../assets/musics/".$new_name;
+
+    move_uploaded_file($_FILES['userfile']['tmp_name'], $caminho);
+    $query =  mysqli_query($conexao, "INSERT INTO musica VALUES(DEFAULT, '$titulo', $musica_idgenero, $album_idalbum) ") or die (mysqli_error($conexao)); 
+    }
 
   $quantidade = mysqli_affected_rows($conexao);
 
@@ -24,20 +37,48 @@ if (isset($_POST["titulo"])){
 <!DOCTYPE html>
 <html>
   <head>
-    
+    <meta charset="utf-8">
+    <style media="screen">
+    body{
+      background-color: #171717;
+
+    }
+    h2{
+    color: #FC9F01;
+    }
+    footer.fixar-rodape{
+       border-top: 1px solid #333;
+       bottom: 0;
+       left: 0;
+       height: 30px;
+       position: fixed;
+       width: 100%;
+       background: #171717;
+       color: #ffffff;
+     }
+
+    </style>
+    <!-- <nav class="navbar navbar-light" style="background-color: #FC9F01;">
+      <a class="navbar-brand" href="#">
+      <!-- <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt=""> -->
+
+
+      </a>
+    </nav>
   </head>
   <body>
-     <br>
-     <!-- O tipo de encoding de dados, enctype, DEVE ser especificado abaixo -->
-     <form enctype="multipart/form-data" action="../pages_adm/m_musica.php" method="POST">
-     <!-- MAX_FILE_SIZE deve preceder o campo input -->
-     <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
-     <!-- O Nome do elemento input determina o nome da array $_FILES -->
-     Selecione o arquivo MP3: <input name="userfile" type="file" />
-     <input type="submit" value="Enviar arquivo" />
-     </form>
+    <center>
+      <h2>Músicas</h2>
+      <table class="table table-bordered">
+      </table>
+    </center>
 
-    <form class="form-inline" method="post">
+    <form enctype="multipart/form-data" action="m_musica.php" method="post">
+      
+      Selecione a música: <input name="userfile" type="file" />
+      <!-- <input type="submit" value="Enviar arquivo" /> -->
+
+
       <br><br><br><br>
       <div class="col-auto">
         <label for="inlineFormImput" class="sr-only">Musica</label>
@@ -45,8 +86,8 @@ if (isset($_POST["titulo"])){
       </div>
       <div class="col-auto">
          <label for="inlineFormImput" class="sr-only">musica_idgenero</label>
-         <select name="musica_idgenero">
-           <option>Selecione o Gênero</option>
+         <select class="form-control mb-2" name="musica_idgenero"required>
+           <option value="">Selecione o Gênero</option>
 
          <?php
 
@@ -66,8 +107,8 @@ if (isset($_POST["titulo"])){
       </div>
       <div class="col-auto">
         <label for="inlineFormImput" class="sr-only">album_idalbum</label>
-           <select name="album_idalbum">
-             <option>Selecione o Album</option>
+           <select class="form-control mb-2" name="album_idalbum" required>
+             <option value="">Selecione o Album</option>
 
            <?php
 
@@ -84,12 +125,12 @@ if (isset($_POST["titulo"])){
             ?>
 
           </select>
-          <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar Música</button>
+          <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar</button>
 
         </div
 
         <?php if ($quantidade >=1){ ?>
-             <div class="alert alert-light alert-dismissible fade show" role="alert">
+             <div class="alert alert-light alert-dismissible fade show" role="alert" >
                <strong>Gênero cadastrado com sucesso!</strong>
               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>

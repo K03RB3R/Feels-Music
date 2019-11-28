@@ -46,6 +46,7 @@ mysqli_close($conexao);
     <a class="navbar-brand" href="#">
     <img src="../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
     Feels Music
+
     </a>
   </nav>
 </head>
