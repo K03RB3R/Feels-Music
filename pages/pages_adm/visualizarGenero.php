@@ -1,5 +1,7 @@
 
 <?php
+include("../../includes/permissao.php");
+  include("../../includes/verificarLogin.php");
 	include("../../includes/nav.php");
 $conexao = mysqli_connect("localhost", "root", "", "bancofeelsmusic");
 

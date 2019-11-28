@@ -19,9 +19,16 @@ resultado ele redirecionará para a página sentimento.php ou retornara  para a 
 do formulário inicial para que se possa tentar novamente realizar o login */
 if(mysqli_num_rows ($result) > 0 )
 {
-$_SESSION['login'] = $login;
-$_SESSION['senha'] = $senha;
-header('location:../pages/pages_usuario/sentimento.php');
+  $usuario = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  $_SESSION['login'] = $login;
+  $_SESSION['senha'] = $senha;
+  $_SESSION['id_tipo'] = $usuario[0]['tipo_usuario_idtipo_usuario1'];
+  if($_SESSION['id_tipo'] == 2){
+    header('location: ../pages/pages_adm/index_adm.php');
+  }else{
+    header('location: ../pages/pages_usuario/sentimento.php');
+  }
+
 }
 else{
   unset ($_SESSION['login']);

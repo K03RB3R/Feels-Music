@@ -1,3 +1,4 @@
+
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -11,6 +12,7 @@
 
             nav{
                 background-color: #FC9F01;
+
             }
             footer.fixar-rodape{
                 border-top: 1px solid #333;
@@ -58,10 +60,26 @@
                             <a class="dropdown-item" href="visualizarSentimento.php">Sentimento</a>
                             <a class="dropdown-item" href="visualizarGenero.php">Gênero</a>
                             <a class="dropdown-item" href="manutencao.php">Usuários</a>
+                            <!-- <a class="dropdown-item"href="http://localhost/feels-music/">Sair</a> -->
+                              <!-- <button class="btn btn-outline-dark my-2 my-sm-0" type="submit"> Sair -->
+                            <!-- <img src="../../assets/imgs/Icon.png" width="30" height="30" class="d-inline-block align-top" alt=""> -->
+
+                          </button>
+                        </a>
                         </div>
                     </li>
                 </ul>
             </div>
+            <div class="d-flex justify-content-between w-100">
+              <div class="">
+                <!-- <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt=""> -->
+                <a class="navbar-brand" href="#">	</a>
+              </div>
+              <a href="http://localhost/feels-music/includes/encerrarLogin.php">
+							<button class="btn btn-outline-dark my-5 my-sm-0" type="submit">Sair
+								<img src="../../assets/imgs/Icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+							</button>
+            </a>
         </nav>
     </body>
 </html>
