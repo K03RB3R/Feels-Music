@@ -73,7 +73,6 @@ if (isset($_POST["titulo"])){
       </table>
     </center>
 
-
     <form enctype="multipart/form-data" action="m_musica.php" method="post">
       
       Selecione a música: <input name="userfile" type="file" />

@@ -8,7 +8,6 @@
 
 <?php
 
-
 //session_start();
 
 //if (isset($_GET['codigo'])){
@@ -19,7 +18,6 @@
 //}
      
 //echo $_SESSION['sentimento'];
-
 
 
 $conexao = mysqli_connect("localhost","root","","bancofeelsmusic");
