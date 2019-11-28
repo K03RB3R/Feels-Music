@@ -1,5 +1,6 @@
-<?php 
+<?php
 session_start();
+  include("../../includes/verificarLogin.php");
 $id_genero =  $_GET['id_genero'];
 $id_sentimento = $_SESSION['id_sentimento'];
 
