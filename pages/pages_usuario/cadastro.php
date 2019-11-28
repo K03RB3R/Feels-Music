@@ -95,36 +95,49 @@ if (isset ($_GET['excluir'])){
 	 	 }
 	 	 h1{
 	 		 color: #FC9F01
-	 	 }
+			}
+			footer.fixar-rodape{
+	       border-top: 1px solid #333;
+	       bottom: 0;
+	       left: 0;
+	       height: 30px;
+	       position: fixed;
+	       width: 100%;
+	       background: #171717;
+	       color: #ffffff;
+			}
 	  </style>
 	</head>
 	<body>
+		<center>
 		<div class="container">
 	 	 <div class="mx-auto" style="width:300px;">
 	 		 <br>
 			 <img class="logo" src="../../assets/imgs/Icon.png"/ width="220" height="270">
-			 <h1>Cadastrar</h1>
+			 <h1>Cadastro</h1>
 				<form action="cadastro.php?<?php echo $url;?>acao=inserir" method="post">
 					<div class="form-group">
-						<input type="text" name="nome" placeholder="Nome"  value="<?php echo $nome;?>"required>
+						<input type="text" name="nome" class="form-control mb-2" placeholder="Nome"  value="<?php echo $nome;?>"required>
 					</div>
 					<div class="form-group">
-						<input type="date" name="data_nascimento" placeholder="Data de nascimento" value="<?php echo $dataNasc;?>"required>
+						<input type="date" name="data_nascimento" class="form-control mb-2" placeholder="Data de nascimento" value="<?php echo $dataNasc;?>"required>
 					</div>
 					<div class="form-group">
-						<input type="email" name="email" placeholder="E-mail"  value="<?php echo $email;?>"required>
+						<input type="email" name="email" placeholder="E-mail" class="form-control mb-2" value="<?php echo $email;?>"required>
 					</div>
 					<div class="form-group">
-						<input type="password" name="senha" placeholder="Senha" value="<?php echo $senha;?>" required>
+						<input type="password" name="senha" class="form-control mb-2" placeholder="Senha" value="<?php echo $senha;?>" required>
 					</div>
 					<div class="form-group">
-						<input type="text" name="nickname" placeholder="Nickname" value="<?php echo $nickname;?>"required>
+						<input type="text" name="nickname" class="form-control mb-2" placeholder="Nickname" value="<?php echo $nickname;?>"required>
 					</div>
-					<button type="submit" style="background-color: #FC9F01;" class="btn btn-warning">Cadastrar</button>
+					<button type="submit" style="background-color: #FC9F01;" class="btn btn-warning-2">Cadastrar</button>
 				</form>
  		 </div>
  	 </div>
- 	 <footer>
- 	 </footer>
+ </center>
  	</body>
+	<footer class="fixar-rodape">
+    Todos os direitos reservados à Feels Music INC - 2019
+  </footer>
  	</html>

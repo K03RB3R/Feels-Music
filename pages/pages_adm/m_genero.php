@@ -3,26 +3,26 @@
 
 <?php
 include("../../includes/permissao.php");
-  include("../../includes/verificarLogin.php");
+include("../../includes/verificarLogin.php");
 include("../../includes/nav.php");
   $quantidade = 0;
 
 
-if (isset($_POST["nome"])){
-   $nome = $_POST["nome"];
-   $genero_idgenero = $_POST["genero_idgenero"];
+  if (isset($_POST["nome"])){
+      $nome = $_POST["nome"];
+      $genero_idgenero = $_POST["genero_idgenero"];
 
-  $conexao = mysqli_connect("localhost","root", "", "bancofeelsmusic");
+      $conexao = mysqli_connect("localhost","root", "", "bancofeelsmusic");
 
-  $query =  mysqli_query($conexao, "INSERT INTO genero VALUES(DEFAULT, '$nome', $genero_idgenero) ") or die (mysqli_error($conexao));
+      $query =  mysqli_query($conexao, "INSERT INTO genero VALUES(DEFAULT, '$nome', $genero_idgenero) ") or die (mysqli_error($conexao));
 
-  $quantidade = mysqli_affected_rows($conexao);
+      $quantidade = mysqli_affected_rows($conexao);
 
-    mysqli_close($conexao);
-    //Script que impede o refresh post
-    echo "<script>history.pushState({}, '', '')</script>";
-}
- ?>
+      mysqli_close($conexao);
+      //Script que impede o refresh post
+      echo "<script>history.pushState({}, '', '')</script>";
+    }
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -74,7 +74,7 @@ if (isset($_POST["nome"])){
       <div class="col-auto">
          <label for="inlineFormImput" class="sr-only">musica_idgenero</label>
          <select class="form-control mb-2" name="genero_idgenero" required>
-           <option value="">Selecione o Sentimento</option>
+          <option value="">Selecione o Sentimento</option>
 
 
          <?php

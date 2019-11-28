@@ -15,9 +15,21 @@
 	 h1{
 		 color: #FC9F01
 	 }
+   footer.fixar-rodape{
+      border-top: 1px solid #333;
+      bottom: 0;
+      left: 0;
+      height: 30px;
+      position: fixed;
+      width: 100%;
+      background: #171717;
+      color: #ffffff;
+
+    }
  </style>
 </head>
 <body>
+  <center>
  <div class="container">
 	 <div class="mx-auto" style="width:200px;">
 		 <br>
@@ -30,8 +42,9 @@
 			 <div class="form-group">
 					<input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required>
 			 </div>
+
 				 <button type="submit" style="background-color: #FC9F01;" class="btn btn-warning">Entrar</button>
-         <a href="pages/pages_usuario/cadastro.php" style="background-color: #FC9F01;" class="btn btn-warning" type="button" name="cadastrar">Cadastrar-se</a>
+         <a href="pages/pages_usuario/cadastro.php" style="background-color: #FC9F01;" class="btn btn-warning" name="cadastrar">Cadastrar-se</a>
 				 <?php
 				 if(isset($_GET["erro"])){
 				  $erro = $_GET["erro"];
@@ -58,7 +71,10 @@
 		 </form>
 	 </div>
  </div>
- <footer>
- </footer>
+</center>
 </body>
+<footer class="fixar-rodape">
+  Todos os direitos reservados à Feels Music INC - 2019
+</footer>
+
 </html>
