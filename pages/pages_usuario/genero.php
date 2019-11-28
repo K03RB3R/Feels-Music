@@ -8,6 +8,10 @@
 
 <?php
 
+
+$idsentimento = $_GET["codigo"];
+
+
 //session_start();
 
 //if (isset($_GET['codigo'])){
