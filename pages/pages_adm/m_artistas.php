@@ -1,6 +1,8 @@
 
 <link rel="stylesheet" href="../css/main.css">
 <?php
+include("../../includes/permissao.php");
+  include("../../includes/verificarLogin.php");
   include("../../includes/nav.php");
   $quantidade = 0;
 
@@ -59,16 +61,16 @@
   <body>
     <center>
       <h2>Artistas</h2>
-      <table class="table table-bordered">
-      </table>
-    </center>
-    <form class="form-inline" method="post">
+        <table class="table table-bordered">
+        </table>
+      </center>
+        <form class="form-inline" method="post">
 
       <div class="col-auto">
         <label class="sr-only" for="inlineFormInput">Nome</label>
-          <input type="text" name="nome" class="form-control mb-2" id="inlineFormInput" placeholder="Nome" required>
+          <input type="text" name="nome" class="form-control mb-4" id="inlineFormInput" placeholder="Nome" required>
       </div>
-      <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar</button>
+      <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-4">Cadastrar</button>
 
       <?php if ($quantidade >=1){ ?>
         <div class="alert alert-light alert-dismissible fade show" role="alert">

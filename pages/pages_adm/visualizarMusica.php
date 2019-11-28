@@ -3,6 +3,8 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <?php
+include("../../includes/permissao.php");
+  include("../../includes/verificarLogin.php");
 $conexao = mysqli_connect("localhost", "root", "", "bancofeelsmusic");
 
 $busca = mysqli_query($conexao, "SELECT * FROM musica");

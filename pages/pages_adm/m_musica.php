@@ -1,6 +1,8 @@
 <link rel="stylesheet" href="../css/main.css">
 
 <?php
+include("../../includes/permissao.php");
+  include("../../includes/verificarLogin.php");
 include("../../includes/nav.php");
   $quantidade = 0;
   $conexao = mysqli_connect("localhost","root", "", "bancofeelsmusic");
@@ -67,14 +69,16 @@ if (isset($_POST["titulo"])){
   <body>
     <center>
       <h2>Músicas</h2>
-      <!-- <table class="table table-bordered">
-      </table> -->
+      <table class="table table-bordered">
+      </table>
     </center>
+
 
     <form enctype="multipart/form-data" action="m_musica.php" method="post">
       
       Selecione a música: <input name="userfile" type="file" />
       <!-- <input type="submit" value="Enviar arquivo" /> -->
+
 
       <br><br><br><br>
       <div class="col-auto">
