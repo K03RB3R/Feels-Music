@@ -8,6 +8,9 @@
 
 <?php
 
+$idsentimento = $_GET["codigo"];
+
+
 //session_start();
 
 //if (isset($_GET['codigo'])){
@@ -21,7 +24,7 @@
 
 
 $conexao = mysqli_connect("localhost","root","","bancofeelsmusic");
-$busca = mysqli_query($conexao,"SELECT * FROM genero");
+$busca = mysqli_query($conexao,"SELECT * FROM genero WHERE sentimento_idsentimento = $idsentimento");
 $arrGenero = mysqli_fetch_all($busca, MYSQLI_ASSOC);
 mysqli_close($conexao);
 
