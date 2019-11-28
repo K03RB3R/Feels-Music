@@ -1,5 +1,8 @@
 
-<?php include("../../includes/nav.php");?>
+<?php
+include("../../includes/permissao.php");
+  include("../../includes/verificarLogin.php");
+include("../../includes/nav.php");?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>

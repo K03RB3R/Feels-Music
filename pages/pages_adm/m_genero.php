@@ -2,6 +2,8 @@
 <link rel="stylesheet" href="../css/main.css">
 
 <?php
+include("../../includes/permissao.php");
+  include("../../includes/verificarLogin.php");
 include("../../includes/nav.php");
   $quantidade = 0;
 
