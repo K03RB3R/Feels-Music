@@ -10,6 +10,9 @@ if(isset($_GET["codigo"])){
 }
 
 ?>
+<?php
+    include("../../actions/selecaoMusica.php");
+?>
 
 <html>
     <head>
