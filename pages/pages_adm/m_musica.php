@@ -12,7 +12,18 @@ if (isset($_POST["titulo"])){
    $album_idalbum = $_POST["album_idalbum"];
 
 
-  $query =  mysqli_query($conexao, "INSERT INTO musica VALUES(DEFAULT, '$titulo', $musica_idgenero, $album_idalbum) ") or die (mysqli_error($conexao));
+   // teste //
+
+    $destino= '../../assets/musics/';
+    print_r($_FILES);
+    $ext = strtolower(substr($_FILES['userfile']['name'],-4));
+    if($ext==".mp3"||$ext==".wma"||$ext==".aac"||$ext==".ogg"){
+    $new_name = $_FILES['userfile']['name'];
+    $caminho="../../assets/musics/".$new_name;
+
+    move_uploaded_file($_FILES['userfile']['tmp_name'], $caminho);
+    $query =  mysqli_query($conexao, "INSERT INTO musica VALUES(DEFAULT, '$titulo', $musica_idgenero, $album_idalbum) ") or die (mysqli_error($conexao)); 
+    }
 
   $quantidade = mysqli_affected_rows($conexao);
 
@@ -51,7 +62,7 @@ if (isset($_POST["titulo"])){
 
 
       </a>
-    </nav> -->
+    </nav>
   </head>
   <body>
     <center>
@@ -60,16 +71,11 @@ if (isset($_POST["titulo"])){
       </table> -->
     </center>
 
-     <!-- O tipo de encoding de dados, enctype, DEVE ser especificado abaixo -->
-     <form enctype="multipart/form-data" action="../pages_adm/m_musica.php" method="POST">
-     <!-- MAX_FILE_SIZE deve preceder o campo input -->
-     <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
-     <!-- O Nome do elemento input determina o nome da array $_FILES -->
-     Selecione o arquivo MP3: <input name="userfile" type="file" />
-     <input type="submit" value="Enviar arquivo" />
-     </form>
+    <form enctype="multipart/form-data" action="m_musica.php" method="post">
+      
+      Selecione a música: <input name="userfile" type="file" />
+      <!-- <input type="submit" value="Enviar arquivo" /> -->
 
-    <form class="form-inline" method="post">
       <br><br><br><br>
       <div class="col-auto">
         <label for="inlineFormImput" class="sr-only">Musica</label>
@@ -121,7 +127,7 @@ if (isset($_POST["titulo"])){
         </div
 
         <?php if ($quantidade >=1){ ?>
-             <div class="alert alert-light alert-dismissible fade show" role="alert">
+             <div class="alert alert-light alert-dismissible fade show" role="alert" >
                <strong>Gênero cadastrado com sucesso!</strong>
               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
