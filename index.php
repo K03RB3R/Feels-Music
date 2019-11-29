@@ -33,7 +33,7 @@
  <div class="container">
 	 <div class="mx-auto" style="width:200px;">
 		 <br>
-		 <img class="logo" src="assets/imgs/Icon.png"/ width="220" height="270">
+		 <img class="logo" src="assets/imgs/Icon.png"/ width="200" height="240">
 		 <h1> Login </h1>
 		 <form action="includes/validarLogin.php" name="formlogin" method="post">
 			 <div class="form-group">
