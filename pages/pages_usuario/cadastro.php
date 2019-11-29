@@ -113,7 +113,7 @@ if (isset ($_GET['excluir'])){
 		<div class="container">
 	 	 <div class="mx-auto" style="width:300px;">
 	 		 <br>
-			 <img class="logo" src="../../assets/imgs/Icon.png"/ width="220" height="270">
+			 <img class="logo" src="../../assets/imgs/Icon.png"/ width="200" height="240">
 			 <h1>Cadastro</h1>
 				<form action="cadastro.php?<?php echo $url;?>acao=inserir" method="post">
 					<div class="form-group">
