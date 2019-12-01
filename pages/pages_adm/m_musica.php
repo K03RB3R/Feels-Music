@@ -46,6 +46,9 @@ if (isset($_POST["titulo"])){
     h2{
     color: #FC9F01;
     }
+    h4{
+      color: #FC9F01;
+    }
     footer.fixar-rodape{
        border-top: 1px solid #333;
        bottom: 0;
@@ -76,7 +79,7 @@ if (isset($_POST["titulo"])){
 
     <form enctype="multipart/form-data" action="m_musica.php" method="post">
 
-      Selecione a música: <input name="userfile" type="file" />
+     <h4>Selecione a música: <input name="userfile" type="file" /></h4>
       <!-- <input type="submit" value="Enviar arquivo" /> -->
 
 
