@@ -36,6 +36,9 @@
                         <a class="nav-link" href="#">Artistas <span class="sr-only">(Página atual)</span></a>
                     </li> -->
                     <li class="nav-item">
+                        <a class="nav-link" href="c_adm.php">Adm</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="m_artistas.php">Artistas</a>
                     </li>
                     <li class="nav-item">
