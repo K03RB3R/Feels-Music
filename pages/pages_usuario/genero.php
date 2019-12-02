@@ -19,7 +19,7 @@ $idsentimento = $_GET["codigo"];
 //}else{
 //  header ('location:sentimento.php');
 //}
-     
+
 //echo $_SESSION['sentimento'];
 
 
