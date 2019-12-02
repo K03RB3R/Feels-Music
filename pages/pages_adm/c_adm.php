@@ -1,4 +1,7 @@
 <?php
+include("../../includes/permissao.php");
+include("../../includes/verificarLogin.php");
+
 
 if (isset ($_GET['excluir'])){
 	$conexao = mysqli_connect("localhost","root","", "bancofeelsmusic");
