@@ -67,6 +67,7 @@ mysqli_close($conexao);
       <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
       Feels Music
       <a href="http://localhost/feels-music/includes/encerrarLogin.php">
+      <a class="navbar-brand">Olá usuário!</a>
         <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Sair
           <img src="../../assets/imgs/Icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
         </button>

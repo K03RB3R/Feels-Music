@@ -156,51 +156,48 @@ INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentim
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('4', 'Pagode/Samba', '1');
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('5', 'Rock/Pop/Mpb', '1');
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('6', 'Sertanejo', '1');
-/*
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('1', 'Funk', '2');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('2', 'Hip Hop/Hap', '2');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('3', 'Música eletrônica', '2');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('4', 'Pagode/Samba', '2');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('5', 'Rock/Pop/Mpb', '2');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('6', 'Sertanejo', '2');
 
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('1', 'Funk', '3');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('2', 'Hip Hop/Hap', '3');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('3', 'Música eletrônica', '3');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('4', 'Pagode/Samba', '3');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('5', 'Rock/Pop/Mpb', '3');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('6', 'Sertanejo', '3');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('7', 'Funk', '2');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('8', 'Hip Hop/Hap', '2');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('9', 'Música eletrônica', '2');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('10', 'Pagode/Samba', '2');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('11', 'Rock/Pop/Mpb', '2');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('12', 'Sertanejo', '2');
 
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('1', 'Funk', '4');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('2', 'Hip Hop/Hap', '4');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('3', 'Música eletrônica', '4');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('4', 'Pagode/Samba', '4');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('5', 'Rock/Pop/Mpb', '4');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('6', 'Sertanejo', '4');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('13', 'Funk', '3');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('14', 'Hip Hop/Hap', '3');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('15', 'Música eletrônica', '3');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('16', 'Pagode/Samba', '3');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('17', 'Rock/Pop/Mpb', '3');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('18', 'Sertanejo', '3');
 
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('1', 'Funk', '5');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('2', 'Hip Hop/Hap', '5');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('3', 'Música eletrônica', '5');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('4', 'Pagode/Samba', '5');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('5', 'Rock/Pop/Mpb', '5');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('6', 'Sertanejo', '5');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('19', 'Funk', '4');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('20', 'Hip Hop/Hap', '4');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('21', 'Música eletrônica', '4');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('22', 'Pagode/Samba', '4');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('23', 'Rock/Pop/Mpb', '4');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('24', 'Sertanejo', '4');
 
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('1', 'Funk', '6');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('2', 'Hip Hop/Hap', '6');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('3', 'Música eletrônica', '6');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('4', 'Pagode/Samba', '6');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('5', 'Rock/Pop/Mpb', '6');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('6', 'Sertanejo', '6');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('25', 'Funk', '5');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('26', 'Hip Hop/Hap', '5');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('27', 'Música eletrônica', '5');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('28', 'Pagode/Samba', '5');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('29', 'Rock/Pop/Mpb', '5');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('30', 'Sertanejo', '5');
 
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('1', 'Funk', '7');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('2', 'Hip Hop/Hap', '7');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('3', 'Música eletrônica', '7');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('4', 'Pagode/Samba', '7');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('5', 'Rock/Pop/Mpb', '7');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('6', 'Sertanejo', '7');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('31', 'Funk', '6');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('32', 'Hip Hop/Hap', '6');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('33', 'Música eletrônica', '6');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('34', 'Pagode/Samba', '6');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('35', 'Rock/Pop/Mpb', '6');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('36', 'Sertanejo', '6');
 
-*/
-
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('37', 'Funk', '7');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('38', 'Hip Hop/Hap', '7');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('39', 'Música eletrônica', '7');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('40', 'Pagode/Samba', '7');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('41', 'Rock/Pop/Mpb', '7');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('42', 'Sertanejo', '7');
 
 INSERT INTO `bancofeelsmusic`.`artista` (`idartista`, `nome`) VALUES ('1', 'Annita');
 INSERT INTO `bancofeelsmusic`.`artista` (`idartista`, `nome`) VALUES ('2', 'Lexa');

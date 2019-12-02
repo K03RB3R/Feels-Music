@@ -2,7 +2,7 @@
 
 <?php
 include("../../includes/permissao.php");
-  include("../../includes/verificarLogin.php");
+include("../../includes/verificarLogin.php");
 include("../../includes/nav.php");
   $quantidade = 0;
   $conexao = mysqli_connect("localhost","root", "", "bancofeelsmusic");
@@ -135,7 +135,7 @@ if (isset($_POST["titulo"])){
 
         <?php if ($quantidade >=1){ ?>
              <div class="alert alert-light alert-dismissible fade show" role="alert" >
-               <strong>Gênero cadastrado com sucesso!</strong>
+               <strong>Música cadastrada com sucesso!</strong>
               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
