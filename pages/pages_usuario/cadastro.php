@@ -64,7 +64,7 @@ if (isset ($_GET['excluir'])){
 
 		    if($fm >= 1){
 			echo "<script>alert('Cadastrado com sucesso!');</script>";
-			header ('location: login.php');
+			header ('location: ../../index.php');
 
 		    }
 		}
