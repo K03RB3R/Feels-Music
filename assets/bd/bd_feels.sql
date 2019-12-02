@@ -185,3 +185,5 @@ UPDATE `usuario` SET `nickname` = 'GK' WHERE `usuario`.`idusuario` = 2;
 ALTER TABLE `usuario` ADD UNIQUE (`nickname`);
 
 ALTER TABLE `usuario` ADD UNIQUE (`email`);
+
+ALTER TABLE `musica` ADD `caminho` VARCHAR(80);
