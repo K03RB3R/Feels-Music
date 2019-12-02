@@ -36,23 +36,38 @@ if (isset ($_GET['excluir'])){
 
 
 		$conexao = mysqli_connect("localhost", "root", "", "bancofeelsmusic");
+		$query = mysqli_query($conexao,"SELECT * FROM usuario WHERE email = '$email' OR nickname = '$nickname'") or die(mysqli_error($conexao));
+		$repetido = mysqli_fetch_all($query,MYSQLI_ASSOC);
+
+		if(count($repetido) > 0){
+		    $campos_erro = '';
+		    foreach ($repetido as $key => $user){
+
+			if($user['email'] == $email){
+			    $campos_erro .=' E-Mail ';
+			}
+			if($user['nickname'] == $nickname){
+			    $campos_erro .=' Nickname ';
+			}
+		    }
+		    echo "<script>alert('Os seguintes campos já foram cadastrados: ".$campos_erro."');</script>";
+		    $url="";
+		}else{
+		    $query = mysqli_query($conexao,"INSERT INTO usuario (NOME, DATA_NASCIMENTO, EMAIL, SENHA, NICKNAME, TIPO_USUARIO_IDTIPO_USUARIO1,SENTIMENTO_IDSENTIMENTO) VALUES('$nome', '$dataNasc', '$email', '$senha','$nickname',1,1)") or die(mysqli_error($conexao));
 
 
-		$query = mysqli_query($conexao,"INSERT INTO usuario (NOME, DATA_NASCIMENTO, EMAIL, SENHA, NICKNAME, TIPO_USUARIO_IDTIPO_USUARIO1,SENTIMENTO_IDSENTIMENTO) VALUES('$nome', '$dataNasc', '$email', '$senha','$nickname',1,1)") or die(mysqli_error($conexao));
+		    $fm = mysqli_affected_rows($conexao);
 
-
-		$fm = mysqli_affected_rows($conexao);
-
-		$id = mysqli_insert_id($conexao);
+		    $id = mysqli_insert_id($conexao);
 
 
 
-		if($fm >= 1){
+		    if($fm >= 1){
 			echo "<script>alert('Cadastrado com sucesso!');</script>";
 			header ('location: login.php');
 
+		    }
 		}
-
 		mysqli_close($conexao);
 	}
 }else{
