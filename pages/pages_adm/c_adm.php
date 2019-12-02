@@ -1,4 +1,7 @@
 <?php
+include("../../includes/permissao.php");
+include("../../includes/verificarLogin.php");
+
 
 if (isset ($_GET['excluir'])){
 	$conexao = mysqli_connect("localhost","root","", "bancofeelsmusic");
@@ -38,7 +41,7 @@ if (isset ($_GET['excluir'])){
 		$conexao = mysqli_connect("localhost", "root", "", "bancofeelsmusic");
 
 
-		$query = mysqli_query($conexao,"INSERT INTO usuario (NOME, DATA_NASCIMENTO, EMAIL, SENHA, NICKNAME, TIPO_USUARIO_IDTIPO_USUARIO1,SENTIMENTO_IDSENTIMENTO) VALUES('$nome', '$dataNasc', '$email', '$senha','$nickname',1,1)") or die(mysqli_error($conexao));
+		$query = mysqli_query($conexao,"INSERT INTO usuario (NOME, DATA_NASCIMENTO, EMAIL, SENHA, NICKNAME, TIPO_USUARIO_IDTIPO_USUARIO1,SENTIMENTO_IDSENTIMENTO) VALUES('$nome', '$dataNasc', '$email', '$senha','$nickname',2,3)") or die(mysqli_error($conexao));
 
 
 		$fm = mysqli_affected_rows($conexao);
@@ -47,9 +50,9 @@ if (isset ($_GET['excluir'])){
 
 
 
-		if($fm >= 1){
+		if($fm > 0){
 			echo "<script>alert('Cadastrado com sucesso!');</script>";
-			header ('location: ../../index.php');
+			header ('location: index_adm.php');
 
 		}
 
@@ -93,7 +96,7 @@ if (isset ($_GET['excluir'])){
 	 	 body{
 	 		 background-color: #171717;
 	 	 }
-	 	 h1{
+	 	 h2{
 	 		 color: #FC9F01
 			}
 			footer.fixar-rodape{
@@ -109,13 +112,70 @@ if (isset ($_GET['excluir'])){
 	  </style>
 	</head>
 	<body>
+		<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #FC9F01;">
+				<a class="navbar-brand" href="../../pages/pages_adm/index_adm.php">Feels Music</a>
+				<img src="../../assets/imgs/Icon.png" width="40" height="40">
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+						<ul class="navbar-nav">
+							 <!-- <li class="nav-item active">
+										<a class="nav-link" href="#">Artistas <span class="sr-only">(Página atual)</span></a>
+								</li> -->
+								<li class="nav-item">
+										<a class="nav-link" href="c_adm.php">Adm</a>
+								</li>
+								<li class="nav-item">
+										<a class="nav-link" href="m_artistas.php">Artistas</a>
+								</li>
+								<li class="nav-item">
+										<a class="nav-link" href="m_album.php">Álbum</a>
+								</li>
+								<li class="nav-item">
+										<a class="nav-link" href="m_sentiment.php">Sentimento</a>
+								</li>
+								<li class="nav-item">
+										<a class="nav-link" href="m_genero.php">Gênero</a>
+								</li>
+								<li class="nav-item">
+										<a class="nav-link" href="m_musica.php">Músicas</a>
+								</li>
+								<li class="nav-item dropdown">
+										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										Manutenções
+										</a>
+										<div class="dropdown-menu" >
+												<a class="dropdown-item" href="visualizarAlbum.php">Álbum</a>
+												<a class="dropdown-item" href="visualizarArtista.php">Artistas</a>
+												<a class="dropdown-item" href="visualizarSentimento.php">Sentimento</a>
+												<a class="dropdown-item" href="visualizarGenero.php">Gênero</a>
+												<a class="dropdown-item" href="manutencao.php">Usuários</a>
+												<!-- <a class="dropdown-item"href="http://localhost/feels-music/">Sair</a> -->
+													<!-- <button class="btn btn-outline-dark my-2 my-sm-0" type="submit"> Sair -->
+												<!-- <img src="../../assets/imgs/Icon.png" width="30" height="30" class="d-inline-block align-top" alt=""> -->
+
+											</button>
+										</a>
+										</div>
+								</li>
+						</ul>
+				</div>
+				<div class="d-flex justify-content-between w-100">
+					<div class="">
+						<!-- <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt=""> -->
+						<a class="navbar-brand" href="#">	</a>
+					</div>
+					<a href="http://localhost/feels-music/includes/encerrarLogin.php">
+					<button class="btn btn-outline-dark my-5 my-sm-0" type="submit">Sair
+						<img src="../../assets/imgs/Icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+					</button>
+				</a>
+		</nav>
 		<center>
 		<div class="container">
 	 	 <div class="mx-auto" style="width:300px;">
 	 		 <br>
 			 <img class="logo" src="../../assets/imgs/Icon.png"/ width="200" height="240">
-			 <h1>Cadastro</h1>
-				<form action="cadastro.php?<?php echo $url;?>acao=inserir" method="post">
+			 <h2>Cadastro de Adm</h2>
+				<form action="c_adm.php?<?php echo $url;?>acao=inserir" method="post">
 					<div class="form-group">
 						<input type="text" name="nome" class="form-control mb-2" placeholder="Nome"  value="<?php echo $nome;?>"required>
 					</div>

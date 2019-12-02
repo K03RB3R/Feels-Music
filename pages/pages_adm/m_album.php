@@ -1,5 +1,5 @@
 <?php
-include("../../includes/permissao.php");
+  include("../../includes/permissao.php");
   include("../../includes/verificarLogin.php");
 	include("../../includes/nav.php");
 	$quantidade = 0;
@@ -17,11 +17,8 @@ include("../../includes/permissao.php");
 
 
 			echo "<script>history.pushState({}, '', '')</script>";
- }
+    }
 ?>
-
-
-
 
 <link rel="stylesheet" href="../css/main.css">
 	<!DOCTYPE html>
@@ -74,21 +71,21 @@ include("../../includes/permissao.php");
 			<a class="navbar-brand" href="#"></a>
 			<form method="POST" class="form-inline">
 
-	  		<div class="form-group mx-sm-3 mb-2">
-	    <label  class="sr-only">Álbum</label>
-	    <input type="text" class="form-control mb-2" placeholder="Álbum" name="album" required>
-	     </div>
+	  		 <div class="form-group mx-sm-3 mb-2">
+    	    <label  class="sr-only">Álbum</label>
+    	    <input type="text" class="form-control mb-2" placeholder="Álbum" name="album" required>
+	       </div>
 
 
-    <div class="form-group mx-sm-3 mb-2">
-  <label  class="sr-only"></label>
-  <input type="date" class="form-control mb-2"  placeholder="Ano" name="ano" required>
-    </div>
+        <div class="form-group mx-sm-3 mb-2">
+          <label  class="sr-only"></label>
+          <input type="date" class="form-control mb-2"  placeholder="Ano" name="ano" required>
+        </div>
 
-		<div class="form-group mx-sm-3 mb-2">
-	<label for="inlineFormImput" class="sr-only">musica_idartista</label>
-	<select class="form-control mb-2" name="musica_idartista" required>
-		<option value="">Selecione o Artista</option>
+    		<div class="form-group mx-sm-3 mb-2">
+        	<label for="inlineFormImput" class="sr-only">musica_idartista</label>
+        	<select class="form-control mb-2" name="musica_idartista" required>
+    		<option value="">Selecione o Artista</option>
 
 			 <?php
 			 $conexao = mysqli_connect("localhost","root", "", "bancofeelsmusic");
@@ -105,11 +102,11 @@ include("../../includes/permissao.php");
 				?>
 			</select>
 
-		</div>
-    <br><br><br><br>
+		  </div>
+      <br><br><br><br>
 
 
-    <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-3">Cadastrar</button>
+      <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-3">Cadastrar</button>
 
 		<?php if ($quantidade >=1){ ?>
 			<div class="alert alert-light alert-dismissible fade show" role="alert">

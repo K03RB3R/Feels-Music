@@ -179,3 +179,9 @@ INSERT INTO `bancofeelsmusic`.`usuario` (`idusuario`, `nome`, `data_nascimento`,
 INSERT INTO `bancofeelsmusic`.`usuario` (`idusuario`, `nome`, `data_nascimento`, `email`, `senha`, `nickname`, `tipo_usuario_idtipo_usuario1`, `sentimento_idsentimento`) VALUES ('2', 'Guilherme Koerber', '2001-11-10', 'gk01@hotmail.com', 'gui123', 'Bru', '2', '1');
 INSERT INTO `bancofeelsmusic`.`usuario` (`idusuario`, `nome`, `data_nascimento`, `email`, `senha`, `nickname`, `tipo_usuario_idtipo_usuario1`, `sentimento_idsentimento`) VALUES ('3', 'Felipe Rangel', '1990-06-20', 'feliperangel@hotmail.com', 'lipe123', 'Lipe', '2', '1');
 INSERT INTO `bancofeelsmusic`.`usuario` (`idusuario`, `nome`, `data_nascimento`, `email`, `senha`, `nickname`, `tipo_usuario_idtipo_usuario1`, `sentimento_idsentimento`) VALUES ('4', 'Roberto Casagrande', '1998-03-18', 'casaroberto@hotmail.com', 'casa123', 'Casa', '2', '1');
+
+UPDATE `usuario` SET `nickname` = 'GK' WHERE `usuario`.`idusuario` = 2;
+
+ALTER TABLE `usuario` ADD UNIQUE (`nickname`);
+
+ALTER TABLE `usuario` ADD UNIQUE (`email`);

@@ -24,7 +24,7 @@ if (isset($_POST["titulo"])){
     $caminho="../../assets/musics/".$new_name;
 
     move_uploaded_file($_FILES['userfile']['tmp_name'], $caminho);
-    $query =  mysqli_query($conexao, "INSERT INTO musica VALUES(DEFAULT, '$titulo', $musica_idgenero, $album_idalbum) ") or die (mysqli_error($conexao)); 
+    $query =  mysqli_query($conexao, "INSERT INTO musica VALUES(DEFAULT, '$titulo', $musica_idgenero, $album_idalbum) ") or die (mysqli_error($conexao));
     }
 
   $quantidade = mysqli_affected_rows($conexao);
@@ -45,6 +45,9 @@ if (isset($_POST["titulo"])){
     }
     h2{
     color: #FC9F01;
+    }
+    h4{
+      color: #FC9F01;
     }
     footer.fixar-rodape{
        border-top: 1px solid #333;
@@ -68,14 +71,15 @@ if (isset($_POST["titulo"])){
   </head>
   <body>
     <center>
+      <br>
       <h2>Músicas</h2>
       <table class="table table-bordered">
       </table>
     </center>
 
     <form enctype="multipart/form-data" action="m_musica.php" method="post">
-      
-      Selecione a música: <input name="userfile" type="file" />
+
+     <h4>Selecione a música: <input name="userfile" type="file" /></h4>
       <!-- <input type="submit" value="Enviar arquivo" /> -->
 
 
