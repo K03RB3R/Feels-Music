@@ -20,9 +20,11 @@ mysqli_close($conexao);
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+
     <style media="screen">
     body{
       background-color: #171717;
+      background-image: url("../../assets/imgs/imagem1.png");
     }
     footer.fixar-rodape{
        border-top: 1px solid #333;

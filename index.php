@@ -11,6 +11,7 @@
  <style media="screen">
 	 body{
 		 background-color: #171717;
+    background-image: url("./assets/imgs/imagem1.png");
 	 }
 	 h1{
 		 color: #FC9F01
@@ -73,7 +74,7 @@
  </div>
 </center>
 </body>
-<footer class="fixar-rodape">
+<footer class="fixar-rodape text-center">
   Todos os direitos reservados à Feels Music INC - 2019
 </footer>
 

@@ -53,8 +53,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="m_musica.php">Músicas</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <li class="nav-item dropdown" style="width: 150px;">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Manutenções
                         </a>
                         <div class="dropdown-menu" >
