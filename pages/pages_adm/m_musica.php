@@ -12,6 +12,7 @@ if (isset($_POST["titulo"])){
    $titulo = $_POST["titulo"];
    $musica_idgenero = $_POST["musica_idgenero"];
    $album_idalbum = $_POST["album_idalbum"];
+   $caminho = $_POST["caminho"];
 
 
    // teste //
@@ -24,7 +25,7 @@ if (isset($_POST["titulo"])){
     $caminho="../../assets/musics/".$new_name;
 
     move_uploaded_file($_FILES['userfile']['tmp_name'], $caminho);
-    $query =  mysqli_query($conexao, "INSERT INTO musica VALUES(DEFAULT, '$titulo', $musica_idgenero, $album_idalbum) ") or die (mysqli_error($conexao));
+    $query =  mysqli_query($conexao, "INSERT INTO musica VALUES(DEFAULT, '$titulo', $musica_idgenero, $album_idalbum,'$caminho') ") or die (mysqli_error($conexao));
     }
 
   $quantidade = mysqli_affected_rows($conexao);
@@ -112,7 +113,7 @@ if (isset($_POST["titulo"])){
       <div class="col-auto">
         <label for="inlineFormImput" class="sr-only">album_idalbum</label>
            <select class="form-control mb-2" name="album_idalbum" required>
-             <option value="">Selecione o Album</option>
+             <option value="">Selecione o Álbum</option>
 
            <?php
 

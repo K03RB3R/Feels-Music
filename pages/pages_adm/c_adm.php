@@ -1,7 +1,4 @@
 <?php
-include("../../includes/permissao.php");
-include("../../includes/verificarLogin.php");
-
 
 if (isset ($_GET['excluir'])){
 	$conexao = mysqli_connect("localhost","root","", "bancofeelsmusic");
@@ -172,7 +169,7 @@ if (isset ($_GET['excluir'])){
 		<center>
 		<div class="container">
 	 	 <div class="mx-auto" style="width:300px;">
-	 		 <br>
+
 			 <img class="logo" src="../../assets/imgs/Icon.png"/ width="200" height="240">
 			 <h2>Cadastro de Adm</h2>
 				<form action="c_adm.php?<?php echo $url;?>acao=inserir" method="post">
