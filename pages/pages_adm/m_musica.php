@@ -77,7 +77,7 @@ if (isset($_POST["titulo"])){
       </table>
     </center>
 
-    <form enctype="multipart/form-data" action="m_musica.php" method="post">
+    <form enctype="multipart/form-data" action="m_musica.php" method="post" >
 
      <h4>Selecione a música: <input name="userfile" type="file" /></h4>
       <!-- <input type="submit" value="Enviar arquivo" /> -->
@@ -85,7 +85,7 @@ if (isset($_POST["titulo"])){
 
       <br><br><br><br>
       <div class="col-auto">
-        <label for="inlineFormImput" class="sr-only">Musica</label>
+        <label for="inlineFormImput" class="sr-only">Música</label>
       <input type="text" class="form-control mb-2"  id="inlineFormImput" placeholder="Nome" name="titulo" required>
       </div>
       <div class="col-auto">
