@@ -75,7 +75,7 @@ mysqli_close($conexao);
   </head>
   <body>
     <br><br>
-    <h2><center>Como voce está se sentindo hoje?</center></h2>
+    <h2><center>Como você está se sentindo hoje?</center></h2>
     <br><br>
     <?php
     foreach($arrSentimento as $chave => $valor){
