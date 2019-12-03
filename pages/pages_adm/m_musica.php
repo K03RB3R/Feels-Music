@@ -120,7 +120,7 @@ if (isset($_POST["titulo"])){
            $album_idalbum = "SELECT * FROM album";
            $album_idalbum = mysqli_query($conexao, $album_idalbum);
 
-           while ($row_album_idalbum = mysqli_fetch_assoc($album_idalbum) ) {
+           while ($row_album_idalbum = mysqli_fetch_assoc($album_idalbum)) {
            ?>
              <option value="<?php echo $row_album_idalbum['idalbum'];?>">
                <?php echo $row_album_idalbum['nome'];?>
