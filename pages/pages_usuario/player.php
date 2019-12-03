@@ -1,26 +1,41 @@
 <?php
-
+session_start();
 if(isset($_GET["codigo"])){
     $genero = $_GET["codigo"];
     $conexao = mysqli_connect("localhost","root","", "bancofeelsmusic");
 
     $buscaMusica = mysqli_query($conexao, "SELECT * FROM musica WHERE musica_idgenero = $genero") or die(mysqli_error($conexao));
     $arrayBuscaM = mysqli_fetch_all($buscaMusica, MYSQLI_ASSOC);
-    //print_r($arrayBuscaM);
+
 
     $variaveisScript = "<script>var songs = [";
     $cont = 0;
     foreach($arrayBuscaM as $key=>$value){
         $variaveisScript .= "'".$value["caminho"]."'";
-        echo count($arrayBuscaM);
+       // echo count($arrayBuscaM);
         
         $cont++;
-        echo $cont;
+     //   echo $cont;
         if($cont < count($arrayBuscaM)){
             $variaveisScript .= ",";
         }
        
     }
+    $variaveisScript .= "]; ";
+    $variaveisScript .= "var titulos = [";
+    $cont = 0;
+    foreach($arrayBuscaM as $key=>$value){
+        $variaveisScript .= "'".$value["titulo"]."'";
+      //  echo count($arrayBuscaM);
+        
+        $cont++;
+       // echo $cont;
+        if($cont < count($arrayBuscaM)){
+            $variaveisScript .= ",";
+        }
+       
+    }
+
     $variaveisScript .= "] </script>";
     echo $variaveisScript;
 }
@@ -41,10 +56,10 @@ if(isset($_GET["codigo"])){
 
         <div id="main">
             <div id="image">
-                <img src="../../assets/imgs/gg.gif"/>
+                <img src="../../assets/imgs/poster.png"/>
             </div>
             <div id="player">
-                <div id="songTitle">Demo</div>
+                <div id="songTitle">titulo</div>
                 <div id="buttons">
                     <button id="pre" onclick="pre()"><img src="../../assets/imgs/Pre.png" height="90%" width="90%"/></button>
                     <button id="play" onclick="playOrPauseSong()"><img src="../../assets/imgs/Play.png"/></button>
@@ -60,7 +75,7 @@ if(isset($_GET["codigo"])){
     </body>
     <script type="text/javascript">
 
-        var poster = ["../../assets/imgs/wave.gif","../../assets/imgs/wave.gif"];
+        var poster = ["../../assets/imgs/poster.png","../../assets/imgs/poster.png"];
         
         var songTitle = document.getElementById("songTitle");
         var fillBar = document.getElementById("fill");
@@ -79,7 +94,7 @@ if(isset($_GET["codigo"])){
 
             song.src = songs[currentSong];
 
-            songTitle.textContent = songs[currentSong];
+            songTitle.textContent = titulos[currentSong];
 
             song.play();
         }
