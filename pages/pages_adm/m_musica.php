@@ -74,17 +74,17 @@ if (isset($_POST["titulo"])){
     <center>
       <br>
       <h2>Músicas</h2>
+      <img class="logo" src="../../assets/imgs/Icon.png"/ width="200" height="240">
       <table class="table table-bordered">
       </table>
     </center>
 
     <form enctype="multipart/form-data" action="m_musica.php" method="post" >
 
-     <h4>Selecione a música: <input name="userfile" type="file" /></h4>
+     <!-- <h4>Selecione a música: <input name="userfile" type="file" /></h4> -->
       <!-- <input type="submit" value="Enviar arquivo" /> -->
 
 
-      <br><br><br><br>
       <div class="col-auto">
         <label for="inlineFormImput" class="sr-only">Música</label>
       <input type="text" class="form-control mb-2"  id="inlineFormImput" placeholder="Nome" name="titulo" required>
@@ -120,7 +120,7 @@ if (isset($_POST["titulo"])){
            $album_idalbum = "SELECT * FROM album";
            $album_idalbum = mysqli_query($conexao, $album_idalbum);
 
-           while ($row_album_idalbum = mysqli_fetch_assoc($album_idalbum) ) {
+           while ($row_album_idalbum = mysqli_fetch_assoc($album_idalbum)) {
            ?>
              <option value="<?php echo $row_album_idalbum['idalbum'];?>">
                <?php echo $row_album_idalbum['nome'];?>
@@ -131,7 +131,7 @@ if (isset($_POST["titulo"])){
 
           </select>
           <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar</button>
-
+        <center>  <h4>Selecione a música: <input name="userfile" type="file" /></h4> </center>
         </div
 
         <?php if ($quantidade >=1){ ?>

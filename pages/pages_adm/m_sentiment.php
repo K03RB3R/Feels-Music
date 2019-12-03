@@ -52,6 +52,7 @@ include("../../includes/nav.php");
 			<center>
 				<br>
 	      <h2>Sentimento</h2>
+        <img class="logo" src="../../assets/imgs/Icon.png"/ width="200" height="240">
 	      <table class="table table-bordered"></table>
 			</center>
 			<form method="POST" class="form-inline">
