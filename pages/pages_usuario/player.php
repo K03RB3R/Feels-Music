@@ -6,7 +6,23 @@ if(isset($_GET["codigo"])){
 
     $buscaMusica = mysqli_query($conexao, "SELECT * FROM musica WHERE musica_idgenero = $genero") or die(mysqli_error($conexao));
     $arrayBuscaM = mysqli_fetch_all($buscaMusica, MYSQLI_ASSOC);
-    print_r($arrayBuscaM);
+    //print_r($arrayBuscaM);
+
+    $variaveisScript = "<script>var songs = [";
+    $cont = 0;
+    foreach($arrayBuscaM as $key=>$value){
+        $variaveisScript .= "'".$value["caminho"]."'";
+        echo count($arrayBuscaM);
+        
+        $cont++;
+        echo $cont;
+        if($cont < count($arrayBuscaM)){
+            $variaveisScript .= ",";
+        }
+       
+    }
+    $variaveisScript .= "] </script>";
+    echo $variaveisScript;
 }
 
 ?>
@@ -44,7 +60,6 @@ if(isset($_GET["codigo"])){
     </body>
     <script type="text/javascript">
 
-        var songs = ["../../assets/musics/It's So Easy - Guns N' Roses.mp3","../../assets/musics/Sunshine - Cat Dealers.mp3","../../assets/musics/Turn Of The Lights - Chris Lake.mp3"];
         var poster = ["../../assets/imgs/wave.gif","../../assets/imgs/wave.gif"];
         
         var songTitle = document.getElementById("songTitle");
