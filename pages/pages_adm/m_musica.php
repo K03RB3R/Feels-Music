@@ -113,7 +113,7 @@ if (isset($_POST["titulo"])){
       <div class="col-auto">
         <label for="inlineFormImput" class="sr-only">album_idalbum</label>
            <select class="form-control mb-2" name="album_idalbum" required>
-             <option value="">Selecione o Album</option>
+             <option value="">Selecione o Álbum</option>
 
            <?php
 
@@ -136,7 +136,7 @@ if (isset($_POST["titulo"])){
 
         <?php if ($quantidade >=1){ ?>
              <div class="alert alert-light alert-dismissible fade show" role="alert" >
-               <strong>Gênero cadastrado com sucesso!</strong>
+               <strong>Música cadastrada com sucesso!</strong>
               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
