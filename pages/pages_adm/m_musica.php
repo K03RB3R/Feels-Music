@@ -74,7 +74,7 @@ if (isset($_POST["titulo"])){
     <center>
       <br>
       <h2>Músicas</h2>
-      <img class="logo" src="../../assets/imgs/Icon.png"/ width="200" height="240">
+      <img class="logo" src="../../assets/imgs/Icon.png"/ width="180" height="240">
       <table class="table table-bordered">
       </table>
     </center>
@@ -84,64 +84,70 @@ if (isset($_POST["titulo"])){
      <!-- <h4>Selecione a música: <input name="userfile" type="file" /></h4> -->
       <!-- <input type="submit" value="Enviar arquivo" /> -->
 
-
-      <div class="col-auto">
-        <label for="inlineFormImput" class="sr-only">Música</label>
-      <input type="text" class="form-control mb-2"  id="inlineFormImput" placeholder="Nome" name="titulo" required>
-      </div>
-      <div class="col-auto">
-         <label for="inlineFormImput" class="sr-only">musica_idgenero</label>
-         <select class="form-control mb-2" name="musica_idgenero"required>
-           <option value="">Selecione o Gênero</option>
-
-         <?php
-
-         $musica_idgenero = "SELECT * FROM genero";
-         $musica_idgenero = mysqli_query($conexao, $musica_idgenero);
-
-         while ($row_musica_idgenero = mysqli_fetch_assoc($musica_idgenero) ) {
-         ?>
-           <option value="<?php echo $row_musica_idgenero['idgenero'];?>">
-             <?php echo $row_musica_idgenero['nome'];?>
-           </option>
-         <?php
-          }
-          ?>
-        </select>
-
-      </div>
-      <div class="col-auto">
-        <label for="inlineFormImput" class="sr-only">album_idalbum</label>
-           <select class="form-control mb-2" name="album_idalbum" required>
-             <option value="">Selecione o Álbum</option>
+      <div class="row">
+        <div class="col-auto">
+          <label for="inlineFormImput" class="sr-only">Música</label>
+          <input type="text" class="form-control mb-2"  id="inlineFormImput" placeholder="Nome" name="titulo" required>
+        </div>
+        <div class="col-auto">
+           <label for="inlineFormImput" class="sr-only">musica_idgenero</label>
+           <select class="form-control mb-2" name="musica_idgenero"required>
+             <option value="">Selecione o Gênero</option>
 
            <?php
 
-           $album_idalbum = "SELECT * FROM album";
-           $album_idalbum = mysqli_query($conexao, $album_idalbum);
+           $musica_idgenero = "SELECT * FROM genero";
+           $musica_idgenero = mysqli_query($conexao, $musica_idgenero);
 
-           while ($row_album_idalbum = mysqli_fetch_assoc($album_idalbum)) {
+           while ($row_musica_idgenero = mysqli_fetch_assoc($musica_idgenero) ) {
            ?>
-             <option value="<?php echo $row_album_idalbum['idalbum'];?>">
-               <?php echo $row_album_idalbum['nome'];?>
+             <option value="<?php echo $row_musica_idgenero['idgenero'];?>">
+               <?php echo $row_musica_idgenero['nome'];?>
              </option>
            <?php
             }
             ?>
-
           </select>
-          <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar</button>
-        <center>  <h4>Selecione a música: <input name="userfile" type="file" /></h4> </center>
-        </div
 
-        <?php if ($quantidade >=1){ ?>
-             <div class="alert alert-light alert-dismissible fade show" role="alert" >
-               <strong>Música cadastrada com sucesso!</strong>
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+        </div>
+
+        <div class="col-auto">
+          <label for="inlineFormImput" class="sr-only">album_idalbum</label>
+             <select class="form-control mb-2" name="album_idalbum" required>
+               <option value="">Selecione o Álbum</option>
+
+             <?php
+
+             $album_idalbum = "SELECT * FROM album";
+             $album_idalbum = mysqli_query($conexao, $album_idalbum);
+
+             while ($row_album_idalbum = mysqli_fetch_assoc($album_idalbum)) {
+             ?>
+               <option value="<?php echo $row_album_idalbum['idalbum'];?>">
+                 <?php echo $row_album_idalbum['nome'];?>
+               </option>
+             <?php
+              }
+              ?>
+
+            </select>
             </div>
-        <?php } ?>
+            <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar</button>
+          </div>
+          <div class="d-flex justify-content-center align-items-center" style="height: 28%;">
+            <h4>Selecione a música: <input name="userfile" type="file" /></h4>
+          </div>
+
+
+
+          <?php if ($quantidade >=1){ ?>
+               <div class="alert alert-light alert-dismissible fade show" role="alert" >
+                 <strong>Música cadastrada com sucesso!</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+          <?php } ?>
       </form>
 
 

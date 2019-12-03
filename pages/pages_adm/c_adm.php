@@ -170,9 +170,9 @@ if (isset ($_GET['excluir'])){
 		<div class="container">
 	 	 <div class="mx-auto" style="width:300px;">
 
-			 <br>
+
 			 <h2>Cadastro de Adm</h2>
-			 <img class="logo" src="../../assets/imgs/Icon.png"/ width="200" height="240">
+			 <img class="logo" src="../../assets/imgs/Icon.png"/ width="170" height="220">
 				<form action="c_adm.php?<?php echo $url;?>acao=inserir" method="post">
 					<div class="form-group">
 						<input type="text" name="nome" class="form-control mb-2" placeholder="Nome"  value="<?php echo $nome;?>"required>
