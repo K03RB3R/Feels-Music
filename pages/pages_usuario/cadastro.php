@@ -148,6 +148,7 @@ if (isset ($_GET['excluir'])){
 						<input type="text" name="nickname" class="form-control mb-2" placeholder="Nickname" value="<?php echo $nickname;?>"required>
 					</div>
 					<button type="submit" style="background-color: #FC9F01;" class="btn btn-warning-2">Cadastrar</button>
+					<a href="javascript:void(0)" style="background-color: #FC9F01;" class="btn btn-warning-2" onClick="history.go(-1); return false;">Voltar</a>
 				</form>
  		 </div>
  	 </div>

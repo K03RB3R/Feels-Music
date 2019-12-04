@@ -57,7 +57,7 @@ if(isset($_GET["codigo"])){
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <style media="screen">
           body{
-            background-image: url("../../assets/imgs/imagem1.png");
+            /* background-image: url("../../assets/imgs/imagem1.png"); */
           }
         </style>
     </head>
@@ -99,6 +99,7 @@ if(isset($_GET["codigo"])){
 
 
         var poster = ["../../assets/imgs/poster.png","../../assets/imgs/poster.png"];
+
 
 
         var poster = ["../../assets/imgs/poster.png","../../assets/imgs/poster.png"];

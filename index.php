@@ -11,7 +11,7 @@
  <style media="screen">
 	 body{
 		 background-color: #171717;
-    background-image: url("./assets/imgs/imagem1.png");
+     background-image: url("./assets/imgs/imagem1.png");
 	 }
 	 h1{
 		 color: #FC9F01
