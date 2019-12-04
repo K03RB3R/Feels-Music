@@ -328,10 +328,113 @@ INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `cami
 INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)  
     VALUES (32, 'Aliança no Dedo - Turma do Pagode', 4,7, '../../assets/musics/Aliança no Dedo - Turma do Pagode.mp3');
     
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (33, 'Evoluiu- MC Kevin O Chris', 19,1, '../../assets/musics/Evoluiu- MC Kevin O Chris.mp3');
 
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (34, 'Garupa 2 - DJ Henrique de Ferraz', 19,6, '../../assets/musics/Garupa 2 - DJ Henrique de Ferraz.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (35, 'Levanta e Anda - Emicida', 20,4, '../../assets/musics/Levanta e Anda - Emicida.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (36, 'Not Afraid - Eminem', 20,9, '../../assets/musics/Not Afraid - Eminem.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (37, 'My Girl - Vintage Culture e Fancy INC', 21,2, '../../assets/musics/My Girl - Vintage Culture e Fancy INC.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (38, 'Hey Hey Hey - Chemical Surf (Doozie Remix)', 21,4, '../../assets/musics/Hey Hey Hey - Chemical Surf (Doozie Remix).mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (39, 'Saideira - Atitude 67', 22,8, '../../assets/musics/Saideira - Atitude 67.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (40, 'Vamo Que Vamo - Thiaguinho', 22,3, '../../assets/musics/Vamo Que Vamo - Thiaguinho.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (41, 'Shoot To Thrill - ACDC', 23,1, '../../assets/musics/Shoot To Thrill - ACDC.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (42, 'Sweet Child Of Mine - Guns N Roses', 23,4, '../../assets/musics/Sweet Child Of Mine - Guns N Roses.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (43, 'Sapequinha - Eduardo Costa', 24,2, '../../assets/musics/Sapequinha - Eduardo Costa.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (44, 'Jenifer - Gabriel Diniz', 24,8, '../../assets/musics/Jenifer - Gabriel Diniz.mp3');
     
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (45, 'Rabiola - Kevinho', 13,6, '../../assets/musics/Rabiola - Kevinho.mp3');
 
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (46, 'Invocada - Ludmilla e Leo Santana', 13,1, '../../assets/musics/Invocada - Ludmilla e Leo Santana.mp3');
 
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (47, 'No Guidance - Chris Brown ft Drake', 14,8, '../../assets/musics/No Guidance - Chris Brown ft Drake.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (48, 'Da Ponte Pra Cá - Racionais MCs', 14,2, '../../assets/musics/Da Ponte Pra Cá - Racionais MCs.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (49, 'Feel The Vibe (UH UH) - Dubdogz e The Fish House', 15,4, '../../assets/musics/Feel The Vibe (UH UH) - Dubdogz e The Fish House.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (50, 'Me Gusta - Kvsh, Beowlf e Flakk', 15,2, '../../assets/musics/Me Gusta - Kvsh, Beowlf e Flakk.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (51, 'Atrasadinha - Felipe Araújo e Ferrugem', 16,9, '../../assets/musics/Atrasadinha - Felipe Araújo e Ferrugem.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (52, 'Sua Mãe Vai Me Amar - Turma do Pagode', 16,5, '../../assets/musics/Sua Mãe Vai Me Amar - Turma do Pagode.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (53, 'Mind Your Manners - Slash', 17,1, '../../assets/musics/Mind Your Manners - Slash.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (54, 'Cant Stop - Red Hot Chili Peppers - Bon Jovi', 17,7, '../../assets/musics/Cant Stop - Red Hot Chili Peppers.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (55, 'Ce Acredita - João Neto e Frederico ft. Kevinho', 18,2, '../../assets/musics/Ce Acredita - João Neto e Frederico ft. Kevinho.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (56, 'Avisa Aí - João Neto e Frederico ft. Kevinho', 18,7, '../../assets/musics/Avisa Aí - João Neto e Frederico ft. Kevinho.mp3');
+ 
+ INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (57, 'Só Quem É Cristão - DJ Robinho de Jesus', 31,8, '../../assets/musics/Só Quem É Cristão - DJ Robinho de Jesus.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (58, 'Perdão a Cura Para o Ódio - Mensageiros da Profecia', 32,2, '../../assets/musics/Perdão a Cura Para o Ódio - Mensageiros da Profecia.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (59, 'Tu És Real- DJ PV', 33,7, '../../assets/musics/Tu És Real- DJ PV.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (60, 'Você Precisa Crer - Grupo Dupla Honra', 34,9, '../../assets/musics/Você Precisa Crer - Grupo Dupla Honra.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (61, 'Cartas Ao Remetente - Rose de Saron', 35,7, '../../assets/musics/Cartas Ao Remetente - Rose de Saron.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (62, 'Chuva de Poder - André & Felipe', 36,3, '../../assets/musics/Chuva de Poder - André & Felipe.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (63, 'Invocada - Ludmilla e Leo Santana', 37,7, '../../assets/musics/Invocada - Ludmilla e Leo Santana.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (64, 'No Guidance - Chris Brown ft Drake', 38,7, '../../assets/musics/No Guidance - Chris Brown ft Drake.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (65, 'I Will Find - Vintage Culture', 39,7, '../../assets/musics/I Will Find - Vintage Culture.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (66, 'Deu a Louca - Turma do Pagode ft. MC Guimê', 40,7, '../../assets/musics/Deu a Louca - Turma do Pagode ft. MC Guimê.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (67, 'By The Sword - Slash', 41,7, '../../assets/musics/By The Sword - Slash.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
+    VALUES (68, 'Boate Azul - Bruno e Marrone', 42,7, '../../assets/musics/Boate Azul - Bruno e Marrone.mp3');
     
 
     
