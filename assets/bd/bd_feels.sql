@@ -149,7 +149,7 @@ INSERT INTO `bancofeelsmusic`.`sentimento` (`idsentimento`, `nome`) VALUES ('6',
 INSERT INTO `bancofeelsmusic`.`sentimento` (`idsentimento`, `nome`) VALUES ('7', 'Triste ');
 
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('1', 'Funk', '1');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('2', 'Hip Hop/Hap', '1');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('2', 'Hip Hop/Rap', '1');
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('3', 'Música eletrônica', '1');
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('4', 'Pagode/Samba', '1');
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('5', 'Rock/Pop/Mpb', '1');
@@ -157,42 +157,42 @@ INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentim
 
 
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('7', 'Funk', '2');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('8', 'Hip Hop/Hap', '2');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('8', 'Hip Hop/Rap', '2');
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('9', 'Música eletrônica', '2');
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('10', 'Pagode/Samba', '2');
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('11', 'Rock/Pop/Mpb', '2');
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('12', 'Sertanejo', '2');
 
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('13', 'Funk', '3');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('14', 'Hip Hop/Hap', '3');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('14', 'Hip Hop/Rap', '3');
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('15', 'Música eletrônica', '3');
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('16', 'Pagode/Samba', '3');
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('17', 'Rock/Pop/Mpb', '3');
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('18', 'Sertanejo', '3');
 
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('19', 'Funk', '4');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('20', 'Hip Hop/Hap', '4');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('20', 'Hip Hop/Rap', '4');
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('21', 'Música eletrônica', '4');
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('22', 'Pagode/Samba', '4');
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('23', 'Rock/Pop/Mpb', '4');
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('24', 'Sertanejo', '4');
 
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('25', 'Funk', '5');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('26', 'Hip Hop/Hap', '5');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('26', 'Hip Hop/Rap', '5');
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('27', 'Música eletrônica', '5');
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('28', 'Pagode/Samba', '5');
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('29', 'Rock/Pop/Mpb', '5');
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('30', 'Sertanejo', '5');
 
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('31', 'Funk', '6');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('32', 'Hip Hop/Hap', '6');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('32', 'Hip Hop/Rap', '6');
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('33', 'Música eletrônica', '6');
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('34', 'Pagode/Samba', '6');
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('35', 'Rock/Pop/Mpb', '6');
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('36', 'Sertanejo', '6');
 
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('37', 'Funk', '7');
-INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('38', 'Hip Hop/Hap', '7');
+INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('38', 'Hip Hop/Rap', '7');
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('39', 'Música eletrônica', '7');
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('40', 'Pagode/Samba', '7');
 INSERT INTO `bancofeelsmusic`.`genero` (`idgenero`, `nome`, `sentimento_idsentimento`) VALUES ('41', 'Rock/Pop/Mpb', '7');
@@ -255,4 +255,91 @@ INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `cami
     
 INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)  
     VALUES (8, 'Viva a Vida', 4,9, '../../assets/musics/Turn of the lights (reduzida).mp3');
+    
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)  
+    VALUES (9, 'Chuva de Novembro - Projota', 2,5, '../../assets/musics/Chuva de Novembro - Projota.mp3');
+    
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)  
+    VALUES (10, 'The One You Loved Is Gone - Slash', 5,8, '../../assets/musics/The One You Loved Is Gone - Slash.mp3');
+    
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)  
+    VALUES (11, 'Partiu - MC Kekel', 7,2, '../../assets/musics/Partiu - MC Kekel.mp3');
+    
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)  
+    VALUES (12, 'Eterna Sacanagem - MC Jottape, MC Kekel e Kevinho', 7,2, '../../assets/musics/Eterna Sacanagem - MC Jottape, MC Kekel e Kevinho.mp3');
+    
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)  
+    VALUES (13, 'Goosebumps - Travis Scott ft. Kendrick Lamar', 8,4, '../../assets/musics/Goosebumps - Travis Scott ft. Kendrick Lamar.mp3');
+    
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)  
+    VALUES (14, 'Estilo Cachorro - Racionais MCs', 8,7, '../../assets/musics/Estilo Cachorro - Racionais MCs.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)  
+    VALUES (15, 'In The Dark - Vintage Culture ft. Fancy INC', 9,2, '../../assets/musics/In The Dark - Vintage Culture ft. Fancy INC.mp3');
+    
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)  
+    VALUES (16, 'Hear Me Now - Alok, Bruno Martini e Zeeba', 9,3, '../../assets/musics/Hear Me Now - Alok, Bruno Martini e Zeeba.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)  
+    VALUES (17, 'Tá Escrito - Grupo Revelação', 10,2, '../../assets/musics/Tá Escrito - Grupo Revelação.mp3');
+    
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)  
+    VALUES (18, 'Camisa 10 - Turma do Pagode', 10,8, '../../assets/musics/Camisa 10 - Turma do Pagode.mp3');
+    
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)  
+    VALUES (19, 'Sweet Child Of Mine - Guns N Roses', 11,5, '../../assets/musics/Sweet Child Of Mine - Guns N Roses.mp3');
+    
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)  
+    VALUES (20, 'We Will Rock You - Queen', 11,7, '../../assets/musics/We Will Rock You - Queen.mp3');
+    
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)  
+    VALUES (21, 'Infiel - Marília Mendonça', 12,6, '../../assets/musics/Infiel - Marília Mendonça.mp3');
+    
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)  
+    VALUES (22, 'Regime Fechado -Simone e Simaria', 12,9, '../../assets/musics/Regime Fechado - Simone e Simaria.mp3');
+    
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)  
+    VALUES (23, 'Always - Bon Jovi', 5,3, '../../assets/musics/Always - Bon Jovi.mp3');
+    
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)  
+    VALUES (24, 'É o Amor - Zezé Di Camargo e Luciano', 6,2, '../../assets/musics/É o Amor - Zezé Di Camargo e Luciano.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)  
+    VALUES (25, 'Cerol na Mão - Bonde do Tigrão', 25,1, '../../assets/musics/Cerol na Mão - Bonde do Tigrão.mp3');
+    
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)  
+    VALUES (26, 'Smack That - Akon ft. Eminem', 26,8, '../../assets/musics/Smack That - Akon ft. Eminem.mp3');
+    
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)  
+    VALUES (27, 'Pa Panamericano - El Original', 27,6, '../../assets/musics/Pa Panamericano - El Original.mp3');
+
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)  
+    VALUES (28, 'Brincadeira de Criança - Molejo', 28,3, '../../assets/musics/Brincadeira de Criança - Molejo.mp3');
+    
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)  
+    VALUES (29, 'We Will Rock You - Queen', 29,2, '../../assets/musics/We Will Rock You - Queen.mp3');
+    
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)  
+    VALUES (30, 'Estrada da Vida - Milionário e José Rico', 30,7, '../../assets/musics/Estrada da Vida - Milionário e José Rico.mp3');
+    
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)  
+    VALUES (31, 'Poesia Acústica 7 - Céu Azul', 2,1, '../../assets/musics/Poesia Acústica 7 - Céu Azul.mp3');
+    
+INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)  
+    VALUES (32, 'Aliança no Dedo - Turma do Pagode', 4,7, '../../assets/musics/Aliança no Dedo - Turma do Pagode.mp3');
+    
+
+    
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
 

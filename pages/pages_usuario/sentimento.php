@@ -12,13 +12,7 @@ include("../../includes/verificarLogin.php");
 $conexao = mysqli_connect("localhost","root","","bancofeelsmusic");
 $busca = mysqli_query($conexao,"SELECT * FROM sentimento");
 $arrSentimento = mysqli_fetch_all($busca, MYSQLI_ASSOC);
-$nick = mysqli_query($conexao,"SELECT nickname FROM usuario");
 
-if(isset($_POST["nickname"])){
-  $nickname = $_POST["nickname"];
-}else{
-
-}
 mysqli_close($conexao);
 
 ?>
@@ -76,7 +70,11 @@ mysqli_close($conexao);
       <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
       Feels Music
       <a href="http://localhost/feels-music/includes/encerrarLogin.php">
+
       <!-- <a class="navbar-brand">Olá usuário!</a> -->
+
+      <h3 class="navbar-brand">Olá <?php echo $_SESSION['login'];?>!</h3>
+
         <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Sair
           <img src="../../assets/imgs/Icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
         </button>
