@@ -1,26 +1,46 @@
 <?php
-
+session_start();
 if(isset($_GET["codigo"])){
+    $nickname = "Felipe";
     $genero = $_GET["codigo"];
     $conexao = mysqli_connect("localhost","root","", "bancofeelsmusic");
 
     $buscaMusica = mysqli_query($conexao, "SELECT * FROM musica WHERE musica_idgenero = $genero") or die(mysqli_error($conexao));
     $arrayBuscaM = mysqli_fetch_all($buscaMusica, MYSQLI_ASSOC);
-    //print_r($arrayBuscaM);
+
 
     $variaveisScript = "<script>var songs = [";
     $cont = 0;
     foreach($arrayBuscaM as $key=>$value){
         $variaveisScript .= "'".$value["caminho"]."'";
-        echo count($arrayBuscaM);
+
+       // echo count($arrayBuscaM);
         
         $cont++;
-        echo $cont;
+     //   echo $cont;
         if($cont < count($arrayBuscaM)){
             $variaveisScript .= ",";
         }
        
     }
+    $variaveisScript .= "]; ";
+    $variaveisScript .= "var titulos = [";
+    $cont = 0;
+    foreach($arrayBuscaM as $key=>$value){
+        $variaveisScript .= "'".$value["titulo"]."'";
+      //  echo count($arrayBuscaM);
+        
+
+        echo count($arrayBuscaM);
+
+        $cont++;
+       // echo $cont;
+        if($cont < count($arrayBuscaM)){
+            $variaveisScript .= ",";
+        }
+
+    }
+
     $variaveisScript .= "] </script>";
     echo $variaveisScript;
 }
@@ -32,19 +52,36 @@ if(isset($_GET["codigo"])){
 
 <html>
     <head>
+        <link rel="stylesheet" href="../../css/bootstrap.min.css" />
         <link href="../../css/mp3.css" rel="stylesheet"/>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <style media="screen">
+          body{
+            background-image: url("../../assets/imgs/imagem1.png");
+          }
+        </style>
     </head>
     <body style="background-color:  #171717;">
-      
+      <nav class="navbar navbar-light" style="background-color: #FC9F01;">
+        <a class="navbar-brand" href="#">
+        <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
+        Feels Music
+        <a href="http://localhost/feels-music/includes/encerrarLogin.php">
+        <a class="navbar-brand">Olá usuário!<?php echo $nickname ?></a>
+          <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Sair
+            <img src="../../assets/imgs/Icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          </button>
+        </a>
+      </nav>
+
 
 
         <div id="main">
             <div id="image">
-                <img src="../../assets/imgs/gg.gif"/>
+                <img src="../../assets/imgs/poster.png"/>
             </div>
             <div id="player">
-                <div id="songTitle">Demo</div>
+                <div id="songTitle">titulo</div>
                 <div id="buttons">
                     <button id="pre" onclick="pre()"><img src="../../assets/imgs/Pre.png" height="90%" width="90%"/></button>
                     <button id="play" onclick="playOrPauseSong()"><img src="../../assets/imgs/Play.png"/></button>
@@ -60,26 +97,31 @@ if(isset($_GET["codigo"])){
     </body>
     <script type="text/javascript">
 
-        var poster = ["../../assets/imgs/wave.gif","../../assets/imgs/wave.gif"];
+
+        var poster = ["../../assets/imgs/poster.png","../../assets/imgs/poster.png"];
         
+
+        var poster = ["../../assets/imgs/wave.gif","../../assets/imgs/wave.gif"];
+
+
         var songTitle = document.getElementById("songTitle");
         var fillBar = document.getElementById("fill");
 
         var song = new Audio();
-        var currentSong = 0;    
-        
+        var currentSong = 0;
+
         $(document).ready(function(){
             playSong();
 
 
         })
 
-        
+
         function playSong(){
 
             song.src = songs[currentSong];
 
-            songTitle.textContent = songs[currentSong];
+            songTitle.textContent = titulos[currentSong];
 
             song.play();
         }

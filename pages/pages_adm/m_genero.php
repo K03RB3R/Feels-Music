@@ -62,7 +62,7 @@ include("../../includes/nav.php");
     <center>
       <br>
       <h2>Gênero</h2>
-      <img class="logo" src="../../assets/imgs/Icon.png"/ width="200" height="240">
+      <img class="logo" src="../../assets/imgs/Icon.png"/ width="180" height="220">
       <table class="table table-bordered">
       </table>
     </center>
