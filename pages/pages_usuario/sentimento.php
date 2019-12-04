@@ -63,6 +63,10 @@ mysqli_close($conexao);
       h2{
         color: #FC9F01;
       }
+      .nick{
+        margin-left: -700PX;
+      }
+    
       }
     </style>
     <nav class="navbar navbar-light" style="background-color: #FC9F01;">
@@ -73,7 +77,7 @@ mysqli_close($conexao);
 
       <!-- <a class="navbar-brand">Olá usuário!</a> -->
 
-      <h3 class="navbar-brand">Olá <?php echo $_SESSION['login'];?>!</h3>
+      <a class="nick">Olá <?php echo $_SESSION['login'];?>!</a>
 
         <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Sair
           <img src="../../assets/imgs/Icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
