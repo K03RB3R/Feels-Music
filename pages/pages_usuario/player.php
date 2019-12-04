@@ -101,7 +101,8 @@ if(isset($_GET["codigo"])){
         var poster = ["../../assets/imgs/poster.png","../../assets/imgs/poster.png"];
 
 
-        var poster = ["../../assets/imgs/wave.gif","../../assets/imgs/wave.gif"];
+
+        var poster = ["../../assets/imgs/poster.png","../../assets/imgs/poster.png"];
 
 
         var songTitle = document.getElementById("songTitle");
