@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_GET["codigo"])){
-    $nickname = "Felipe";
+    // $nickname = "";
     $genero = $_GET["codigo"];
     $conexao = mysqli_connect("localhost","root","", "bancofeelsmusic");
 
@@ -67,7 +67,7 @@ if(isset($_GET["codigo"])){
         <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
         Feels Music
         <a href="http://localhost/feels-music/includes/encerrarLogin.php">
-        <a class="navbar-brand">Olá usuário!<?php echo $nickname ?></a>
+        <!-- <a class="navbar-brand">Olá usuário!<?php echo $nickname ?></a> -->
           <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Sair
             <img src="../../assets/imgs/Icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
           </button>
