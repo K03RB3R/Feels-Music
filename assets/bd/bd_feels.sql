@@ -242,7 +242,6 @@ INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `cami
 
 INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
     VALUES (3, 'Troféu do Ano', 1,3, '../../assets/musics/Troféu do Ano.mp3');
-INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)  
 
 INSERT `musica` (`idmusica`, `titulo`, `musica_idgenero`, `album_idalbum`, `caminho`)
     VALUES (4, 'Pirata e Tesouro', 4,9, '../../assets/musics/Pirata e Tesouro (reduzida).mp3');
