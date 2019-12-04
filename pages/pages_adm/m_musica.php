@@ -18,7 +18,7 @@ if (isset($_POST["titulo"])){
    // teste //
 
     $destino= '../../assets/musics/';
-    print_r($_FILES);
+
     $ext = strtolower(substr($_FILES['userfile']['name'],-4));
     if($ext==".mp3"||$ext==".wma"||$ext==".aac"||$ext==".ogg"){
     $new_name = $_FILES['userfile']['name'];
@@ -74,7 +74,7 @@ if (isset($_POST["titulo"])){
     <center>
       <br>
       <h2>Músicas</h2>
-      <img class="logo" src="../../assets/imgs/Icon.png"/ width="180" height="240">
+      <img class="logo" src="../../assets/imgs/Icon.png"/ width="180" height="220">
       <table class="table table-bordered">
       </table>
     </center>
@@ -135,7 +135,7 @@ if (isset($_POST["titulo"])){
             <button type="submit" style="background-color: #FC9F01;" class="btn warning mb-2">Cadastrar</button>
           </div>
           <div class="d-flex justify-content-center align-items-center" style="height: 28%;">
-            <h4>Selecione a música: <input name="userfile" type="file" /></h4>
+            <h4>Selecione a música: <input name="userfile" type="file" required/></h4>
           </div>
 
 
