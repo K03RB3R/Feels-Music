@@ -15,13 +15,13 @@ if(isset($_GET["codigo"])){
         $variaveisScript .= "'".$value["caminho"]."'";
 
        // echo count($arrayBuscaM);
-        
+
         $cont++;
      //   echo $cont;
         if($cont < count($arrayBuscaM)){
             $variaveisScript .= ",";
         }
-       
+
     }
     $variaveisScript .= "]; ";
     $variaveisScript .= "var titulos = [";
@@ -29,7 +29,7 @@ if(isset($_GET["codigo"])){
     foreach($arrayBuscaM as $key=>$value){
         $variaveisScript .= "'".$value["titulo"]."'";
       //  echo count($arrayBuscaM);
-        
+
 
         //echo count($arrayBuscaM);
 
@@ -67,7 +67,7 @@ if(isset($_GET["codigo"])){
         <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
         Feels Music
         <a href="http://localhost/feels-music/includes/encerrarLogin.php">
-        <!-- <a class="navbar-brand">Olá usuário!<?php echo $nickname ?></a> -->
+        <h3>Olá,<?php echo $nickname ?>!</h3>
           <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Sair
             <img src="../../assets/imgs/Icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
           </button>
@@ -99,7 +99,7 @@ if(isset($_GET["codigo"])){
 
 
         var poster = ["../../assets/imgs/poster.png","../../assets/imgs/poster.png"];
-        
+
 
         var poster = ["../../assets/imgs/wave.gif","../../assets/imgs/wave.gif"];
 
