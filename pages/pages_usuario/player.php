@@ -31,7 +31,7 @@ if(isset($_GET["codigo"])){
       //  echo count($arrayBuscaM);
         
 
-        echo count($arrayBuscaM);
+        //echo count($arrayBuscaM);
 
         $cont++;
        // echo $cont;
