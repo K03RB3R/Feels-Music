@@ -67,7 +67,7 @@ if(isset($_GET["codigo"])){
         <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
         Feels Music
         <a href="http://localhost/feels-music/includes/encerrarLogin.php">
-        <h3>Olá,<?php echo $nickname ?>!</h3>
+        <!-- <a class="navbar-brand">Olá usuário!<?php echo $nickname ?></a> -->
           <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Sair
             <img src="../../assets/imgs/Icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
           </button>
@@ -101,7 +101,7 @@ if(isset($_GET["codigo"])){
         var poster = ["../../assets/imgs/poster.png","../../assets/imgs/poster.png"];
 
 
-        var poster = ["../../assets/imgs/wave.gif","../../assets/imgs/wave.gif"];
+        var poster = ["../../assets/imgs/poster.png","../../assets/imgs/poster.png"];
 
 
         var songTitle = document.getElementById("songTitle");
