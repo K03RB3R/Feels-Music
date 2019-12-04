@@ -15,13 +15,13 @@ if(isset($_GET["codigo"])){
         $variaveisScript .= "'".$value["caminho"]."'";
 
        // echo count($arrayBuscaM);
-        
+
         $cont++;
      //   echo $cont;
         if($cont < count($arrayBuscaM)){
             $variaveisScript .= ",";
         }
-       
+
     }
     $variaveisScript .= "]; ";
     $variaveisScript .= "var titulos = [";
@@ -29,7 +29,7 @@ if(isset($_GET["codigo"])){
     foreach($arrayBuscaM as $key=>$value){
         $variaveisScript .= "'".$value["titulo"]."'";
       //  echo count($arrayBuscaM);
-        
+
 
         //echo count($arrayBuscaM);
 
@@ -99,7 +99,7 @@ if(isset($_GET["codigo"])){
 
 
         var poster = ["../../assets/imgs/poster.png","../../assets/imgs/poster.png"];
-        
+
 
         var poster = ["../../assets/imgs/wave.gif","../../assets/imgs/wave.gif"];
 
