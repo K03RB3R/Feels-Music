@@ -1,4 +1,4 @@
-<?php 
+<?php
 $conexao = mysqli_connect("localhost","root","", "bancofeelsmusic");
 
 $buscaSentimento = mysqli_query($conexao, "SELECT * FROM musica WHERE musica_idgenero = 2") or die(mysqli_error($conexao));
@@ -7,7 +7,7 @@ $buscaGenero = mysqli_query($conexao, "SELECT * FROM genero WHERE idgenero") or 
 $arrayBuscaG = mysqli_fetch_all($buscaGenero, MYSQLI_ASSOC);
 
 while ($arrayBuscaS =  mysqli_fetch_assoc($buscaSentimento)) {
-    print_r($arrayBuscaS == $arrayBuscaS['idsentimento']);
+    // print_r($arrayBuscaS == $arrayBuscaS['idsentimento']);
 }
 
 
