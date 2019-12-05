@@ -66,7 +66,7 @@ mysqli_close($conexao);
       .nick{
         margin-left: -700PX;
       }
-    
+
       }
     </style>
     <nav class="navbar navbar-light" style="background-color: #FC9F01;">
@@ -77,7 +77,7 @@ mysqli_close($conexao);
 
       <!-- <a class="navbar-brand">Olá usuário!</a> -->
 
-      <a class="nick">Olá <?php echo $_SESSION['login'];?>!</a>
+      <a class="nick">Olá,  <?php echo $_SESSION['login'];?>!</a>
 
         <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Sair
           <img src="../../assets/imgs/Icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -92,7 +92,7 @@ mysqli_close($conexao);
     <?php
     foreach($arrSentimento as $chave => $valor){
         echo "<div class='mx-auto linhaSentimento'>";
-        echo "<a href='genero.php?codigo=".$valor['idsentimento']."'>".$valor['nome']."</a>";
+        echo "<a href='genero.php?codigo=".$valor['idsentimento']."'>".utf8_encode($valor['nome'])."</a>";
         echo "</div></br>";
 
     }
