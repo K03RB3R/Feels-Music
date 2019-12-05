@@ -59,7 +59,7 @@ mysqli_close($conexao);
         <input type="text" name="sentimento" class="form-control mb-2" id="inlineFormInput" placeholder="Sentimento" value="<?php echo $arrSentimento[0]["nome"]; ?>"/>
         <input type="hidden" name="codigo" value="<?php echo $codigo; ?>"/>
     </div>
-    <button type="submit" style="background-color: #FC9F01;" class="btn btn-warning mb-2">Editar Artista</button>
+    <button type="submit" style="background-color: #FC9F01;" class="btn btn-warning mb-2">Editar Sentimento</button>
   </form>
 </body>
 </html>
