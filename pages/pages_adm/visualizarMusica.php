@@ -5,6 +5,8 @@
 <?php
 include("../../includes/permissao.php");
   include("../../includes/verificarLogin.php");
+  include("../../includes/nav.php");
+
 $conexao = mysqli_connect("localhost", "root", "", "bancofeelsmusic");
 
 $busca = mysqli_query($conexao, "SELECT * FROM musica");
@@ -40,12 +42,6 @@ mysqli_close($conexao);
         color: #ffffff;
       }
     </style>
-    <nav class="navbar navbar-light" style="background-color: #FC9F01;">
-      <a class="navbar-brand" href="#">
-        <img src="../../assets/imgs/Icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
-        Feels Music
-      </a>
-    </nav>
   </head>
   <body>
     <br>

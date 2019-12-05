@@ -107,7 +107,7 @@ mysqli_close($conexao);
     <?php
     foreach($arrGenero as $chave => $valor){
         echo "<div class='mx-auto linhaGenero'>";
-        echo "<a href='player.php?codigo=".$valor["idgenero"]."'>".$valor["nome"]."</a>";
+        echo "<a href='player.php?codigo=".$valor["idgenero"]."'>".utf8_encode($valor["nome"])."</a>";
         echo "</div></br>";
     }
     ?>
