@@ -7,10 +7,10 @@
 		if(isset($_POST["album"])){
 			$album = $_POST["album"];
 			$ano = $_POST["ano"];
-			$artista = $_POST["artista"];
+			$artista = $_POST["musica_idartista"];
 
 			$conexao = mysqli_connect("localhost", "root", "", "bancofeelsmusic");
-			$query = mysqli_query($conexao,"INSERT INTO album (idalbum, ano_lancamento, nome, artista_idartista) VALUES(1, '$ano','$album', '$artista')") or die(mysqli_error($conexao));
+			$query = mysqli_query($conexao,"INSERT INTO album (ano_lancamento, nome, artista_idartista) VALUES('$ano','$album', '$artista')") or die(mysqli_error($conexao));
 
       $quantidade = mysqli_affected_rows($conexao);
 			mysqli_close($conexao);
