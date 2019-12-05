@@ -56,7 +56,7 @@ mysqli_close($conexao);
 
           foreach ($arrGenero as $chave => $valor) {
             echo "<tr>";
-            echo "<td>".$valor["nome"]."</td>";
+            echo "<td>".utf8_encode($valor["nome"])."</td>";
             echo "<td>";
               echo "<a href='../../actions/alterarGenero.php?codigo=".$valor["idgenero"]."'>Editar</a>";
             echo "</td>";

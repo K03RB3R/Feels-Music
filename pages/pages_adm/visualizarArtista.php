@@ -54,7 +54,7 @@ mysqli_close($conexao);
         <?php
           foreach ($arrArtista as $chave => $valor) {
             echo "<tr>";
-            echo "<td>".$valor["nome"]."</td>";
+            echo "<td>".utf8_encode($valor["nome"])."</td>";
             echo "<td>";
               echo "<a href='../../actions/alterarArtista.php?codigo=".$valor["idartista"]."'>Editar</a>";
             echo "</td>";

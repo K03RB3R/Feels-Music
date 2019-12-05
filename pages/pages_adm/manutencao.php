@@ -55,8 +55,8 @@ include("../../includes/nav.php");?>
         <?php
         foreach ($arrFM as $key => $value){
             echo "<tr>";
-                echo "<td>". $value["nome"] . "</td>";
-                echo "<td>". $value["data_nascimento"] . "</td>";
+                echo "<td>". utf8_encode($value["nome"]) . "</td>";
+                echo "<td>". date('d/m/Y',strtotime($value["data_nascimento"])) . "</td>";
                 echo "<td>". $value["email"] . "</td>";
                 echo "<td>". $value["senha"] . "</td>";
                 echo "<td>". $value["nickname"] . "</td>";

@@ -5,7 +5,13 @@ include("../../includes/permissao.php");
 	include("../../includes/nav.php");
 $conexao = mysqli_connect("localhost", "root", "", "bancofeelsmusic");
 
-$busca = mysqli_query($conexao,"SELECT * FROM album");
+
+$sql = "SELECT al.*, ar.nome as NomeArt
+        FROM album al
+        INNER JOIN artista ar
+        ON ar.idartista = al.artista_idartista";
+
+$busca = mysqli_query($conexao,$sql);
 
 $arrAlbum = mysqli_fetch_all($busca, MYSQLI_ASSOC);
 
@@ -65,9 +71,9 @@ mysqli_close($conexao);
         <?php
           foreach ($arrAlbum as $chave => $valor) {
             echo "<tr>";
-            echo "<td>".$valor["nome"]."</td>";
-            echo "<td>".$valor["ano_lancamento"]."</td>";
-            echo "<td>".$valor["artista_idartista"]."</td>";
+            echo "<td>".utf8_encode($valor["nome"])."</td>";
+            echo "<td>".date('d/m/Y',strtotime($valor["ano_lancamento"]))."</td>";
+            echo "<td>".utf8_encode($valor["NomeArt"])."</td>";
             echo "<td>";
             echo "<a href='../../actions/alterarAlbum.php?codigo=".$valor["idalbum"]."'>Editar</a>";
             echo "</td>";
